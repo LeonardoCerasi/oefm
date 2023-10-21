@@ -1,0 +1,10 @@
+*.aux
+*.bib
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.xml
+*.gz
+
+.vscode/*
