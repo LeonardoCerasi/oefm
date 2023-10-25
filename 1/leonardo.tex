@@ -2,6 +2,10 @@
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
+% imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[]{csvsimple}
+
 \usepackage{ragged2e}
 \usepackage[left=25mm, right=25mm, top=15mm]{geometry}
 \geometry{a4paper}
@@ -69,20 +73,52 @@
 
 \DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 %opening
 \title{%
     \Huge Misura indiretta della velocità della luce \\
-    \Large C.d.L. in Fisica, a.a. 2022-2023 \\ Università degli Studi di Milano}
+    \Large C.d.L. in Fisica, a.a. 2023-2024 \\ Università degli Studi di Milano}
 \author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi}
-\date{}
+\date{19 ottobre 2023}
 
 \begin{document}
 
     \maketitle
 
-    \section{Prova}
+    \section{ Prova}
 
-    Lorem ipsum.
+    Lorem ipsum $ \vec{F} = \oint m a $.
+
+    $$
+    \vec{F} = \oint m a
+    $$
+
+    \begin{equation}
+        \vec{F} = \oint m a
+    \end{equation}
+    \begin{equation}
+        \vec{F} = \oint m a
+    \end{equation}
+
+    Per quanto riguarda l'analisi del moto oscillatorio, prima di tutto è stata associata un'incertezza alle misure della posizione: per ogni posizione $h_i$ una buona stima dell'incertezza è data dall'intervallo che essa percorrerebbe nel tempo che intercorre tra due misurazioni del photogate nel caso ideale di moto non smorzato, quindi $\Delta h_i = v_i \Delta t = \frac{v_i}{\nu}$ e $\sigma_{h_i} = \frac{1}{2} \Delta h_i = \frac{v_i}{2\nu}$; per compensare la sottostima dell'errore che si verifica per valori piccoli della velocità, ovvero agli estremi
+    
+    \subsection{ciao}
+
+    \subsubsection*{ciao}
+
+    del moto, abbiamo preso come incertezza uguale per tutti gli $h_i$ la massima incertezza associabile con questo metodo, ovverosia quella corrispondente al valore massimo di velocità (non smorzata), quindi $v_m = \omega A$ con $A$ ampiezza dell'oscillazione (già stimata nella sezione 4 sulle Misure) e $\omega = \frac{2\pi}{T}$ pulsazione del moto ottenibile dal periodo. \\
+    Abbiamo allora che $\sigma_h = \frac{\pi A}{\nu T}$, quindi che rimane soltanto da stimare il periodo d'oscillazione. Per fare ciò, abbiamo considerato il set di dati dei massimi d'oscillazioni, il set dei minimi e quello di massimi e minimi insieme; per i primi due sono stati calcolati i multipli del periodo (opportunamente divisi dal rispettivo numero di periodi intercorsi) associati a tutte le possibili combinazioni di coppie di massimi o minimi, per poi calcolare sia $T_{max}$ che $T_{min}$ come la media campionaria di questi periodi ottenuti, associando come incertezze $\sigma_{T_{max}}$ e $\sigma_{T_{min}}$ le corrispondenti deviazioni standard; per il set di dati contenente sia massimi che minimi, abbiamo ripetuto lo stesso procedimento calcolando però tutti i possibili mezzi periodi, ottenendo quindi $\tau = \frac{1}{2}T_{mm}$ e $\sigma_\tau = \frac{1}{2}\sigma_{T_{mm}}$. I valori così ottenuti sono:
+
+    \begin{tabular}{||c|c|c||}
+
+        \hline
+        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \csvreader[head to column names]{prova.csv}{}
+        {\\\hline\x & \y & \z} \\
+        \hline
+        
+    \end{tabular}
 
 
 \end{document}
