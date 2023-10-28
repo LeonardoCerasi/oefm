@@ -86,39 +86,17 @@
 
     \maketitle
 
-    \section{ Prova}
+    \section{Analisi Dati}
 
-    Lorem ipsum $ \vec{F} = \oint m a $.
+    \subsection{Elaborazione Dati}
 
-    $$
-    \vec{F} = \oint m a
-    $$
-
-    \begin{equation}
-        \vec{F} = \oint m a
-    \end{equation}
-    \begin{equation}
-        \vec{F} = \oint m a
-    \end{equation}
-
-    Per quanto riguarda l'analisi del moto oscillatorio, prima di tutto è stata associata un'incertezza alle misure della posizione: per ogni posizione $h_i$ una buona stima dell'incertezza è data dall'intervallo che essa percorrerebbe nel tempo che intercorre tra due misurazioni del photogate nel caso ideale di moto non smorzato, quindi $\Delta h_i = v_i \Delta t = \frac{v_i}{\nu}$ e $\sigma_{h_i} = \frac{1}{2} \Delta h_i = \frac{v_i}{2\nu}$; per compensare la sottostima dell'errore che si verifica per valori piccoli della velocità, ovvero agli estremi
+    A partire dalle coppie di misurazioni della frequenza $ \nu $ e della deviazione $ \delta $ per ciascuna configurazione, abbiamo calcolato la velocità angolare $ \omega $ e le rispettive variazioni $ \Delta\omega $ e $ \Delta\delta $ al variare della frequenza tramite le relazioni $ riferimenti-alle-equazioni $. I dati così elaborati sono riportati in $ riferimenti-alle-tabelle $. \\
+    Una volta ottenute ciascuna coppia $ \left(\Delta\omega,\Delta\delta\right) $ abbiamo ottenuto i valori della velocità della luce tramite l'equazione $ riferimento-all-equazione $, i quali sono riportati in $ riferimento-alla-tabella $.
     
-    \subsection{ciao}
+    \subsection{Stima degli errori}
 
-    \subsubsection*{ciao}
+    
 
-    del moto, abbiamo preso come incertezza uguale per tutti gli $h_i$ la massima incertezza associabile con questo metodo, ovverosia quella corrispondente al valore massimo di velocità (non smorzata), quindi $v_m = \omega A$ con $A$ ampiezza dell'oscillazione (già stimata nella sezione 4 sulle Misure) e $\omega = \frac{2\pi}{T}$ pulsazione del moto ottenibile dal periodo. \\
-    Abbiamo allora che $\sigma_h = \frac{\pi A}{\nu T}$, quindi che rimane soltanto da stimare il periodo d'oscillazione. Per fare ciò, abbiamo considerato il set di dati dei massimi d'oscillazioni, il set dei minimi e quello di massimi e minimi insieme; per i primi due sono stati calcolati i multipli del periodo (opportunamente divisi dal rispettivo numero di periodi intercorsi) associati a tutte le possibili combinazioni di coppie di massimi o minimi, per poi calcolare sia $T_{max}$ che $T_{min}$ come la media campionaria di questi periodi ottenuti, associando come incertezze $\sigma_{T_{max}}$ e $\sigma_{T_{min}}$ le corrispondenti deviazioni standard; per il set di dati contenente sia massimi che minimi, abbiamo ripetuto lo stesso procedimento calcolando però tutti i possibili mezzi periodi, ottenendo quindi $\tau = \frac{1}{2}T_{mm}$ e $\sigma_\tau = \frac{1}{2}\sigma_{T_{mm}}$. I valori così ottenuti sono:
-
-    \begin{tabular}{||c|c|c||}
-
-        \hline
-        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
-        \csvreader[head to column names]{CW_CCW.csv}{}
-        {\\\hline\nu & \omega & \delta} \\
-        \hline
-        
-    \end{tabular}
-
+    \subsection{Confronto}
 
 \end{document}
