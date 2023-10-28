@@ -15,7 +15,7 @@
 \usepackage{paralist}
 \usepackage{subfig} 
 \usepackage{fancyhdr}
-\usepackage{amsmath}
+\usepackage{amsmath} % Per la modalità matematica e il comando \bfseries
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage{amsthm}
@@ -32,6 +32,16 @@
 \usepackage{wrapfig}
 \usepackage{babel}
 \usepackage{caption}
+\usepackage{csvsimple} % Per leggere dati da file CSV
+\usepackage{tabularx} 
+
+
+\usepackage{array}  % Per la gestione delle tabelle
+\usepackage{siunitx}  % Per formattare i numeri
+
+
+
+
 \captionsetup{font=small}
 \pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
@@ -84,25 +94,80 @@
     \section{Misure} % tra {} titolo del paragrafo
     
     Si è inizialmente misurata la distanza $D$ tra lo specchio rotante e lo specchio concavo. La distanza $D$ è stata misurata 
-    mediante un metro di risoluzione $ 0,01 \ m $, la quale è stata attribuita come incertezza al valore della misura.
+    mediante un metro di risoluzione $ 0,01 \, \text{m} $, la quale è stata attribuita come incertezza al valore della misura.
 
     \begin{equation}
-        \tag{3.1}
-        D = (13.28 \pm 0.01) \ m
+        \label{3.1}
+        D = (13.28 \pm 0.01) \, \text{m}
     \end{equation} \\
     Si è poi misurata la distanza $A$ tra la seconda lente dell'apparato e lo specchio rotante. La misura è stata effettuata
-    attraverso un calibro di risoluzione $ 0,01 \ m $, che è stata attribuita come incertezza di $a$.
+    attraverso un calibro di risoluzione $ 0,01 \, \text{m} $, che è stata attribuita come incertezza di $a$.
     
     \begin{equation}
-        \tag{3.2}
-        a = (0.474 \pm 0.001) \ m
+        \label{3.1}
+        a = (0.474 \pm 0.001) \, \text{m}
     \end{equation} \\
-    Dopo aver avviato lo specchio rotante in senso orario a una frequenza di rotazione $ \nu_0 $ nell'intervallo $[10,20] Hz$,
-    si è misurata, mediante micrometro di risoluzione $ 0.00001 m $ , la posizione dello spot luminoso $\delta_0$ visibile attraverso
+    Dopo aver avviato lo specchio rotante in senso orario a una frequenza di rotazione $ \nu_0 $ nell'intervallo $[10,20] \, \text{Hz}$,
+    si è misurata, mediante micrometro di risoluzione $ 0.00001 \text{m} $ , la posizione dello spot luminoso $\delta_0$ visibile attraverso
     un microscopio. Si è poi portato lo specchio in un intorno della frequenza massima di rotazione $ \nu $ e si è misurata,
-    sempre mediante micrometro, la nuova posizione dello spot luminoso $\delta$. Note le frequenze iniziale e finale, si sono
-    determinate le corrispondenti pulsazioni, $\omega_0$ e $\omega$, e la variazione di pulsazione $\Delta\omega$. Si è inoltre
-    determinata la variazione di posizione $\Delta\delta$
+    sempre mediante micrometro, la nuova posizione dello spot luminoso $\delta$. Tale set di misure è stato ripetuto per $30$ volte.
+    I dati rilevati sono riportati nella tabella $ riferimento-alla-tabella $. \\ 
+
+    Si sono prese le medesime misure di posizione, a frequenza minima e a frequenza massima, facendo ruotare
+    lo specchio in senso antiorario. I dati rilevati sono riportati nella tabella $ riferimento-alla-tabella $. \\ 
+
+    Si sono poi effettuate misure di posizione dello spot luminoso portando lo specchio dalla frequenza massima di rotazione in senso
+    orario $\nu_0$ alla frequenza massima di rotazione in senso antiorario $\nu$.
+    I dati rilevati sono riportati nella tabella $ riferimento-alla-tabella $. \\
+
+    Infine, si sono rilevate misure di posizione dello spot luminoso con lo specchio a frequenza minima di rotazione ( $[10,20] \, \text{Hz}$ )
+    e a frequenze intermedie, sia in senso orario (i dati sono riportati nella tabella $ riferimento-alla-tabella $) sia 
+    in senso antiorario (i dati sono riportati nella tabella $ riferimento-alla-tabella $). \\
+    
+
+
+    \begin{table}
+        \centering
+        \begin{tabular}{c|c|c|c|c|c}
+
+            \hline
+            \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
+            \csvreader[head to column names]{csv/CW_min_max.csv}{}
+            {\\\hline\nu0 & \omega0 & \delta0 & \nu & \omega & \delta  } \\
+            \hline
+        
+        \end{tabular}
+        \caption{Specchio in rotazione CW a frequenze $\nu_0$ e $\nu$: misure di posizione $\delta_0$ e $\delta$ dello spot luminoso}
+    \end{table}
+
+
+    Tabella 1.2: Specchio in rotazione CCW a frequenze $\nu_0$ e $\nu$: misure di posizione $\delta_0$ e $\delta$ dello spot luminoso \\
+    \begin{tabular}{c|c|c|c|c|c}
+
+        \hline
+        \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
+        \csvreader[head to column names]{csv/CCW_min_max.csv}{}
+        {\\\hline\nu0 & \omega0 & \delta0 & \nu & \omega & \delta  } \\
+        \hline
+        
+    \end{tabular}
+
+
+    
+    \begin{tabular}{c|c|c}
+
+        \hline
+        \bfseries \bfseries $\Delta \omega$ & \bfseries $\Delta \delta$ & \bfseries $c$
+        \csvreader[head to column names]{csv/CCW_min_max.csv}{}
+        {\\\hline \deltaomega & \deltadelta & c} \\
+        \hline
+        
+    \end{tabular}
+
+
+  
+
+
     
 
 
