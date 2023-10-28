@@ -19,6 +19,7 @@
 \usepackage{titlesec}
 \usepackage{braket}
 \usepackage{gensymb}
+\usepackage{csvsimple}
 \usepackage{url}
 \usepackage{hyperref}
 \usepackage{csquotes}
@@ -87,7 +88,7 @@
     fisica universale e la sua determinazione è stata di fondamentale importanza per la definizione 
     delle unità di misura nel Sistema Internazionale.
 
-    \subsection{metodo}
+    \subsection{Metodo}
     
     La determinazione della velocità della luce viene effettuata utilizzando il metodo di Focault: 
     il fascio luminoso proveniente dalla sorgente viene diretto verso uno specchio rotante che ne causa
@@ -103,5 +104,47 @@
     \label{eqn:c}
     c=4f_2D^2
     \frac{(\omega -\omega_0)}{(D+a-f_2)\Delta \delta }
+    \end{equation}
+
+    \section{Appendice}
+
+    \begin {table}
+    \centering
+    \begin{tabular}[b]{||c|c|c||}
+        
+        \hline
+        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \csvreader[head to column names]{csv/CW_CCW.csv}{}
+        {\\\hline\nu & \omega & \delta}
+
+    \end{tabular}
+    \caption {da frequenze massime clockwise a frequenze massime counterclockwise}
+    \end {table}
+
+    \begin {table}
+    \centering
+    \begin{tabular}[b]{||c|c|c||}
+        
+        \hline
+        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \csvreader[head to column names]{csv/CW_min_max.csv}{}
+        {\\\hline\nu & \omega & \delta}
+
+    \end{tabular}
+    \caption {clockwise da frequenze basse a frequenze massime.}
+    \end {table}    
+    
+    \begin {table}
+    \centering
+    \begin{tabular}[b]{||c|c|c||}
+        
+        \hline
+        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \csvreader[head to column names]{csv/CW_min_mid.csv}{}
+        {\\\hline\nu & \omega & \delta}
+
+    \end{tabular}
+    \caption {clockwise da frequenze basse a frequenze medie.}
+    \end {table}
 
 \end{document}
