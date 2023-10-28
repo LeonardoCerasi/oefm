@@ -97,14 +97,14 @@
     mediante un metro di risoluzione $ 0,01 \, \text{m} $, la quale è stata attribuita come incertezza al valore della misura.
 
     \begin{equation}
-        \label{3.1}
+        \label{equation for D}
         D = (13.28 \pm 0.01) \, \text{m}
     \end{equation} \\
     Si è poi misurata la distanza $A$ tra la seconda lente dell'apparato e lo specchio rotante. La misura è stata effettuata
     attraverso un calibro di risoluzione $ 0,01 \, \text{m} $, che è stata attribuita come incertezza di $a$.
     
     \begin{equation}
-        \label{3.1}
+        \label{equation for a}
         a = (0.474 \pm 0.001) \, \text{m}
     \end{equation} \\
     Dopo aver avviato lo specchio rotante in senso orario a una frequenza di rotazione $ \nu_0 $ nell'intervallo $[10,20] \, \text{Hz}$,
@@ -133,7 +133,7 @@
             \hline
             \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
             \csvreader[head to column names]{csv/CW_min_max.csv}{}
-            {\\\hline\nu0 & \omega0 & \delta0 & \nu & \omega & \delta  } \\
+            {\\\hline\nuzero & \omegazero & \deltazero & \nu & \omega & \delta  } \\
             \hline
         
         \end{tabular}
@@ -147,7 +147,7 @@
         \hline
         \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
         \csvreader[head to column names]{csv/CCW_min_max.csv}{}
-        {\\\hline\nu0 & \omega0 & \delta0 & \nu & \omega & \delta  } \\
+        {\\\hline\nu0 & \omegazero & \deltazero & \nu & \omega & \delta  } \\
         \hline
         
     \end{tabular}
@@ -157,7 +157,7 @@
     \begin{tabular}{c|c|c}
 
         \hline
-        \bfseries \bfseries $\Delta \omega$ & \bfseries $\Delta \delta$ & \bfseries $c$
+        \bfseries $\Delta \omega $ & \bfseries $\Delta \delta $ & \bfseries $c$
         \csvreader[head to column names]{csv/CCW_min_max.csv}{}
         {\\\hline \deltaomega & \deltadelta & c} \\
         \hline
