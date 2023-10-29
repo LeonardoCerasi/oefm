@@ -91,14 +91,14 @@
     \subsection{Metodo}
     
     La determinazione della velocità della luce viene effettuata utilizzando il metodo di Focault: 
-    il fascio luminoso proveniente dalla sorgente viene diretto verso uno specchio rotante che ne causa
+    viene diretto un fascio luminoso, proveniente da una sorgente, verso uno specchio rotante che ne causa
      la riflessione con spostamento angolare $    \Delta\omega  $.\\
      Il raggio di luce, dopo aver colpito lo specchio rotante, viene riflesso nella direzione opposta lungo 
      la stessa traiettoria che aveva compito nel viaggio di andata. Poiché lo specchio è in rotazione, 
      la posizione in cui il raggio colpisce lo specchio è in costante cambiamento: questo causa uno spostamento
       angolare tra il punto di arrivo del raggio riflesso e la posizione iniziale - misurata con specchio fermo -.\\
       Misurando con precisione la posizione iniziale $ \delta _i $ - con specchio fermo - e la finale  $ \delta _f $ - con specchio in movimento - 
-      si riesce a dedurre lo spostamento angolare $ \Delta \delta $ : questo rende possibile determinare la velocità della luce 
+      si riesce a dedurre lo spostamento angolare $ \Delta \delta = \delta_f - \delta_i $ : questo rende possibile determinare la velocità della luce 
 
     \begin{equation}
     \label{eqn:c}
@@ -106,27 +106,45 @@
     \frac{(\omega -\omega_0)}{(D+a-f_2)\Delta \delta }
     \end{equation}
 
+    dove $ c $ è la velocità della luce, $ f_2 $ è la lunghezza focale della seconda lente posta nell'apparato,
+    $ D $ è la lunghezza del percorso compituto dal facio luminoso, $ \omega_0 $ e $ \omega $ sono rispettivamente
+    la velocità angolare iniziale e finale dello specchio rotante, $ a $ è la distanza tra 
+    la seconda lente dell'apparato e lo specchio rotante e $ \Delta\delta$ è lo spostamento 
+    dell'immagine nel punto di osservazione, quando la velocità angolare dello specchio rotante passa da 
+    $ \omega_0 $ a $ \omega $.
+
+    \section {Analisi dati}
+
+    \subsection {Stima degli errori}
+
+
+    L'errore sulla stima del valore di $ c $ è frutto di due componenti: una sistematica 
+    - calcolata mediante propagazione degli errori - e una statistica - data dalla deviazione standard 
+    della media di $ c $ ottenuta per ogni coppia $ \Delta \omega $ e $ \Delta \delta $.
+
+
     \section{Appendice}
 
     \begin {table}
     \centering
-    \begin{tabular}[b]{||c|c|c||}
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
         
         \hline
-        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \bfseries $ \nu_0 [\text{Hz}] $ & \bfseries $ \omega_0 [\text{rad/s}] $ & \bfseries $ \delta_0 [\text{m}]$ & \bfseries $ \nu [\text{Hz}] $ & \bfseries $ \omega [\text{Hz}]$ & \bfseries $ \delta [\text{m}] $ & \bfseries Delta & \bfseries Omega & \bfseries c
         \csvreader[head to column names]{csv/CW_CCW.csv}{}
-        {\\\hline\nu & \omega & \delta}
+        {\\\hline\nuzero & \omegazero & \deltazero & \nu & \omega & \delta & \deltadelta & \deltaomega & \c}
 
     \end{tabular}
     \caption {da frequenze massime clockwise a frequenze massime counterclockwise}
     \end {table}
 
+
     \begin {table}
     \centering
     \begin{tabular}[b]{||c|c|c||}
         
         \hline
-        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \bfseries $ \nu_0 $ & \bfseries Colonna 2 & \bfseries Colonna 3
         \csvreader[head to column names]{csv/CW_min_max.csv}{}
         {\\\hline\nu & \omega & \delta}
 
@@ -136,15 +154,17 @@
     
     \begin {table}
     \centering
-    \begin{tabular}[b]{||c|c|c||}
+    \begin{tabular}[b]{|c|c|c|c|c|c|}
         
         \hline
-        \bfseries Colonna 1 & \bfseries Colonna 2 & \bfseries Colonna 3
+        \bfseries $ \nu_0 $ & \bfseries $ \omega_0 $ & \bfseries $ \delta_0 $ & 
+        \bfseries $ \nu $ & \bfseries $ \omega $ & \bfseries $ \delta $
         \csvreader[head to column names]{csv/CW_min_mid.csv}{}
         {\\\hline\nu & \omega & \delta}
 
     \end{tabular}
     \caption {clockwise da frequenze basse a frequenze medie.}
     \end {table}
+
 
 \end{document}
