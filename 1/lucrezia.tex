@@ -36,11 +36,6 @@
 \usepackage{tabularx} 
 
 
-\usepackage{array}  % Per la gestione delle tabelle
-\usepackage{siunitx}  % Per formattare i numeri
-
-
-
 
 \captionsetup{font=small}
 \pagestyle{fancy}
@@ -125,52 +120,308 @@
     in senso antiorario (i dati sono riportati nella tabella $ riferimento-alla-tabella $). \\
     
 
+    \section{Appendice}
 
     \begin{table}
         \centering
-        \begin{tabular}{c|c|c|c|c|c}
-
+        \begin{tabular}{||c|c|c||c|c|c||}
             \hline
-            \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
-            \csvreader[head to column names]{csv/CW_min_max.csv}{}
-            {\\\hline\nuzero & \omegazero & \deltazero & \nu & \omega & \delta  } \\
-            \hline
-        
+            $\nu_0 \, [\text{Hz}]$ & $\omega_0 \, [\text{rad/s}]$ &  $\delta_0 \,[\text{m}]$ &  $\nu \,[\text{Hz}]$ & $\omega \,[\text{rad/s}]$ & $\delta \, [\text{m}]$ \\
+            \hline\hline
+            $-11 $ & $-69.11503838 $ & $ 9.32 $ & $ -1390 $ & $ -8733.627577 $ & $  8.93 $ \\\hline
+            $-10 $ & $-62.83185307 $ & $ 9.31 $ & $ -1317 $ & $ -8274.955050 $ & $  8.93 $ \\\hline
+            $-10 $ & $-62.83185307 $ & $ 9.31 $ & $ -1355 $ & $ -8513.716091 $ & $  8.94 $ \\\hline
+            $-11 $ & $-69.11503838 $ & $ 9.30 $ & $ -1404 $ & $ -8821.592171 $ & $  8.93 $ \\\hline
+            $-15 $ & $-94.24777961 $ & $ 9.31 $ & $ -1359 $ & $ -8538.848832 $ & $  8.94 $ \\\hline
+            $-15 $ & $-94.24777961 $ & $ 9.31 $ & $ -1409 $ & $ -8853.008098 $ & $  8.92 $ \\\hline
+            $-17 $ & $-106.8141502 $ & $ 9.30 $ & $ -1374 $ & $ -8633.096612 $ & $  8.95 $ \\\hline
+            $-16 $ & $-100.5309649 $ & $ 9.30 $ & $ -1386 $ & $ -8708.494836 $ & $  8.94 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1386 $ & $ -8708.494836 $ & $  8.92 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1409 $ & $ -8853.008098 $ & $  8.92 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1363 $ & $ -8563.981574 $ & $  8.94 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.30 $ & $ -1143 $ & $ -7181.680806 $ & $  8.96 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1441 $ & $ -9054.070028 $ & $  8.97 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1450 $ & $ -9110.618695 $ & $  8.92 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.33 $ & $ -1414 $ & $ -8884.424024 $ & $  8.94 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.32 $ & $ -1401 $ & $ -8802.742615 $ & $  8.95 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1410 $ & $ -8859.291283 $ & $  8.93 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1431 $ & $ -8991.238175 $ & $  8.93 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1444 $ & $ -9072.919584 $ & $  8.93 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.30 $ & $ -1424 $ & $ -8947.255877 $ & $  8.94 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.30 $ & $ -1395 $ & $ -8765.043504 $ & $  8.92 $ \\\hline
+            $-13 $ & $-81.68140899 $ & $ 9.30 $ & $ -1455 $ & $ -9142.034622 $ & $  8.92 $ \\\hline
+            $-17 $ & $-106.8141502 $ & $ 9.31 $ & $ -1456 $ & $ -9148.317807 $ & $  8.94 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.30 $ & $ -1469 $ & $ -9229.999216 $ & $  8.91 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.30 $ & $ -1426 $ & $ -8959.822248 $ & $  8.92 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1446 $ & $ -9085.485954 $ & $  8.92 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1418 $ & $ -8909.556766 $ & $  8.92 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.30 $ & $ -1446 $ & $ -9085.485954 $ & $  8.90 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1455 $ & $ -9142.034622 $ & $  8.91 $ \\\hline
+            $-18 $ & $-113.0973355 $ & $ 9.31 $ & $ -1446 $ & $ -9085.485954 $ & $  8.93 $ \\\hline
         \end{tabular}
-        \caption{Specchio in rotazione CW a frequenze $\nu_0$ e $\nu$: misure di posizione $\delta_0$ e $\delta$ dello spot luminoso}
+        \caption{Specchio in rotazione CW a frequenza iniziale minima $\nu_0$ e frequenza finale massima $\nu$: misure di posizione iniziale $\delta_0$ e finale $\delta$ dello spot luminoso}
+        \label{CW_min_max}
     \end{table}
 
 
-    Tabella 1.2: Specchio in rotazione CCW a frequenze $\nu_0$ e $\nu$: misure di posizione $\delta_0$ e $\delta$ dello spot luminoso \\
-    \begin{tabular}{c|c|c|c|c|c}
+    \begin{table}
+        \centering
+        \begin{tabular}{||c|c|c||c|c|c||}
+            \hline
+            $\nu_0 \, [\text{Hz}]$ & $\omega_0 \, [\text{rad/s}]$ &  $\delta_0 \,[\text{m}]$ &  $\nu \,[\text{Hz}]$ & $\omega \,[\text{rad/s}]$ & $\delta \, [\text{m}]$ \\
+            \hline\hline
+            $17$ & $106.8141502$ & $9.31$ & $1400$ & $8796.459430$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1421$ & $8928.406322$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1422$ & $8934.689507$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1393$ & $8752.477133$ & $9.71$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1399$ & $8790.176245$ & $9.70$ \\\hline
+            $17$ & $106.8141502$ & $9.31$ & $1396$ & $8771.326689$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1414$ & $8884.424024$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1391$ & $8739.910762$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1376$ & $8645.662983$ & $9.69$ \\\hline
+            $17$ & $106.8141502$ & $9.32$ & $1404$ & $8821.592171$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1434$ & $9010.087730$ & $9.70$ \\\hline
+            $17$ & $106.8141502$ & $9.31$ & $1334$ & $8381.769200$ & $9.71$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1342$ & $8432.034682$ & $9.70$ \\\hline
+            $17$ & $106.8141502$ & $9.32$ & $1363$ & $8563.981574$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1317$ & $8274.955050$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1351$ & $8488.583350$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1316$ & $8268.671864$ & $9.70$ \\\hline
+            $17$ & $106.8141502$ & $9.31$ & $1330$ & $8356.636459$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1380$ & $8670.795724$ & $9.71$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1444$ & $9072.919584$ & $9.71$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1435$ & $9016.370916$ & $9.70$ \\\hline
+            $17$ & $106.8141502$ & $9.32$ & $1359$ & $8538.848832$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1378$ & $8658.229353$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1412$ & $8871.857654$ & $9.70$ \\\hline
+            $17$ & $106.8141502$ & $9.31$ & $1378$ & $8658.229353$ & $9.67$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1424$ & $8947.255877$ & $9.71$ \\\hline
+            $18$ & $113.0973355$ & $9.32$ & $1438$ & $9035.220472$ & $9.70$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1421$ & $8928.406322$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1423$ & $8940.972692$ & $9.69$ \\\hline
+            $18$ & $113.0973355$ & $9.31$ & $1421$ & $8928.406322$ & $9.69$ \\\hline
+        \end{tabular}
+        \caption{Specchio in rotazione CCW a frequenza iniziale minima $\nu_0$ e frequenza finale massima $\nu$: misure di posizione iniziale $\delta_0$ e finale $\delta$ dello spot luminoso}
+        \label{CCW_min_max}
+    \end{table}
 
-        \hline
-        \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
-        \csvreader[head to column names]{csv/CCW_min_max.csv}{}
-        {\\\hline\nu0 & \omegazero & \deltazero & \nu & \omega & \delta  } \\
-        \hline
-        
-    \end{tabular}
 
 
-    
-    \begin{tabular}{c|c|c}
+    \begin{table}
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            $\Delta \omega [\text{rad/s}]$ & $\Delta \delta [\text{m}]$ & $c [\text{m/s}]$ \\
+            \hline\hline
+            $-8664.512539$ & $-0.39$ & $2.92508E+08$ \\\hline
+            $-8212.123196$ & $-0.38$ & $2.84532E+08$ \\\hline
+            $-8450.884238$ & $-0.37$ & $3.00718E+08$ \\\hline
+            $-8752.477133$ & $-0.37$ & $3.11450E+08$ \\\hline
+            $-8444.601053$ & $-0.37$ & $3.00494E+08$ \\\hline
+            $-8758.760318$ & $-0.39$ & $2.95690E+08$ \\\hline
+            $-8526.282462$ & $-0.35$ & $3.20738E+08$ \\\hline
+            $-8607.963871$ & $-0.36$ & $3.14816E+08$ \\\hline
+            $-8595.397000$ & $-0.39$ & $2.90175E+08$ \\\hline
+            $-8739.910762$ & $-0.39$ & $2.95054E+08$ \\\hline
+            $-8450.884238$ & $-0.37$ & $3.00718E+08$ \\\hline
+            $-7068.583471$ & $-0.34$ & $2.73723E+08$ \\\hline
+            $-8940.972692$ & $-0.34$ & $3.46230E+08$ \\\hline
+            $-8997.521360$ & $-0.39$ & $3.03750E+08$ \\\hline
+            $-8771.326689$ & $-0.39$ & $2.96114E+08$ \\\hline
+            $-8689.645280$ & $-0.37$ & $3.09214E+08$ \\\hline
+            $-8746.193948$ & $-0.38$ & $3.03036E+08$ \\\hline
+            $-8878.140839$ & $-0.38$ & $3.07608E+08$ \\\hline
+            $-8959.822248$ & $-0.38$ & $3.10438E+08$ \\\hline
+            $-8834.158542$ & $-0.36$ & $3.23088E+08$ \\\hline
+            $-8651.946168$ & $-0.38$ & $2.99770E+08$ \\\hline
+            $-9060.353213$ & $-0.38$ & $3.13921E+08$ \\\hline
+            $-9041.503657$ & $-0.37$ & $3.21734E+08$ \\\hline
+            $-9116.901881$ & $-0.39$ & $3.07781E+08$ \\\hline
+            $-8846.724913$ & $-0.38$ & $3.06519E+08$ \\\hline
+            $-8972.388619$ & $-0.39$ & $3.02902E+08$ \\\hline
+            $-8796.459430$ & $-0.39$ & $2.96963E+08$ \\\hline
+            $-8972.388619$ & $-0.40$ & $2.95329E+08$ \\\hline
+            $-9028.937286$ & $-0.40$ & $2.97191E+08$ \\\hline
+            $-8972.388619$ & $-0.38$ & $3.10873E+08$ \\\hline
+        \end{tabular}
+        \caption{Specchio in rotazione CW, frequenza iniziale minima e frequenza finale massima: variazione di pulsazione $\Delta\omega$ e variazione di posizione $\Delta\delta$, e rispettiva misura indiretta della velocità della luce $c$}
+        \label{CW_min_max}
+    \end{table}
 
-        \hline
-        \bfseries $\Delta \omega $ & \bfseries $\Delta \delta $ & \bfseries $c$
-        \csvreader[head to column names]{csv/CCW_min_max.csv}{}
-        {\\\hline \deltaomega & \deltadelta & c} \\
-        \hline
-        
-    \end{tabular}
+
+    \begin{table}
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            $\Delta \omega [\text{rad/s}]$ & $\Delta \delta [\text{m}]$ & $c [\text{m/s}]$ \\
+            \hline\hline
+            $8689.645280$ & $0.39$ & $2.93357E+08$ \\\hline
+            $8815.308986$ & $0.39$ & $2.97599E+08$ \\\hline
+            $8821.592171$ & $0.38$ & $3.05648E+08$ \\\hline
+            $8639.379797$ & $0.40$ & $2.84368E+08$ \\\hline
+            $8677.078909$ & $0.38$ & $3.00641E+08$ \\\hline
+            $8664.512539$ & $0.39$ & $2.92508E+08$ \\\hline
+            $8771.326689$ & $0.37$ & $3.12120E+08$ \\\hline
+            $8626.813427$ & $0.37$ & $3.06978E+08$ \\\hline
+            $8532.565647$ & $0.37$ & $3.03624E+08$ \\\hline
+            $8714.778021$ & $0.37$ & $3.10108E+08$ \\\hline
+            $8896.990395$ & $0.38$ & $3.08261E+08$ \\\hline
+            $8274.955050$ & $0.40$ & $2.72373E+08$ \\\hline
+            $8318.937347$ & $0.38$ & $2.88232E+08$ \\\hline
+            $8457.167423$ & $0.37$ & $3.00941E+08$ \\\hline
+            $8161.857714$ & $0.38$ & $2.82790E+08$ \\\hline
+            $8375.486014$ & $0.38$ & $2.90192E+08$ \\\hline
+            $8155.574529$ & $0.39$ & $2.75327E+08$ \\\hline
+            $8249.822308$ & $0.39$ & $2.78509E+08$ \\\hline
+            $8557.698388$ & $0.40$ & $2.81680E+08$ \\\hline
+            $8959.822248$ & $0.39$ & $3.02478E+08$ \\\hline
+            $8903.273580$ & $0.38$ & $3.08478E+08$ \\\hline
+            $8432.034682$ & $0.38$ & $2.92151E+08$ \\\hline
+            $8545.132018$ & $0.38$ & $2.96070E+08$ \\\hline
+            $8758.760318$ & $0.38$ & $3.03471E+08$ \\\hline
+            $8551.415203$ & $0.36$ & $3.12748E+08$ \\\hline
+            $8834.158542$ & $0.40$ & $2.90779E+08$ \\\hline
+            $8922.123136$ & $0.38$ & $3.09131E+08$ \\\hline
+            $8815.308986$ & $0.38$ & $3.05431E+08$ \\\hline
+            $8827.875357$ & $0.38$ & $3.05866E+08$ \\\hline
+            $8815.308986$ & $0.38$ & $3.05431E+08$ \\\hline
+        \end{tabular}
+        \caption{Specchio in rotazione CCW, frequenza iniziale minima e frequenza finale massima: variazione di pulsazione $\Delta\omega$ e variazione di posizione $\Delta\delta$, e rispettiva misura indiretta della velocità della luce $c$}
+        \label{CCW_min_max}
+    \end{table}
 
 
-  
+    \begin{table}
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            $\Delta \omega [\text{rad/s}]$ & $\Delta \delta [\text{m}]$ & $c [\text{m/s}]$ \\
+            \hline\hline
+            $17479.82152$ & $0.76$ & $3.02818E+08$ \\\hline
+            $17630.61797$ & $0.77$ & $3.01464E+08$ \\\hline
+            $17008.58263$ & $0.77$ & $2.90828E+08$ \\\hline
+            $17618.05160$ & $0.79$ & $2.93623E+08$ \\\hline
+            $17228.49411$ & $0.77$ & $2.94588E+08$ \\\hline
+            $17266.19322$ & $0.78$ & $2.91448E+08$ \\\hline
+            $17291.32597$ & $0.78$ & $2.91872E+08$ \\\hline
+            $17668.31708$ & $0.79$ & $2.94460E+08$ \\\hline
+            $17335.30826$ & $0.77$ & $2.96414E+08$ \\\hline
+            $17812.83035$ & $0.79$ & $2.96869E+08$ \\\hline
+            $17706.01620$ & $0.76$ & $3.06737E+08$ \\\hline
+            $17498.67108$ & $0.78$ & $2.95372E+08$ \\\hline
+            $17724.86575$ & $0.79$ & $2.95403E+08$ \\\hline
+            $16549.91010$ & $0.74$ & $2.94457E+08$ \\\hline
+            $17511.23745$ & $0.76$ & $3.03362E+08$ \\\hline
+            $16926.90122$ & $0.76$ & $2.93239E+08$ \\\hline
+            $16920.61803$ & $0.74$ & $3.01053E+08$ \\\hline
+            $17222.21093$ & $0.74$ & $3.06419E+08$ \\\hline
+            $17398.14012$ & $0.77$ & $2.97489E+08$ \\\hline
+            $16908.05166$ & $0.70$ & $3.18020E+08$ \\\hline
+            $16700.70655$ & $0.76$ & $2.89321E+08$ \\\hline
+            $17266.19322$ & $0.77$ & $2.95233E+08$ \\\hline
+            $17002.29944$ & $0.73$ & $3.06650E+08$ \\\hline
+            $16688.14018$ & $0.74$ & $2.96917E+08$ \\\hline
+            $17146.81270$ & $0.74$ & $3.05078E+08$ \\\hline
+            $17247.34367$ & $0.77$ & $2.94910E+08$ \\\hline
+            $17335.30826$ & $0.78$ & $2.92614E+08$ \\\hline
+            $17259.91004$ & $0.74$ & $3.07090E+08$ \\\hline
+            $16870.35255$ & $0.76$ & $2.92260E+08$ \\\hline
+            $16788.67114$ & $0.75$ & $2.94723E+08$ \\\hline
+        \end{tabular}
+        \caption{Specchio in rotazione iniziale CW e rotazione finale CCW: variazione di pulsazione $\Delta\omega$ e variazione di posizione $\Delta\delta$, e rispettiva misura indiretta della velocità della luce $c$}
+        \label{CW_CCW}
+    \end{table}
+
+    \begin{table}
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            $\Delta \omega [\text{rad/s}]$ & $\Delta \delta [\text{m}]$ & $c [\text{m/s}]$ \\
+            \hline\hline
+            $-4209.734156$&$-0.20$&$2.77130E+08$\\\hline
+            $-4995.132319$&$-0.21$&$3.13174E+08$\\\hline
+            $-4517.610236$&$-0.21$&$2.83236E+08$\\\hline
+            $-5296.725214$&$-0.23$&$3.03206E+08$\\\hline
+            $-5328.141140$&$-0.24$&$2.92296E+08$\\\hline
+            $-5177.344693$&$-0.23$&$2.96372E+08$\\\hline
+            $-5334.424326$&$-0.24$&$2.92641E+08$\\\hline
+            $-5284.158843$&$-0.24$&$2.89883E+08$\\\hline
+            $-5152.211952$&$-0.22$&$3.08340E+08$\\\hline
+            $-5510.353514$&$-0.24$&$3.02292E+08$\\\hline
+            $-5196.194249$&$-0.23$&$2.97451E+08$\\\hline
+            $-5158.495137$&$-0.22$&$3.08716E+08$\\\hline
+            $-5409.822549$&$-0.23$&$3.09680E+08$\\\hline
+            $-5453.804847$&$-0.25$&$2.87222E+08$\\\hline
+            $-5460.088032$&$-0.23$&$3.12558E+08$\\\hline
+        \end{tabular}
+        \caption{Specchio in rotazione CW, frequenza iniziale minima e frequenza finale intermedia: variazione di pulsazione $\Delta\omega$ e variazione di posizione $\Delta\delta$, e rispettiva misura indiretta della velocità della luce $c$}
+        \label{CW_min_mid}
+    \end{table}
+
+        %%%%%%%%%%%%%%%%%%
+        %tabelle che mannaggia non funzionano
 
 
-    
-
-
-
+    %\begin{table}
+    %    \centering
+    %    \begin{tabular}{||c|c|c||c|c|c||}
+%
+    %        \hline
+    %        \bfseries $\nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
+    %        \csvreader[head to column names]{csv/CW_min_max.csv}{}
+    %        {\\\hline\nuzero & \omegazero & \deltazero & \nu & \omega & \delta  } \\
+    %        \hline
+    %    
+    %    \end{tabular}
+    %    \caption{Misure delle freqeuenze iniziale e finale dello specchio in rotazione CW e misure di posizione iniziale e finale dello spot luminoso}
+    %\end{table}
+%
+    % \begin{table}
+    %    \centering
+    %    \begin{tabular}{||c|c|c||c|c|c||}
+%
+    %        \hline
+    %        \bfseries $ \nu_0 \, [\text{Hz}]$ & \bfseries $\omega_0 \, [\text{rad/s}]$ & \bfseries $\delta_0 \,[\text{m}]$ & \bfseries $\nu \,[\text{Hz}]$ & \bfseries $\omega \,[\text{rad/s}]$ & \bfseries $\delta \, [\text{m}]$
+    %        \csvreader[head to column names]{csv/CCW_min_max.csv}{}
+    %        {\\\hline\nu0 & \omegazero & \deltazero & \nu & \omega & \delta  } \\
+    %        \hline
+    %    
+    %    \end{tabular}
+    %    \caption{Misure delle freqeuenze iniziale e finale dello specchio in rotazione CCW e misure di posizione iniziale e finale dello spot luminoso}
+    %\end{table}
+%
+%
+    %\begin{table}
+    %    \centering
+    %    \begin{tabular}{||c|c|c||}
+%
+    %        \hline
+    %        \bfseries $\Delta \omega [\text{rad/s}]$ & \bfseries $\Delta \delta [\text{m}]$ & \bfseries $c [\text{m/s}]$
+    %        \csvreader[head to column names]{csv/CW_min_max.csv}{}
+    %        {\\\hline \deltaomega & \deltadelta & \c} \\
+    %        \hline
+    %    
+    %    \end{tabular}
+    %    \caption{Specchio in rotazione CW: misure delle variazioni di pulsazione e delle variazioni di posizione, e della relativa velocità della luce}
+    %\end{table}
+%
+%
+    %\begin{table}
+    %    \centering
+    %    \begin{tabular}{||c|c|c||}
+%
+    %        \hline
+    %        \bfseries $\Delta \omega [\text{rad/s}]$ & \bfseries $\Delta \delta [\text{m}]$ & \bfseries $c [\text{m/s}]$
+    %        \csvreader[head to column names] {csv/CCW_min_max.csv}{}
+    %        {\\\hline \deltaomega & \deltadelta & \c} \\
+    %        \hline
+%
+    %    \end{tabular}
+    %    \caption{Specchio in rotazione CCW: misure delle variazioni di pulsazione e delle variazioni di posizione, e della relativa velocità della luce}
+    %\end{table}
+%
+%
+%
+%
 
 \end{document} % fine il documento: non necessario perché lo farà automaticamente
