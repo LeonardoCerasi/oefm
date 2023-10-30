@@ -121,7 +121,22 @@
 
     L'errore sulla stima del valore di $ c $ è frutto di due componenti: una sistematica 
     - calcolata mediante propagazione degli errori - e una statistica - data dalla deviazione standard 
-    della media di $ c $ ottenuta per ogni coppia $ \Delta \omega $ e $ \Delta \delta $. Omega e delta le consideriamo grandezze senza errore perché il loro errore è già presente nella deviazione standard
+    della media di $ c $ ottenuta per ogni coppia $ \Delta \omega $ e $ \Delta \delta $. \\
+
+    $\omega$ e $\delta$ vengono considerate come grandezze prive di errore: questo risulta essere valutato nel calcolo della deviazione standard a loro riferito.\\
+
+    La formula per la determinazione di $ c $ è quella già presentata al paragrafo 1.2 (non so come mettere la reference).
+    Da essa si ricavano le seguenti formule utilizzate per la propagazione degli errori:
+
+    \begin{equation}
+        \label{eqn:propD}
+        \frac{\partial c}{\partial D} = \frac{4\Delta \omega}{\Delta \delta} \frac{D f_2 (2a + D -2f_2)}{(a + D -f_2)^2}
+        \end{equation}
+
+    \begin{equation}
+        \label{eqn:propa}
+        \frac{\partial c}{\partial a} = -\frac{4\Delta \omega}{\Delta \delta} \frac{D^2 f_2}{(a + D -f_2)^2}
+        \end{equation}
 
 
     \section{Appendice}
