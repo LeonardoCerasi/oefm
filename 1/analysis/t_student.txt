@@ -1,0 +1,108 @@
+Compatibility with expected value:
+
+CCW_min_max :
+23.66183096812754
+
+
+CCW_min_mid :
+37.164363027378045
+
+
+CW_CCW :
+15.396632646267502
+
+
+CW_min_max :
+6.900160033517341
+
+
+CW_min_mid :
+60.903822619006284
+
+
+
+
+
+
+Cross-compatibility between datasets:
+
+CCW_min_max - CCW_min_mid :
+45.59946434623963
+
+
+CCW_min_max - CW_CCW :
+8.358280682384578
+
+
+CCW_min_max - CW_min_max :
+1.356220937626869e-15
+
+
+CCW_min_max - CW_min_mid :
+17.764929176748982
+
+
+CCW_min_mid - CCW_min_max :
+45.59946434623963
+
+
+CCW_min_mid - CW_CCW :
+59.511578039824364
+
+
+CCW_min_mid - CW_min_max :
+2.815416283546391e-09
+
+
+CCW_min_mid - CW_min_mid :
+57.93052111979653
+
+
+CW_CCW - CCW_min_max :
+8.358280682384578
+
+
+CW_CCW - CCW_min_mid :
+59.511578039824364
+
+
+CW_CCW - CW_min_max :
+1.4381684895419833e-16
+
+
+CW_CCW - CW_min_mid :
+67.68563125396506
+
+
+CW_min_max - CCW_min_max :
+1.356220937626869e-15
+
+
+CW_min_max - CCW_min_mid :
+2.815416283546391e-09
+
+
+CW_min_max - CW_CCW :
+1.4381684895419833e-16
+
+
+CW_min_max - CW_min_mid :
+2.7404932250228003e-07
+
+
+CW_min_mid - CCW_min_max :
+17.764929176748982
+
+
+CW_min_mid - CCW_min_mid :
+57.93052111979653
+
+
+CW_min_mid - CW_CCW :
+67.68563125396506
+
+
+CW_min_mid - CW_min_max :
+2.7404932250228003e-07
+
+
