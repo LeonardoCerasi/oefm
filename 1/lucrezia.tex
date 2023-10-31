@@ -119,6 +119,37 @@
     e a frequenze intermedie, sia in senso orario (i dati sono riportati nella tabella $ riferimento-alla-tabella $) sia 
     in senso antiorario (i dati sono riportati nella tabella $ riferimento-alla-tabella $). \\
     
+    \section {Analisi dati}
+
+
+    \subsection {Stima degli errori}
+    %% finisco parte iniziata da Giulia
+
+    L'errore sulla stima del valore di $ c $, $ \sigma_c(tot) $, è frutto di due componenti, una statistica $\sigma_c(stat)$ e una sistematica $\sigma_c(sist)$:
+    \begin{equation}
+        \label{sigma_tot}
+        \sigma_c(tot) = \sqrt{ \sigma_c(stat) ^2 + \sigma_c(sist) ^2 } 
+    \end{equation}
+    
+    La componente statistica viene determinata attraverso la deviazione standard della media dei valori ottenuti per $c$ per ogni set di misure di $ \Delta \omega $ e $ \Delta \delta $. \\
+    La componente sistematica viene determinata attraverso la propagazione degli errori sulle misure delle grandezze $D$ e $a$ nella formula per la determinazione della velocità della luce $ riferimento-alla-formula $. In tale procedimento si considerano le grandezze  $\omega$ e $\delta$ come prive di errore, poiché questo è già stato considerato nella componente statistica dell'errore.
+
+    \begin{equation}
+        \label{sigma_stat}
+        \sigma_c(stat) = \sqrt{ (\frac{\partial c}{\partial D})^2 \, \sigma_D ^2 + (\frac{\partial c}{\partial a})^2 \, \sigma_a ^2 } 
+    \end{equation}
+
+    dove
+
+    \begin{equation}
+        \label{eqn:propD}
+        \frac{\partial c}{\partial D} = \frac{4\Delta \omega}{\Delta \delta} \frac{D f_2 (2a + D -2f_2)}{(a + D -f_2)^2}
+        \end{equation}
+
+    \begin{equation}
+        \label{eqn:propa}
+        \frac{\partial c}{\partial a} = -\frac{4\Delta \omega}{\Delta \delta} \frac{D^2 f_2}{(a + D -f_2)^2}
+        \end{equation}
 
     \section{Appendice}
 
