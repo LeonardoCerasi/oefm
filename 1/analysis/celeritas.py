@@ -75,3 +75,18 @@ with open("t_student.txt", 'w') as text:
                 print(key_1, "-", key_2, ":", file=text)
                 print(t_student_cross(mean(data_set[key_1]['c']), data_set[key_1]['e'], len(data_set[key_1]['c']), mean(data_set[key_2]['c']), data_set[key_2]['e'], len(data_set[key_2]['c'])), file=text)
                 print('\n', file=text)
+    
+    c = 0
+    div = 0
+    for key in data_set:
+        if (key != "CW_min_max"):
+            c += (mean(data_set[key]['c']))/(data_set[key]['e'])**2
+            div += 1/(data_set[key]['e'])**2
+
+    c /= div
+    err = 1 / np.sqrt(div)
+    print('\n\n\n', file=text)
+    print("Final c value: ", c, file=text)
+    print("Error on final c value: ", err, file=text)
+    print("n_sigma: ", (299792456.2 - c) / err, file=text)
+    print("n_sigma: ", (299792456.2 - 297900000) / 900000, file=text)

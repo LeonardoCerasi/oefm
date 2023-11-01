@@ -106,3 +106,11 @@ CW_min_mid - CW_min_max :
 2.7404932250228003e-07
 
 
+
+
+
+
+Final c value:  297861859.43981004
+Error on final c value:  899976.7128174602
+n_sigma:  2.1451630166585525
+n_sigma:  2.1027291111110977
