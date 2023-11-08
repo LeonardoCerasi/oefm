@@ -1,0 +1,170 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[]{csvsimple}
+
+\usepackage{ragged2e}
+\usepackage[left=25mm, right=25mm, top=15mm]{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{paralist}
+\usepackage{subfig} 
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{braket}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{babel}
+\usepackage{caption}
+\captionsetup{font=small}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+\usepackage{sectsty}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage[titles,subfigure]{tocloft}
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape}
+
+\let\oldsection\section% Store \section
+\renewcommand{\section}{% Update \section
+	\renewcommand{\theequation}{\thesection.\arabic{equation}}% Update equation number
+	\oldsection}% Regular \section
+\let\oldsubsection\subsection% Store \subsection
+\renewcommand{\subsection}{% Update \subsection
+	\renewcommand{\theequation}{\thesubsection.\arabic{equation}}% Update equation number
+	\oldsubsection}% Regular \subsection
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\g}{\text{g}}
+\newcommand{\m}{\text{m}}
+\newcommand{\cm}{\text{cm}}
+\newcommand{\mm}{\text{mm}}
+\newcommand{\s}{\text{s}}
+\newcommand{\N}{\text{N}}
+\newcommand{\Hz}{\text{Hz}}
+
+\newcommand{\virgolette}[1]{``\text{#1}"}
+\newcommand{\tildetext}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+
+\renewcommand{\arraystretch}{1.2}
+
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
+
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+%opening
+\title{%
+    \Huge Misura del rapporto carica su massa di elettroni non relativistici \\
+    \Large C.d.L. in Fisica, a.a. 2022-2023 \\ Università degli Studi di Milano}
+\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi}
+\date{}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Introduzione}
+
+    In questa esperienza ci si propone di misurare il rapporto carica su massa $$ \frac{e}{m} $$ dell'elettrone.
+
+
+    \subsection{Metodo}
+
+    Per determinare il rapporto $ /frac{e}{m} $ si impiega un fascio di elettroni non relativistici: prodotto all'interno di un'ampolla contenente gas idrogeno a bassa pressione, viene fatto deviare - mediante l'immersione dell'ampolla in un campo magnetico $ B_z $ - fino a fargli compiere una traiettoria circolare. Il raggio della circonferenza risulta essere la grandezza fondamentale per la determinazione della grandezza interessata come mostrato dalla seguente equazione:
+
+    \begin{equation}
+        \label{e_m}
+        \frac{e}{m} = \frac{2 \Delta V}{(B_z R)^2}
+    \end{equation}
+
+    La determinazione della grandezza interessata viene effettuata mediante l'utilizzo di un fascio di elettroni non relativistici. Questi vengono emessi per effetto termoelettrico da un catodo posto in un'apolla contenente gas idrogeno a bassa pressione 
+
+    La determinazione della velocità della luce viene effettuata utilizzando il metodo di Focault: 
+    viene diretto un fascio luminoso, proveniente da una sorgente, verso uno specchio rotante che ne causa
+     la riflessione con spostamento angolare $    \Delta\omega  $.\\
+     Il raggio di luce, dopo aver colpito lo specchio rotante, viene riflesso nella direzione opposta lungo 
+     la stessa traiettoria che aveva compito nel viaggio di andata. Poiché lo specchio è in rotazione, 
+     la posizione in cui il raggio colpisce lo specchio è in costante cambiamento: questo causa uno spostamento
+      angolare tra il punto di arrivo del raggio riflesso e la posizione iniziale - misurata con specchio fermo -.\\
+      Misurando con precisione la posizione iniziale $ \delta _i $ - con specchio fermo - e la finale  $ \delta _f $ - con specchio in movimento - 
+      si riesce a dedurre lo spostamento angolare $ \Delta \delta = \delta_f - \delta_i $ : questo rende possibile determinare la velocità della luce 
+
+    \begin{equation}
+    \label{eqn:c}
+    c=4f_2D^2
+    \frac{(\omega -\omega_0)}{(D+a-f_2)\Delta \delta }
+    \end{equation}
+
+    dove $ c $ è la velocità della luce, $ f_2 $ è la lunghezza focale della seconda lente posta nell'apparato,
+    $ D $ è la lunghezza del percorso compituto dal facio luminoso, $ \omega_0 $ e $ \omega $ sono rispettivamente
+    la velocità angolare iniziale e finale dello specchio rotante, $ a $ è la distanza tra 
+    la seconda lente dell'apparato e lo specchio rotante e $ \Delta\delta$ è lo spostamento 
+    dell'immagine nel punto di osservazione, quando la velocità angolare dello specchio rotante passa da 
+    $ \omega_0 $ a $ \omega $.
+
+    \section {Analisi dati}
+
+    \subsection {Stima degli errori}
+
+    \section{Appendice}
+
+    \begin{table}
+        \centering
+
+    \begin{tabular}{||c|c|c||c|c|c||}
+        \hline
+        $\nu_0\, [\text{Hz}] $ & $\omega_0\, [\text{rad/s}] $ & $\delta_0\, [\text{m}] $ & $\nu\, [\text{Hz}] $ & $\omega_0\, [\text{rad/s}] $ & $\delta\, [\text{m}] $ \\
+        \hline\hline
+        $-1395$ & $-8765.043504 $ & $8.93$ & $1387$ & $8714.778021$ & $9.69$\\\hline
+        $-1400$ & $-8796.459430 $ & $8.92$ & $1406$ & $8834.158542$ & $9.69$\\\hline
+        $-1300$ & $-8168.140899 $ & $8.93$ & $1407$ & $8840.441727$ & $9.70$\\\hline
+        $-1413$ & $-8878.140839 $ & $8.91$ & $1391$ & $8739.910762$ & $9.70$\\\hline
+        $-1360$ & $-8545.132018 $ & $8.92$ & $1382$ & $8683.362095$ & $9.69$\\\hline
+        $-1346$ & $-8457.167423 $ & $8.92$ & $1402$ & $8809.025801$ & $9.70$\\\hline
+        $-1358$ & $-8532.565647 $ & $8.91$ & $1394$ & $8758.760318$ & $9.69$\\\hline
+        $-1393$ & $-8752.477133 $ & $8.91$ & $1419$ & $8915.839951$ & $9.70$\\\hline
+        $-1390$ & $-8733.627577 $ & $8.92$ & $1369$ & $8601.680686$ & $9.69$\\\hline
+        $-1416$ & $-8896.990395 $ & $8.91$ & $1419$ & $8915.839951$ & $9.70$\\\hline
+        $-1394$ & $-8758.760318 $ & $8.93$ & $1424$ & $8947.255877$ & $9.69$\\\hline
+        $-1366$ & $-8582.831130 $ & $8.91$ & $1419$ & $8915.839951$ & $9.69$\\\hline
+        $-1417$ & $-8903.273580 $ & $8.91$ & $1404$ & $8821.592171$ & $9.70$\\\hline
+        $-1322$ & $-8306.370976 $ & $8.92$ & $1312$ & $8243.539123$ & $9.66$\\\hline
+        $-1378$ & $-8658.229353 $ & $8.93$ & $1409$ & $8853.008098$ & $9.69$\\\hline
+        $-1300$ & $-8168.140899 $ & $8.92$ & $1394$ & $8758.760318$ & $9.68$\\\hline
+        $-1378$ & $-8658.229353 $ & $8.92$ & $1315$ & $8262.388679$ & $9.66$\\\hline
+        $-1372$ & $-8620.530241 $ & $8.92$ & $1369$ & $8601.680686$ & $9.66$\\\hline
+        $-1385$ & $-8702.211650 $ & $8.93$ & $1384$ & $8695.928465$ & $9.70$\\\hline
+        $-1362$ & $-8557.698388 $ & $8.93$ & $1329$ & $8350.353273$ & $9.63$\\\hline
+        $-1309$ & $-8224.689567 $ & $8.93$ & $1349$ & $8476.016979$ & $9.69$\\\hline
+        $-1365$ & $-8576.547944 $ & $8.92$ & $1383$ & $8689.645280$ & $9.69$\\\hline
+        $-1389$ & $-8727.344392 $ & $8.92$ & $1317$ & $8274.955050$ & $9.65$\\\hline
+        $-1342$ & $-8432.034682 $ & $8.92$ & $1314$ & $8256.105494$ & $9.66$\\\hline
+        $-1398$ & $-8783.893059 $ & $8.92$ & $1331$ & $8362.919644$ & $9.66$\\\hline
+        $-1364$ & $-8570.264759 $ & $8.92$ & $1381$ & $8677.078909$ & $9.69$\\\hline
+        $-1374$ & $-8633.096612 $ & $8.92$ & $1385$ & $8702.211650$ & $9.70$\\\hline
+        $-1372$ & $-8620.530241 $ & $8.93$ & $1375$ & $8639.379797$ & $9.67$\\\hline
+        $-1375$ & $-8639.379797 $ & $8.91$ & $1310$ & $8230.972752$ & $9.67$\\\hline
+        $-1347$ & $-8463.450609 $ & $8.93$ & $1325$ & $8325.220532$ & $9.68$\\\hline
+    \end{tabular}
+    \caption{Specchio in rotazione CW a frequenza iniziale massima $\nu_0$ e in rotazione CCW a frequenza finale massima $\nu$: misure di posizione iniziale $\delta_0$ e finale $\delta$ dello spot luminoso}
+    \label{CW_CCW}
+\end{table}
