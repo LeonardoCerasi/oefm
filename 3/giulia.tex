@@ -3,6 +3,7 @@
 \usepackage[english]{babel}
 
 \usepackage[]{csvsimple}
+\usepackage{float}
 
 \usepackage{ragged2e}
 \usepackage[left=25mm, right=25mm, top=15mm]{geometry}
@@ -71,12 +72,12 @@
 
 \DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
 
-%opening
+
 \title{%
-    \Huge Misura del rapporto carica su massa di elettroni non relativistici \\
-    \Large C.d.L. in Fisica, a.a. 2023-2024 \\ Università degli Studi di Milano}
-\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi}
-\date{}
+    \Huge Misura del rapporto carica/massa di un elettrone non relativistico \\
+    \Large Laboratorio di Ottica, Elettronica e Fisica Moderna \\ C.d.L. in Fisica, a.a. 2023-2024 \\ Università degli Studi di Milano}
+\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi \\ Matricole: 13655A, 11410A, 11823A}
+\date{2 novembre 2023}
 
 \begin{document}
 
@@ -89,11 +90,9 @@
 
 
     \subsection{Metodo}
+    In un'ampolla contenente gas idrogeno a bassa pressione (circa $ 10^{-2}\, torr $), è posta una resistenza che, essendo percorsa da corrente elettrica alternata, scalda un catodo che produce elettroni per effetto termoelettrico. Questi, accelerati dalla differenza di potenziale $\Delta V$ presente tra il catodo e l'anodo, vengono fatti collimare in un unico fascio, la cui traiettoria viene deviata dalla forza di Lorentz - ortogonale al vettore velocità degli elettroni - generata dal campo magnetico $ B_z $ prodotto dalle bobine di Helmholz poste ai lati dell'ampolla: il cammino percorso dal fascio assume una forma circolare grazie alla regolazione dell'intensità di $B_z$. \\
 
-    In un'ampolla contenente gas idrogeno a bassa pressione (circa $ 10^{-2}\, torr $), è posta una resistenza che, essendo percorsa da corrente elettrica alternata, scalda un catodo che produce elettroni per effetto termoelettrico. 
-    Questi, accelerati dalla differenza di potenziale $\Delta V$ presente tra il catodo e l'anodo, vengono fatti collimare in un unico fascio, la cui traiettoria viene deviata dalla forza di Lorentz - ortogonale al vettore velocità degli elettroni - generata dal campo magnetico $ B_z $ prodotto dalle bobine di Helmholz poste ai lati dell'ampolla: il cammino percorso dal fascio assume una forma circolare grazie alla regolazione dell'intensità di $B_z$. \\
-
-    Lungo il loro cammino, gli elettroni collidono contro le molecole di idrogeno, emettendo fotoni ad una lunghezza d'onda di circa 4500 Å.
+    Lungo il loro cammino, gli elettroni collidono con le molecole di idrogeno, emettendo fotoni ad una lunghezza d'onda di circa 4500 Å.
     Il raggio della circonferenza visibile risulta fondamentale per la determinazione della grandezza interessata come mostrato dalla seguente equazione:
 
     \begin{equation}
@@ -107,27 +106,73 @@
 
     \section{Misure}
 
-    \subsubsection{Campo magnetico generato dalle bobine di Helmholtz}
+    \subsection{Per la determinazione del campo magnetico generato dalle bobine di Helmholtz}
 
-    La determinazione delle grandezze utili a fornire un valore di $e/m$ richiede la determinazione preliminare del raggio medio delle bobine di Helmholz: tale misurazione viene compiuta attraverso l'utilizzo di un calibro di risoluzione 0.02 mm. Le bobine di Helmholz hanno la caratteristica di essere poste ad una distanza equivalente al loro raggio medio, dunque si procede misurando la loro distanza per eccesso e per difetto - 5 misurazioni per entrambe le distanze - e come valore finale si fornisce la media delle due medie ottenute dai due set di dati. Come incertezza, invece, viene fornita la somma in quadratura delle devaizioni standard dei due set si dati:
+    La determinazione delle grandezze utili a fornire un valore di $e/m$ richiede la determinazione preliminare del raggio medio delle bobine di Helmholz: tale misurazione viene compiuta attraverso l'utilizzo di un calibro di risoluzione 0.02 mm. Le bobine di Helmholz hanno la caratteristica di essere poste ad una distanza equivalente al loro raggio medio, dunque si procede misurando la loro distanza per eccesso e per difetto - 5 misurazioni per entrambe le distanze - e come valore finale si fornisce la media delle due medie ottenute dai due set di dati. Le misure effettuate sono riportate in Tab. ~\ref{Raggio_bobine} e ~\ref{media_devst_Rb}. Come incertezza, invece, si attribuisce la somma in quadratura delle deviazioni standard dei due set si dati, poiché tale valore è superiore alla risoluzione dello strumento.
+
+
+    \begin{table}[H]
+        \centering
+    
+        \begin{tabular}{||c|c||}
+            \hline
+            $R_b \, per \, difetto\, \text{[cm]} $ & $R_b \, per \, eccesso\, \text{[cm]} $\\
+            \hline\hline
+    
+            $ 13.45 $ & $ 17.77 $ \\\hline
+            $ 13.51 $ & $ 17.80 $ \\\hline
+            $ 13.48 $ & $ 17.69 $ \\\hline
+            $ 13.76 $ & $ 17.74 $ \\\hline
+            $ 13.43 $ & $ 17.70 $ \\\hline
+        
+        \end{tabular}
+        \caption{Misure del raggio medio delle bobine di Helmholz per difetto e per eccesso.}
+        \label{Raggio_bobine}
+    \end{table}
+    
+    \begin{table}[H]
+        \centering
+    
+        \begin{tabular} {||c|c||c|c||}
+            \hline
+            $ media \, per \, difetto\, [\text{cm}] $ & $\sigma_{dif} [\text{cm}] $ & $ media \, per \, eccesso\, [\text{cm}] $ & $\sigma_{ecc} [\text{cm}] $\\
+            \hline \hline
+    
+            $ 13.52 $ & $ 0.14 $ & $ 17.74 $ & $ 0.05 $ \\\hline
+    
+        \end{tabular}
+        \caption{Medie per difetto e per eccesso delle misure del raggio medio delle bobine di Helmholz con relative deviazioni standard}
+        \label{media_devst_Rb}
+    
+    \end{table}
+
+    Il valore finale attribuito al raggio delle bobine di Helmholtz risulta dunque essere:
 
     \begin{equation}
         \label{misura_Rb}
         R_b = (15.63 \pm 0.07) \, \text{cm}
     \end{equation} 
 
-    Tutte le misure effettuate sono riportate nella Tab ~\ref{Raggio_bobine}.
+    Dopo aver determinato, mediante ago magnetico, la direzione della componente orizzontale del campo magnetico terrestre, si orienta l'asse delle bobine ortogonale a tale direzione, e, al variare della differenza di potenziale $\Delta V $ tra catodo e anodo e dell'intensità di corrente $I$ che alimenta le bobine di Helmholtz, si misura il raggio $R$ della circonferenza percorsa dagli elettroni. Alle misure del raggio $R$ è stata attribuita come incertezza la risoluzione del calibro adoperato, ovvero $0,01 \text{mm}$. I valori di differenza di potenziale e intensità di corrente, invece, sono stati misurati attraverso un multimetro digitale in modalità, rispettivamente, di Voltmetro (con risoluzione di $0,1 \text{V}$) e di Amperometro (con risoluzione di $0,001 \text{A}$). In entrambi i casi è stata attribuita come incertezza la risoluzione dello strumento, poiché risultava sempre superiore all'intervallo di stabilizzazione del generatore ($\pm 0,1 \%$). Tale set di misure è riportato in Tab. \ref{CM_ortogonale}. \\
+    
+    Si è ripetuto il medesimo set di misure orientando l'asse delle bobine in direzione parallela ( Tab. \ref{CM_parallelo} ) e antiparallela ( Tab. \ref{CM_antiparallelo} ) rispetto alla componente orizzontale del campo magnetico terrestre.
 
-    Si procede alla costruzione dei circuiti necessari per produrre il campo magnetico: in questa fase si attriuisce come errore a $\Delta V $ il valore di ||| e a $ I $ il valore di ||| . %% valore incertezza su differenza di potenziale e corrente %%
-    Tali misurazioni sono necessarie alla determinazione del campo magnetico $B_z(0)$ - ovvero il valore del campo magnetico nel centro dell'ampolla - che viene calcolato come segue:
+    \subsection{Per la determinzione del campo magnetico terrestre}
+    Nelle condizioni in cui la strumentazione viene posta parallelela e antiparallela al campo magnetico terrestre, questo influisce sull'effettivo campo magnetico a cui sono sottoposti gli elettroni lungo la loro orbita: risulta, dunque, necessario dare un valore a questa grandezza in modo da poter correggere le errate stime del rapporto $e/m$. In mezzo ad una coppia di bobine di geometria nota è posto un ago magnetico: questo viene fatto deflettere di angoli noti facendo variare l'intensità di corrente che alimenta le bobine (generatrici del campo magnetico). L'intensità di corrente viene misurata mediante multimetro in modalità di Amperometro, con risoluzione di $0,001 \text{A}$ (attribuita come incertezza della misura, poiché maggiore all'intervallo di stabilizzazione del generatore $\pm 0,1 \%$). L'angolo di deflessione, invece, viene misurato con un goniometro, solidale alle bobine, orientato in modo che, a corrente nulla, l'ago magnetico risulti diretto nella direzione $0-180 \degree $ di esso. Come incertezza a tali misure viene attribuita la risoluzione dello strumento: $1 \degree$. Tali misure sono state prese facendo deflettere l'ago magnetico sia in senso orario sia in senso antiorario, e sono riportate in Tabb. \ref{campomagneticoterrestre_sensoorario} , \ref{campomagneticoterrestre_sensoantiorario}.
+    
 
+    \section {Analisi Dati}
+
+    \subsection{Elaborazione Dati}
+    \subsubsection{Campo magnetico generato dalle bobine di Helmholtz}
+    Attraverso la misura del raggio delle bobine di Helmholtz e dell'intensità di corrente con cui vengono alimentate, è possibile determinare l'intensità del campo di induzione magnetica $B_z(0)$ da esse prodotto attraverso la seguente relazione:
     \begin{equation}
         \label{B_z0}
         B_z (0) = \mu _0 \frac{8}{5\sqrt{5}} \frac{NI}{R_b}
     \end{equation} 
 
-    dove $\mu _0 = 4\pi \times 10^{-7} \, \text{N/A}^2 $ è la costante di permeabilità magentica del vuoto, $N$ è i numero di spire che compongono le bobine di Helmholtz - pari a 130 in questo caso -, $I$ è il valore dell'intensità di corrente e $R_b$ è il valore del raggio medio delle bobine assegnato (equazione ~\ref{misura_Rb}).
-    Poichè il valore effettivo del campo magnetico $B_z$ a cui sono sottoposti gli elettroni non è quello calcolato nel centro dell'ampolla, il valore ricavato deve essere corretto:
+    dove $\mu _0 = 4\pi \times 10^{-7} \, \text{N/A}^2 $ è la costante di permeabilità magentica del vuoto, $N$ è i numero di spire che compongono le bobine di Helmholtz - pari a 130 in questo caso -, $I$ è il valore dell'intensità di corrente e $R_b$ è il valore del raggio medio delle bobine assegnato (equazione ~\ref{misura_Rb}). \\
+    La relazione \ref{B_z0} fornisce, per esattezza, l'intensità del campo magnetico al centro dell'ampolla. Tuttavia, ai fini dell'esperienza, è utile conoscere il campo magnetico cui sono effettivamente sottoposti gli elettroni, ovvero il valore di questo lungo la circonferenza percorsa. Il valore ricavato deve essere dunque corretto mediante la seguente relazione:
 
     \begin{equation}
         \label{B_zR}
@@ -135,73 +180,40 @@
     \end{equation}
 
     dove $B_z(R) $ è il valore del campo magnetico alla distanza $ R $ - raggio della circonferenza percorsa dagli elettroni - dal centro dell'ampolla, $\delta$ è il termine correttivo fornito in Tab ~\ref{termine_correttivo} e $B_z(0)$ è il valore del campo magnetico al centro dell'ampolla calcolato all'equazione ~\ref{B_z0}.
-
-
-
-    Avendo prodotto le condizioni necessarie alla formazione della traiettoria circolare degli elettroni, si ancorano le guide esterne all'ampolla ad un valore fissato - che sarà poi dato come valore del diametro della circonferenza - per minimizzare gli eventuali errori di parallasse. Si fornisce come valore per il diametro il seguente, dove l'errore è dato dall'incertezza strementale del calibro elettronico utilizzato: 
-
-    \begin{equation}
-        \label{misura_d}
-        d = ( 9.814\pm 0.001) \, \text{cm}
-    \end{equation} 
-
-    Da questo valore si ricava il raggio della traiettoria degli elettroni. \\
+    Inoltre, nel caso in cui l'asse delle bobine, e dunque il campo magnetico da esse generato, sia parallelo (o antiparallelo) al campo magnetico terrestre, è necessario sommare (o sottrarre) al valore di $B_z(0)$ la componente orizzontale del campo magnetico terrestre, ricavata come da Par. \ref{par:campo_magnetico_terrestre}. I valori così ottenuti sono riportati in Tabb. \ref{CM_ortogonale}, \ref{CM_parallelo}, \ref{CM_antiparallelo}.
 
     \subsubsection{Campo magnetico terrestre}
+    La componente orizzontale del campo magnetico terrestre $B_t $ si ricava attraverso la seguente relazione:
 
-    Nelle condizioni in cui la strumentazione viene posta parallelea e antiparallela al campo magnetico terrestre, questo influisce su quello che è l'effettivo campo magnetico a cui sono sottoposti gli elettroni lungo la loro orbita: risulta necessario dare un valore a questa grandezza in modo da poter correggere le errate stime del rapporto $e/m$.
-    In mezzo ad una coppia di bobine di geometria nota è posto un ago magnetico: questo viene fatto deflettere di angoli noti facendo variare l'intensità di corrente che alimenta le bobine (generatrici del campo magnetico). Seguendo i valori riportati nelle Tabb ~\ref{campomagneticoterrestre_sensoorario} ~\ref{campomagneticoterrestre_sensoantiorario} viene dato come valore per il campo magnetico terrestre il seguente:
+    \begin{equation}
+        \label{mag_terr}
+        B_t= \left(\frac{I}{I_0}\right) (B_z \cot(\theta) \, + B_r)
+    \end{equation}
+    
+    dove $ I_0 $ è l'intensità di corrente di alimentazione delle bobine, $ I $ è l'intensità di corrente necessaria per deflettere l'ago di un angolo $ \theta $, $B_z$ e $B_r$ sono le componenti di campo magnetico generato dalle bobine (tabulate in base alla lunghezza dell'ago magnetico e all'angolo di deflessione).
+    Attraverso una media ponderata dei valori ottenuti, riportati nelle Tabb. \ref{campomagneticoterrestre_sensoorario} e \ref{campomagneticoterrestre_sensoantiorario}, si ottiene il seguente valore per la componente orizzontale del campo magnetico terrestre:
 
     
     \begin{equation}
         \label{misura_campomagneticoterrestre}
-        B_t = ( 2.59462 10^{-7}\pm ?) \, \text{T}
+        B_t = ( 2.59\pm ?) \, \cdot 10^{-7} \, \text{T}
     \end{equation}
 
+    dove l'incertezza è stata attribuita come da paragrafo $reference-a-incertezza$.
 
-    \section {Analisi dati}
+    \label{par:campo_magnetico_terrestre}
+
 
     \subsection {Stima degli errori}
 
+
+
+    \newpage
     \section{Appendice}
 
-    \begin{table}
-        \centering
-
-    \begin{tabular}{||c|c||}
-        \hline
-        $R_b \, per \, difetto\, \text{[cm]} $ & $R_b \, per \, eccesso\, \text{[cm]} $\\
-        \hline\hline
-
-        $ 13.45 $ & $ 17.77 $ \\\hline
-        $ 13.51 $ & $ 17.80 $ \\\hline
-        $ 13.48 $ & $ 17.69 $ \\\hline
-        $ 13.76 $ & $ 17.74 $ \\\hline
-        $ 13.43 $ & $ 17.70 $ \\\hline
-    
-    \end{tabular}
-    \caption{Misure del raggio medio delle bobine di Helmholz per difetto e per eccesso.}
-    \label{Raggio_bobine}
-\end{table}
-
-\begin{table}
-    \centering
-
-    \begin{tabular} {||c|c||c|c||}
-        \hline
-        $ media \, per \, difetto\, [text{cm}] $ & $\sigma_dif [text{cm}] $ & $ media \, per \, eccesso\, [text{cm}] $ & $\sigma_ecc [text{cm}] $\\
-        \hline \hline
-
-        $ 13.52 $ & $ 0.14 $ & $ 17.74 $ & $ 0.05 $ \\\hline
-
-    \end{tabular}
-    \caption{Medie per difetto e per eccesso con relative deviazioni standard}
-    \label{media_devst_Rb}
-
-\end{table}
 
 
-    \begin{table}
+    \begin{table}[H]
         \centering
 
     \begin{tabular}{||c|c|c|c|c|c|c||}
@@ -376,24 +388,24 @@
 
 \begin{tabular}{||c|c|c|c|c|c||}
     \hline
-    $Angolo $ & $I\, \text{[A]} $ & $B_r\, [\text{mG}] $ & $B_z\, [\text{mG}] $ & $B_t\, \text{[mG]} $ & $I_0\, \text{[A]} $\\
+    $Angolo [\text{\degree}] $ & $I\, \text{[A]} $ & $B_r\, [\text{mG}] $ & $B_z\, [\text{mG}] $ & $B_t\, \text{[mG]} $ & $I_0\, \text{[A]} $\\
     \hline\hline
 
 
 
-    $65$ & $0,037  $ & $2,5 $ & $0,001545 $ & $0,925266565$ & $0.1$ \\\hline
-    $60$ & $0,03145$ & $6,2 $ & $0,0015472$ & $1,950180935$ & $$ \\\hline
-    $55$ & $0,02565$ & $11  $ & $0,001548 $ & $2,821778026$ & $$ \\\hline
-    $50$ & $0,02179$ & $16,7$ & $0,0015471$ & $3,639212871$ & $$ \\\hline
-    $45$ & $0,01698$ & $22,8$ & $0,0015438$ & $3,871702137$ & $$ \\\hline
-    $40$ & $0,01369$ & $28,6$ & $0,0015379$ & $3,91559091 $ & $$ \\\hline
-    $35$ & $0,01312$ & $33,3$ & $0,0015295$ & $4,369246587$ & $$ \\\hline
-    $30$ & $0,00973$ & $36,2$ & $0,001519 $ & $3,522515995$ & $$ \\\hline
-    $25$ & $0,00725$ & $36,7$ & $0,0015072$ & $2,660984335$ & $$ \\\hline
-    $20$ & $0,00539$ & $34,2$ & $0,0014951$ & $1,843601408$ & $$ \\\hline
-    $15$ & $0,00409$ & $28,9$ & $0,0014839$ & $1,182236504$ & $$ \\\hline
-    $10$ & $0,00196$ & $20,9$ & $0,001475 $ & $0,409803957$ & $$ \\\hline
-    $5 $ & $0,0006 $ & $11  $ & $0,0014691$ & $0,066100751$ & $$ \\\hline
+    $65$ & $0,037  $ & $2,5 $ & $0,001545 $ & $0,925266565$ & $0,1$ \\\hline
+    $60$ & $0,03145$ & $6,2 $ & $0,0015472$ & $1,950180935$ & $0,1$ \\\hline
+    $55$ & $0,02565$ & $11  $ & $0,001548 $ & $2,821778026$ & $0,1$ \\\hline
+    $50$ & $0,02179$ & $16,7$ & $0,0015471$ & $3,639212871$ & $0,1$ \\\hline
+    $45$ & $0,01698$ & $22,8$ & $0,0015438$ & $3,871702137$ & $0,1$ \\\hline
+    $40$ & $0,01369$ & $28,6$ & $0,0015379$ & $3,91559091 $ & $0,1$ \\\hline
+    $35$ & $0,01312$ & $33,3$ & $0,0015295$ & $4,369246587$ & $0,1$ \\\hline
+    $30$ & $0,00973$ & $36,2$ & $0,001519 $ & $3,522515995$ & $0,1$ \\\hline
+    $25$ & $0,00725$ & $36,7$ & $0,0015072$ & $2,660984335$ & $0,1$ \\\hline
+    $20$ & $0,00539$ & $34,2$ & $0,0014951$ & $1,843601408$ & $0,1$ \\\hline
+    $15$ & $0,00409$ & $28,9$ & $0,0014839$ & $1,182236504$ & $0,1$ \\\hline
+    $10$ & $0,00196$ & $20,9$ & $0,001475 $ & $0,409803957$ & $0,1$ \\\hline
+    $5 $ & $0,0006 $ & $11  $ & $0,0014691$ & $0,066100751$ & $0,1$ \\\hline
 
 \end{tabular}
 \caption{Componenti del campo magnetico terrestre $B_t$, $B_r$ e $B_z$ ottenute mediante la misura della deflessione angolare dell'ago magnetico in senso orario. Si riportano inoltre i valori dell'intensità della corrente indotta nelle bobine $I$ e del valore iniziale $I_0$}
@@ -406,28 +418,28 @@
 
 \begin{tabular}{||c|c|c|c|c|c||}
     \hline
-    $Angolo $ & $I\, \text{[A]} $ & $B_r\, \text{[mG]} $ & $B_z\, \text{[mG]} $ & $B_t\, \text{[mG]} $ & $I_0\, \text{[A]} $\\
+    $Angolo [\text{\degree}]$ & $I\, \text{[A]} $ & $B_r\, \text{[mG]} $ & $B_z\, \text{[mG]} $ & $B_t\, \text{[mG]} $ & $I_0\, \text{[A]} $\\
     \hline\hline
 
 
 
-    $65$ & $0,03685$ & $2,5 $ & $0,001545 $ & $0,921515484$ & $0.1$ \\\hline
-    $60$ & $0,03136$ & $6,2 $ & $0,0015472$ & $1,944600131$ & $$ \\\hline
-    $55$ & $0,0231 $ & $11  $ & $0,001548 $ & $2,541250386$ & $$ \\\hline
-    $50$ & $0,02082$ & $16,7$ & $0,0015471$ & $3,477210279$ & $$ \\\hline
-    $45$ & $0,01686$ & $22,8$ & $0,0015438$ & $3,844340285$ & $$ \\\hline
-    $40$ & $0,01383$ & $28,6$ & $0,0015379$ & $3,955633476$ & $$ \\\hline
-    $35$ & $0,0121 $ & $33,3$ & $0,0015295$ & $4,029564307$ & $$ \\\hline
-    $30$ & $0,0098 $ & $36,2$ & $0,001519 $ & $3,547857837$ & $$ \\\hline
-    $25$ & $0,00765$ & $36,7$ & $0,0015072$ & $2,807797263$ & $$ \\\hline
-    $20$ & $0,0057 $ & $34,2$ & $0,0014951$ & $1,949634142$ & $$ \\\hline
-    $15$ & $0,0036 $ & $28,9$ & $0,0014839$ & $1,040599368$ & $$ \\\hline
-    $10$ & $0,00152$ & $20,9$ & $0,001475 $ & $0,31780715 $ & $$ \\\hline
-    $5 $ & $0,00066$ & $11  $ & $0,0014691$ & $0,072710826$ & $$ \\\hline
+    $65$ & $0,03685$ & $2,5 $ & $0,001545 $ & $0,921515484$ & $0,1$ \\\hline
+    $60$ & $0,03136$ & $6,2 $ & $0,0015472$ & $1,944600131$ & $0,1$ \\\hline
+    $55$ & $0,0231 $ & $11  $ & $0,001548 $ & $2,541250386$ & $0,1$ \\\hline
+    $50$ & $0,02082$ & $16,7$ & $0,0015471$ & $3,477210279$ & $0,1$ \\\hline
+    $45$ & $0,01686$ & $22,8$ & $0,0015438$ & $3,844340285$ & $0,1$ \\\hline
+    $40$ & $0,01383$ & $28,6$ & $0,0015379$ & $3,955633476$ & $0,1$ \\\hline
+    $35$ & $0,0121 $ & $33,3$ & $0,0015295$ & $4,029564307$ & $0,1$ \\\hline
+    $30$ & $0,0098 $ & $36,2$ & $0,001519 $ & $3,547857837$ & $0,1$ \\\hline
+    $25$ & $0,00765$ & $36,7$ & $0,0015072$ & $2,807797263$ & $0,1$ \\\hline
+    $20$ & $0,0057 $ & $34,2$ & $0,0014951$ & $1,949634142$ & $0,1$ \\\hline
+    $15$ & $0,0036 $ & $28,9$ & $0,0014839$ & $1,040599368$ & $0,1$ \\\hline
+    $10$ & $0,00152$ & $20,9$ & $0,001475 $ & $0,31780715 $ & $0,1$ \\\hline
+    $5 $ & $0,00066$ & $11  $ & $0,0014691$ & $0,072710826$ & $0,1$ \\\hline
 
 \end{tabular}
 \caption{Componenti del campo magnetico terrestre $B_t$, $B_r$ e $B_z$ ottenute mediante la misura della deflessione angolare dell'ago magnetico in senso antiorario. Si riportano inoltre i valori dell'intensità della corrente indotta nelle bobine $I$ e del valore iniziale $I_0$}
-\label{campomagneticoterrestre_sensoorario}
+\label{campomagneticoterrestre_sensoantiorario}
 \end{table}
 
 
