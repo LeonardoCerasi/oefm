@@ -1,0 +1,130 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[]{csvsimple}
+\usepackage{float}
+
+\usepackage{ragged2e}
+\usepackage[left=25mm, right=25mm, top=15mm]{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{paralist}
+\usepackage{subfig} 
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{braket}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{babel}
+\usepackage{caption}
+\captionsetup{font=small}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+\usepackage{sectsty}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage[titles,subfigure]{tocloft}
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape}
+
+\let\oldsection\section% Store \section
+\renewcommand{\section}{% Update \section
+	\renewcommand{\theequation}{\thesection.\arabic{equation}}% Update equation number
+	\oldsection}% Regular \section
+\let\oldsubsection\subsection% Store \subsection
+\renewcommand{\subsection}{% Update \subsection
+	\renewcommand{\theequation}{\thesubsection.\arabic{equation}}% Update equation number
+	\oldsubsection}% Regular \subsection
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\g}{\text{g}}
+\newcommand{\m}{\text{m}}
+\newcommand{\cm}{\text{cm}}
+\newcommand{\mm}{\text{mm}}
+\newcommand{\s}{\text{s}}
+\newcommand{\N}{\text{N}}
+\newcommand{\Hz}{\text{Hz}}
+
+\newcommand{\virgolette}[1]{``\text{#1}"}
+\newcommand{\tildetext}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+
+\renewcommand{\arraystretch}{1.2}
+
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
+
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+
+\title{%
+    \Huge Misura del rapporto carica/massa di un elettrone non relativistico \\
+    \Large Laboratorio di Ottica, Elettronica e Fisica Moderna \\ C.d.L. in Fisica, a.a. 2023-2024 \\ Università degli Studi di Milano}
+\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi \\ Matricole: 13655A, 11410A, 11823A}
+\date{2 novembre 2023}
+
+\begin{document}
+
+    \maketitle
+
+    \section{Misure}
+
+    \subsection{Misure preliminari}
+
+    Innanzi tutto si prendono 6 misure - mediante l'utilizzo di un calibro di sensibilità $ 0.01\, mm $ dello spessore $ d $ del disantaziale della camera di Millikan
+
+    \begin{table}[H]
+        \centering
+    
+        \begin{tabular}{||c||}
+            \hline
+            $d\, \text{[mm]} $ \\
+            \hline\hline
+    
+            $ 7,65 $ \\\hline
+            $ 7,64 $ \\\hline
+            $ 7,63 $ \\\hline
+            $ 7,64 $ \\\hline
+            $ 7,64 $ \\\hline
+            $ 7,63 $ \\\hline
+
+        
+        \end{tabular}
+        \caption{Misure dello spessore del distanziale}
+        \label{distanziale}
+    \end{table}
+
+    Viene quindi attribuito come valore finale a $ d $ la sua media con la relativa incertezza strumentale:
+
+    \begin{equation}
+        \label{misura_Rb}
+        d = (7.64 \pm 0.01) \, \text{mm}
+    \end{equation} 
+
+    Ogni volta che viene scelta una gocciolina da seguire, si prende la misura della temperatura attuale. Tale grandezza è variata durante l'esperimento tra i $ 21.5\, °C $ e i $ 22.0\, °C $: la temperatura relativa a ciascuna goccia è riportata nelle relative Tabb $ riferimento - alle tavelle-$.
+
+    \subsection {Misure effettive}
+
+    Per 10 gocce vengono prese le misure della differenza di potenziale applicata $ \Delta V $ e il tempo che questa impiega a percorrere $ 0.5 mm $. A tali grandezze si corredano ulteriori informazioni: il verso del moto - se sale o se scende - e dati qualitativi come eventuale presenza di rumore e comportamenti anomali.
+    Tutti i dati vegono riporate nelle Tabb. $ riferimento alle tabelle$.
+
+    La misurazione del tempo di volo è stata effetuata mediante un cronometro digitale di precisione $ 0.01 s $ a cui non viene attribuita alcuna incertezza e la misurazione della differenza di potenziale $ \Delta V $ è stata effettuata mediante un multimetro digitale a cui viene attribuita come incertezza $ 10 V $.
+
+
+\end{document}
