@@ -1,3 +1,14 @@
+% chktex-file 2
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 18
+% chktex-file 24
+% chktex-file 26
+% chktex-file 35
+% chktex-file 44
+% chktex-file 45
+
 \documentclass[]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -105,7 +116,7 @@
         \label{eqn-c}
         c=4 f_2 D^2 \frac{(\omega -\omega_0)}{(D+a-f_2)\Delta \delta }
     \end{equation}
-    dove $ c $ è la velocità della luce, $ f_2 $ è la lunghezza focale della seconda lente posta nell'apparato, $ D $ è la lunghezza del percorso compituto dal facio luminoso, $ \omega_0 $ e $ \omega $ sono rispettivamente la velocità angolare iniziale e finale dello specchio rotante, $ a $ è la distanza tra la seconda lente dell'apparato e lo specchio rotante e $ \Delta\delta$ è lo spostamento dell'immagine nel punto di osservazione, quando la velocità angolare dello specchio rotante passa da $ \omega_0 $ a $ \omega $.
+    dove $ c $ è la velocità della luce, $ f_2 $ è la lunghezza focale della seconda lente posta nell'apparato, $ D $ è la lunghezza del percorso compiuto dal fascio luminoso, $ \omega_0 $ e $ \omega $ sono rispettivamente la velocità angolare iniziale e finale dello specchio rotante, $ a $ è la distanza tra la seconda lente dell'apparato e lo specchio rotante e $ \Delta\delta$ è lo spostamento dell'immagine nel punto di osservazione, quando la velocità angolare dello specchio rotante passa da $ \omega_0 $ a $ \omega $.
 
     \section{Misure}
     
@@ -114,7 +125,7 @@
         \label{equation-for-D}
         D = (13.28 \pm 0.01) \, \text{m}
     \end{equation} \\
-    Si è poi misurata la distanza $a$ tra la seconda lente dell'apparato e lo specchio rotante. La misura è stata effettuata attraverso un calibro di risoluzione $ 0.001 \, \text{m} $, che è stata attribuita come incertezza di $a$:
+    Si è poi misurata la distanza $a$ tra la seconda lente dell'apparato e lo specchio rotante. La misura è stata effettuata attraverso un metro di risoluzione $ 0.001 \, \text{m} $, che è stata attribuita come incertezza di $a$:
     \begin{equation}
         \label{equation for a}
         a = (0.474 \pm 0.001) \, \text{m}
@@ -142,8 +153,8 @@
     La componente statistica viene determinata attraverso la deviazione standard della media dei valori ottenuti per $c$ per ogni set di misure di $ \Delta \omega $ e $ \Delta \delta $. \\
     La componente sistematica viene determinata attraverso la propagazione degli errori sulle misure delle grandezze $D$ e $a$ nella formula per la determinazione della velocità della luce \ref{eqn-c}. In tale procedimento si considerano le grandezze  $\omega$ e $\delta$ come prive di errore, poiché questo è già stato considerato nella componente statistica dell'errore:
     \begin{equation}
-        \label{sigma-stat}
-        \sigma_{c,stat} = \sqrt{ \left(\frac{\partial c}{\partial D}\right)^2 \, \sigma_D ^2 + \left(\frac{\partial c}{\partial a}\right)^2 \, \sigma_a ^2 } 
+        \label{sigma-sist}
+        \sigma_{c,sist} = \sqrt{ \left(\frac{\partial c}{\partial D}\right)^2 \, \sigma_D ^2 + \left(\frac{\partial c}{\partial a}\right)^2 \, \sigma_a ^2 } 
     \end{equation}
     dove:
     \begin{equation}
