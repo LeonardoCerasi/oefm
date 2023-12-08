@@ -87,18 +87,16 @@
 
 \subsection{Scopo}
 
-L'interferometro di Michelson è uno strumento che permette di misurare le seguenti quantità: la lunghezza d'onda di un fascio di luce monocromatica, l'indice di rifrazione dell'aria a pressione atmosferica, la lunghezza dei pacchetti d'onda di una sorgente non monocromatica e la separazione tra le due lunghezze d'onda del doppietto del sodio.
+In questa esperienza ci si propone di misurare - mediante l'utilizzo dell'interferometro di Michelson - le seguenti quattro quantità: la lunghezza d'onda di un fascio di luce monocromatica, l'indice di rifrazione dell'aria a pressione atmosferica, la lunghezza dei pacchetti d'onda di una sorgente non monocromatica e la separazione tra le due lunghezze d'onda del doppietto del sodio.
 
 \subsection{Metodo}
 
-Per la msurazione delle quattro grandezze interessate, si utilizza l'apparato sviluppato da Michelson riportato in figura. L'interferometro è costituito da quattri lastre di vetro ($S_1, \, S_2, \, S_3, \, L_c$): $S_1$ è una lastra semiriflettente - rivolta verso $S_2$ -a facce piane e parallele, $S_2$ e $S_3$ sono completamente riflettenti sulla faccia rivolta verso $S_1$, $L_c$ è una lastra trasparente il cui scopo è quello di rendere uguali i cammiini ottici compiuti dai raggi lungo i due braci dello strumento. 
-Essendosi assicurati che $S_2$ e $S_3$ siano perpendicolari e che formino un angolo di $45°$ con $S_1$, il raggio luminoso inciderà su $S_1$ sdoppiandosi: il primo verrà riflesso da $S_2$ e dalla faccia riflettente di $S_1$, per poi proseguire verso lo schermo, il secondo - riflesso da $S_1$ - verrà riflesso da $S_3$ ed inciderà sullo schermo dove formerà delle figure di interferenza con il primo raggio - douvuta alla coerenza dei due fasci luminosi- .\\
+Per la msurazione delle quattro grandezze interessate, si utilizza l'apparato sviluppato da Michelson riportato in figura. L'interferometro è costituito da quattro lastre di vetro ($S_1, \, S_2, \, S_3, \, L_c$): $S_1$ è una lastra semiriflettente - rivolta verso $S_2$ -a facce piane e parallele, $S_2$ e $S_3$ sono completamente riflettenti sulla faccia rivolta verso $S_1$, $L_c$ è una lastra trasparente il cui scopo è quello di rendere uguali i cammiini ottici compiuti dai raggi lungo i due braci dello strumento. 
+Essendosi assicurati che $S_2$ e $S_3$ siano perpendicolari e che formino un angolo di $45°$ con $S_1$, il raggio luminoso inciderà su $S_1$ sdoppiandosi: il primo verrà riflesso da $S_2$ e dalla faccia riflettente di $S_1$, per poi proseguire verso lo schermo, il secondo - riflesso da $S_1$ - verrà riflesso da $S_3$ ed inciderà sullo schermo dove formerà delle figure di interferenza con il primo raggio - douvuta alla coerenza dei due fasci luminosi- .
 
-\section{Misure}
+\subsubsection{Misura della lunghezza d'onda di un fascio di luca monocromatica}
 
-\subsection {Misura della lunghezza d'onda di un fascio di luce monocromatica}
-
-Si vuole misurare la lunghezza d'ond di un fascio di luce laser: agendo sulla variazione di cammino ottico dei due fasci - spostando lo specchio $S_3$ - si conta il numero di frange chiare (o scure) passanti per un punto prefissato dello schermo. la misura della lunghezza d'onda è pertanto data dalla formula
+Si vuole misurare la lunghezza d'ond di un fascio di luce laser: agendo sulla variazione di cammino ottico dei due fasci - spostando lo specchio $S_3$ - si conta il numero di frange chiare (o scure) passanti per un punto prefissato dello schermo. La misura della lunghezza d'onda è pertanto data dalla formula
 
 \begin{equation}
     \label{lambda_laser}
@@ -107,9 +105,118 @@ Si vuole misurare la lunghezza d'ond di un fascio di luce laser: agendo sulla va
 
 dove $\lambda$ è la lunghezza d'onda incognita, $n_a$ è l'indice di rifrazione dell'aria, $\Delta x$ è lo spostamento dello specchio $S_3$ e $N_1$ è il numero di frange chiare (o scure) contate.
 
+\subsubsection{Misura dell'indice di rifrazione dell'aria}
+
+Tra gli specchi $S_1$ e $S_2$ viene inserita una cameretta contenente una pompa per la creazione del vuoto. Il cammino ottico percorso dal fascio luminoso nel vuoto cambia - poichè questo è legato all'indice di rifrazione del mezzo che attraversa come mostrato dall'equazione \ref{lambda_laser} - e quindi, facendo rientrare lentamente l'aria nella cameretta e contando le frange di interferenza passanti per un dato punto sullo schermo, si riuscirà a fornire una stima del valore dell'indice di rifrazione dell'aria $n_a$ seocndo la seguente equazione:
+
+\begin{equation}
+    \label{n_a}
+    2(n_a - 1) = N_2 \lambda
+\end{equation}
+
+dove $n_a$ è l'indice di rifrazione dell'aria, $N_2$ è il numero di frange contate su un punto dello schermo e $\lambda$ è la lunghezza d'onda del fascio emesso dalla sorgente monocromatica.
+
+\subsubsection{Misura della lunghezza dei pacchetti d'onda di una sorgente non monocromatica}
+
+Il fascio di luce prodotto da una sorgente non monocromatica è costituita da impulsi di lunghezza limitata. L'inferferenza dei fasci luminosi riflessi dagli specchi $S_2$ e $S_3$ si manifesta quando la distanza tra le due sorgenti immagine è inferiore alla lunghezza del pacchetto: quando viene superata tale lunghezza, si osserva sullo schermo una figura unifermemente illuminata e quindi si misura la distanza tra due zone di uniforme illuminazione - mediante la misura dello spostamento di $S_3$ - per quantificare tale grandezza.
+
+\subsubsection{Misura della separazione tra le due lunghezze d'onda del doppietto del sodio}
+
+Si utilizza ora una sorgente luinosa al sodio per misurare le due lunghezze d'onda che emette e la loro cnseguente separazione: quando le frange di interferenza delle due lunghezze d'onda si vanno a sovrapporre, sullo schermo si vede una figura di interferenza con frange molto nette - in particolare quando la differenza di cammino ottico trta i fasci prpvenieni da $S_2$ ed $S_3$ è nulla -. 
+Si misura quindi lo spostamento dello specchio $S_3$ e di ricava:
+
+\begin{equation}
+    \label{Delta_lambda}
+    \lambda _2 - \lambda _1 = \frac {m \lambda ^2 }{2 \Delta x}
+\end{equation}
+
+dove $\lambda _1$ e $\lambda _2$ sono le due lunghezze d'onda del doppietto del sodio, $m$ è il numero di alternanze tra le condizioni di interferenza netta, $\lambda$ è la media delle due lunghezze d'onda e $\Delta x$ è lo spostamento dello spcchio $S_3$.
+
+\section{Misure}
+
+\subsection {Misura della lunghezza d'onda di un fascio di luce monocromatica}
+
+La misura della lunghezza d'onda del fascio laser viene effettuata prendendo 5 misure dello spostamento dello specchio mobile e contando le frange passanti per un punto fissato dello schermo, le misure sono riportate nella seguente Tabella.
+
+\begin{table}[H]
+    \centering
+
+    \begin{tabular}{||c|c|c||}
+        \hline
+        $N_1 $ & $x_1 \, \text{[mm]}$ & $x_2\, \text{[mm]}$ \\
+        \hline\hline
+
+        $195$ & $10.00$ & $10.30$ \\\hline
+        $194$ & $10.00$ & $10.30$ \\\hline
+        $150$ & $10.00$ & $10.23$ \\\hline
+        $150$ & $10.00$ & $10.23$ \\\hline
+        $180$ & $10.00$ & $10.28$ \\\hline
+    
+    \end{tabular}
+    \caption{Misure di $N_1$, $x_1$ e $x_2$ effetuate per valutare la lunghezza d'onda della sorgente laser}
+    \label{lambda}    
+\end{table}
+
+Al conteggio $N_1$ viene fornito un errore di $ \pm 5$, alle misure di $x_1$ e $x_2$ viene fornita l'incertezza strumentale pari a $0.01 mm$ 
 
 
-\section{Appendice}
+\subsection{Misura dell'indice di rifrazione dell'aria}
+
+A camera usata per creare il vuoto risulta essere lunga $D=0.05 m$ - valore fornito - e per fornire un valore ad $n_a$ si contano 5 volte il numero di frange di interferenza passanti epr un punto dello schermo. I valori ottenuti sono tutti uguali e pertanto si fornisce il valore $N_2 = 42$ a cui non viene attribuito alcun errore.
+
+\subsection{Misura della lunghezza dei pacchetti d'onda di una sorgente non monocromatica}
+
+Vengono fatte 6 misure dello spostamento dello specchio per valutare la lunghezza del treno di impulsi come descritto nel paragrafo 1.2.3. I risultati sono riportati in tabella.
+
+\begin{table}[H]
+    \centering
+
+    \begin{tabular}{||c|c||}
+        \hline
+        $x_1 \, \text{[mm]}$ & $x_2\, \text{[mm]}$ \\
+        \hline\hline
+
+        $15.58$ & $15.54$ \\\hline
+        $15.58$ & $15.54$ \\\hline
+        $15.57$ & $15.54$ \\\hline
+        $15.57$ & $15.54$ \\\hline
+        $15.57$ & $15.54$ \\\hline
+        $15.57$ & $15.54$ \\\hline
+    
+    \end{tabular}
+    \caption{Misure della posizione iniziale e finale dello specchio $S_3$}
+    \label{L}    
+\end{table}
+
+A queste misure viene sempre fornita l'incertezza strumentale pari a $0.01mm$.
+
+\subsection{Misura della separazione tra le due lunghezze d'onda del doppietto del sodio}
+
+Per valutare la distanza delle due lunghezze d'onda emesse dal sodio vegono prese 8 misure dello spostamento dello specchio $S_3$, fornendo anche il valore $m$ di numero di alternanze di interferenze nette viste sullo schermo durante lo spostamento dello specchio mobile. Le misure vengono riportate in tabella.
+
+\begin{table}[H]
+    \centering
+
+    \begin{tabular}{||c|c|c||}
+        \hline
+        $m $ & $x_1 \, \text{[mm]}$ & $x_2\, \text{[mm]}$ \\
+        \hline\hline
+
+        $1$ & $16.24$ & $17.73$ \\\hline
+        $1$ & $17.73$ & $19.11$ \\\hline
+        $1$ & $19.11$ & $20.66$ \\\hline
+        $1$ & $20.66$ & $22.07$ \\\hline
+        $1$ & $22.07$ & $23.58$ \\\hline
+        $1$ & $23.58$ & $24.98$ \\\hline
+        $1$ & $17.72$ & $19.15$ \\\hline
+        $2$ & $19.15$ & $22.17$ \\\hline
+    
+    \end{tabular}
+    \caption{Misure di $m$, $x_1$ e $x_2$ effettuate per valutare $\Delta \lambda$ del doppietto di $Na$ }
+    \label{sodio}    
+\end{table}
+
+Alle misure di $m$ non viene fornita alcuna incertezza, a quelle di $x_1$ e $x_2$ viene fornita l'incertezza strumentale di $0.01mm$.
 
 
 \end{document}
