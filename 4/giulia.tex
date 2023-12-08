@@ -1,0 +1,115 @@
+\documentclass[]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+\usepackage[]{csvsimple}
+\usepackage{float}
+
+\usepackage{ragged2e}
+\usepackage[left=25mm, right=25mm, top=15mm]{geometry}
+\geometry{a4paper}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{paralist}
+\usepackage{subfig} 
+\usepackage{fancyhdr}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{braket}
+\usepackage{gensymb}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage{csquotes}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{babel}
+\usepackage{caption}
+\captionsetup{font=small}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+\usepackage{sectsty}
+\usepackage[nottoc,notlof,notlot]{tocbibind}
+\usepackage[titles,subfigure]{tocloft}
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape}
+
+\let\oldsection\section% Store \section
+\renewcommand{\section}{% Update \section
+	\renewcommand{\theequation}{\thesection.\arabic{equation}}% Update equation number
+	\oldsection}% Regular \section
+\let\oldsubsection\subsection% Store \subsection
+\renewcommand{\subsection}{% Update \subsection
+	\renewcommand{\theequation}{\thesubsection.\arabic{equation}}% Update equation number
+	\oldsubsection}% Regular \subsection
+
+\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+
+\newcommand{\g}{\text{g}}
+\newcommand{\m}{\text{m}}
+\newcommand{\cm}{\text{cm}}
+\newcommand{\mm}{\text{mm}}
+\newcommand{\s}{\text{s}}
+\newcommand{\N}{\text{N}}
+\newcommand{\Hz}{\text{Hz}}
+
+\newcommand{\virgolette}[1]{``\text{#1}"}
+\newcommand{\tildetext}{\raise.17ex\hbox{$\scriptstyle\mathtt{\sim}$}}
+
+
+\renewcommand{\arraystretch}{1.2}
+
+\addto\captionsenglish{\renewcommand{\figurename}{Fig.}}
+\addto\captionsenglish{\renewcommand{\tablename}{Tab.}}
+
+\DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
+
+
+\title{%
+    \Huge Misura del rapporto carica/massa di un elettrone non relativistico \\
+    \Large Laboratorio di Ottica, Elettronica e Fisica Moderna \\ C.d.L. in Fisica, a.a. 2023-2024 \\ Università degli Studi di Milano}
+\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi \\ Matricole: 13655A, 11410A, 11823A}
+\date{2 novembre 2023}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduzione}
+
+\subsection{Scopo}
+
+L'interferometro di Michelson è uno strumento che permette di misurare le seguenti quantità: la lunghezza d'onda di un fascio di luce monocromatica, l'indice di rifrazione dell'aria a pressione atmosferica, la lunghezza dei pacchetti d'onda di una sorgente non monocromatica e la separazione tra le due lunghezze d'onda del doppietto del sodio.
+
+\subsection{Metodo}
+
+Per la msurazione delle quattro grandezze interessate, si utilizza l'apparato sviluppato da Michelson riportato in figura. L'interferometro è costituito da quattri lastre di vetro ($S_1, \, S_2, \, S_3, \, L_c$): $S_1$ è una lastra semiriflettente - rivolta verso $S_2$ -a facce piane e parallele, $S_2$ e $S_3$ sono completamente riflettenti sulla faccia rivolta verso $S_1$, $L_c$ è una lastra trasparente il cui scopo è quello di rendere uguali i cammiini ottici compiuti dai raggi lungo i due braci dello strumento. 
+Essendosi assicurati che $S_2$ e $S_3$ siano perpendicolari e che formino un angolo di $45°$ con $S_1$, il raggio luminoso inciderà su $S_1$ sdoppiandosi: il primo verrà riflesso da $S_2$ e dalla faccia riflettente di $S_1$, per poi proseguire verso lo schermo, il secondo - riflesso da $S_1$ - verrà riflesso da $S_3$ ed inciderà sullo schermo dove formerà delle figure di interferenza con il primo raggio - douvuta alla coerenza dei due fasci luminosi- .\\
+
+\section{Misure}
+
+\subsection {Misura della lunghezza d'onda di un fascio di luce monocromatica}
+
+Si vuole misurare la lunghezza d'ond di un fascio di luce laser: agendo sulla variazione di cammino ottico dei due fasci - spostando lo specchio $S_3$ - si conta il numero di frange chiare (o scure) passanti per un punto prefissato dello schermo. la misura della lunghezza d'onda è pertanto data dalla formula
+
+\begin{equation}
+    \label{lambda_laser}
+    \lambda = \frac{2 n_a \Delta x}{N_1}
+\end{equation}
+
+dove $\lambda$ è la lunghezza d'onda incognita, $n_a$ è l'indice di rifrazione dell'aria, $\Delta x$ è lo spostamento dello specchio $S_3$ e $N_1$ è il numero di frange chiare (o scure) contate.
+
+
+
+\section{Appendice}
+
+
+\end{document}
