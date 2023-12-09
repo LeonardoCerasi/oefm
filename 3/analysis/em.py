@@ -120,3 +120,12 @@ with open("t_student.txt", 'w') as text:
     print("\nParallelo - antiparallelo:", t_student_cross(par['em'], par['s'], par['n'] - 1, ant['em'], ant['s'], ant['n'] - 1), "%", file=text)
 
     print("\nAntiparallelo - ortogonale:", t_student_cross(ant['em'], ant['s'], ant['n'] - 1, ort['em'], ort['s'], ort['n'] - 1), "%", file=text)
+
+    print("\n", file=text)
+
+    print("Dopo aver rigettato il primo set di dati, il valore finale è:\n", file=text)
+    e_m_final = (par['em'] / par['s']**2 + ant['em'] / ant['s']**2) / (1. / par['s']**2 + 1. / ant['s']**2)
+    e_m_err_final = 1. / np.sqrt(1. / par['s']**2 + 1. / ant['s']**2)
+    print("e/m:", e_m_final, file=text)
+    print("err:", e_m_err_final, file=text)
+    print("sigma dal val. asp.:", np.abs(e_m_err_final - e_m_th) / e_m_err_final, file=text)

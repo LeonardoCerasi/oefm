@@ -5,12 +5,12 @@ e/m: 168529534540.02698
 err: 3177333186.675143
 
 Parallelo:
-e/m: 183800246126.37558
-err: 5991278444.406544
+e/m: 180192459844.05017
+err: 5878542417.266182
 
 Antiparallelo:
-e/m: 175712370309.18185
-err: 4746550188.811433
+e/m: 179430456323.32132
+err: 4850328461.031816
 
 
 
@@ -18,16 +18,23 @@ Test di compatibilità col valore atteso (t di Student):
 
 Ortogonale: 3.201718313892421 %
 
-Parallelo: 20.198557236490068 %
+Parallelo: 47.235508918910455 %
 
-Antiparallelo: 97.18643121256005 %
+Antiparallelo: 47.33459483278878 %
 
 
 
 Test di cross-compatibility (t di Student):
 
-Ortogonale - parallelo: 1.0200565926942683e-09 %
+Ortogonale - parallelo: 5.323033453788635e-07 %
 
-Parallelo - antiparallelo: 0.004881909049303102 %
+Parallelo - antiparallelo: 66.55679293094899 %
 
-Antiparallelo - ortogonale: 0.00034289697782024966 %
+Antiparallelo - ortogonale: 9.523362921306724e-08 %
+
+
+Dopo aver rigettato il primo set di dati, il valore finale è:
+
+e/m: 179739095202.40677
+err: 3741247880.324437
+sigma dal val. asp.: 46.01158723028737
