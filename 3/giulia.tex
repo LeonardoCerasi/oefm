@@ -99,7 +99,7 @@
         \label{e_m}
         \frac{e}{m} = \frac{2 \Delta V}{(B_z R)^2}
     \end{equation}
-    dove $ e $ ed $ m $ rappresentano rispettivamente la carica elettrica e la massa dell'elettrone, $\Delta V$ rapprensenta la differenza di potenziale, $B_z$ rappresenta il campo elettrico generato dalle bobine di Helmholz e $ R $ rapprensenta il raggio della circonferenzza compiuta dagli elettroni. \\
+    dove $ e $ ed $ m $ rappresentano rispettivamente la carica elettrica e la massa dell'elettrone, $\Delta V$ rapprensenta la differenza di potenziale, $B_z$ rappresenta il campo elettrico generato dalle bobine di Helmholz e $ R $ rapprensenta il raggio della circonferezza compiuta dagli elettroni. \\
 
     In base alla differente influenza del campo magnetico terrestre, il campo magnetico effettivo a cui è sottoposto il fascio di elettroni varia: è dunque necessario andare a stimare il contributo di quest'ultimo in modo da poter fornire un risultato più accurato al valore finale della grandezza interessata.
 
@@ -221,8 +221,6 @@
     
     \end{table}
 
-    
-
 
     \subsection {Stima degli errori}
     \subsubsection{Campo magnetico generato dalle bobine di Helmholtz}
@@ -236,6 +234,16 @@
 
 
     \subsubsection{Campo magnetico terrestre}
+    Il valore della componente orizzontale del campo magnetico terrestre $B_t$ ottenuto da ciascun set di misure è affetto dall'errore sulle grandezze da cui è ricavato, ovvero l'intensità di corrente di alimentazione delle bobine $I$ e l'angolo di deviazione dell'ago magnetico $\theta$. Di tali incertezze si è tenuto conto attribuendo all'errore sul campo magnetico terrestre $\sigma_{B_t}$ una componente statistica e una componente sistematica. La prima, $\sigma_{B_t,stat}$, è stata calcolata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$.
+    La seconda, $\sigma_{B_t,sist}$, invece, è stata calcolata attraverso la propagazione degli errori su $I$ nella formula \ref{mag_terr}. In tale procedimento si considerano le grandezze $B_z$ e $B_r$ come prive di errore, poiché tabulate, e ugualmente $\theta$, poiché già considerato nella componente statistica dell'errore:
+    \begin{equation}
+        \label{sigma_Bt_sist}
+        \sigma_{B_t,sist} = \sigma_I \cdot \left(\frac{1}{I_0}\right) (B_z \cot(\theta) \, + B_r)
+    \end{equation}
+    La scelta di considerare l'incertezza su $\theta$ nella componente statistica dell'errore, e non in quella sistematica, è legata a (??)
+    
+    alla dipendenza di $B_t$ dalla cotangente dell'angolo $\theta$. Infatti, per piccoli valori di $\theta$, questa dipendenza avrebbe portato a valori molto elevati di $\sigma_{B_t,sist}$
+
     L'incertezza attribuita al campo magnetico terrestre, e riportata in \ref{misura_campomagneticoterrestre}, è stata ricavata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$. Il numero di misure effettuate, infatti, ha reso significativa la rilevazione dell'errore statistico, e ha reso ininfluente la componente sistematica dell'errore $\sigma _{Bt, sist}$, dovuta alla propagazione delle incertezze sulle misure di $I$ e di $\theta$ nell'espresione per ottenere il campo magnetico terrestre:
     \begin{equation}
         \label{sigma_Bt_stat}
@@ -251,8 +259,47 @@
         \sigma _{e/m} = \frac{\sigma_A}{A^2} 
     \end{equation}
     Inoltre, per valutare anche l'errore sistematico di cui sono affette le misure del rapporto carica/massa dell'elettrone, si è effettuata una propagazione degli errori su $\Delta V$, $B_z$ e $R$ nell'espressione \ref{e_m}:
+    \begin{equation}
+        \label{sigma_e/m_sist}
+        \sigma _{e/m,sist} = \sqrt{ \frac{4}{B_z^4 \, R^4} \sigma_{\Delta V ^2} + \frac{16 \, \Delta V ^2}{B_z^6 \, R^4} \sigma_{B_z ^2} + \frac{16 \, \Delta V ^2}{B_z^4 \, R^6} \sigma_{R ^2}  }  
+    \end{equation}
+    Dove le grandezze $\Delta V$, $R$ e $B_z$ sono i valori medi di ciascun set di misure.
 
     \subsection{Confronto}
+    Per confrontare i valori del rapporto carica/massa dell'elettrone ottenuti per ciascuna configurazione con il valore aspettato
+    $e/m = 1.758820 \cdot 10^{11}\text{C/kg}$, si è utilizzato un test di Student a due code, con gradi di libertà pari a 19, ottenuti dalla differenza tra il numero totale di misure effettuate (20) e il numero di variabili statistiche estratte da queste (1).
+    I valori di $e/m$ elaborati per ciascuna configurazione con i rispettivi errori sono riportati nella seguente
+    tabella:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{||c|c|c|c|c||}
+            \hline
+            Configurazione & $e/m \, [10^{11} \,\text{C/kg}]$ & $\sigma_{e/m} \,[10^{11} \,\text{C/kg}]$ & $\sigma_{e/m,sist} \,[10^{11} \,\text{C/kg}]$ & Compatibilità \\
+            \hline\hline
+            CM ortogonale & $1.685295$ & $0.031773$ & $0.017409 $ & $3.20\%$ \\\hline
+            CM parallelo & $1.838002$ & $0.059913$ & $????$ & $20.20\%$ \\\hline
+            CM antiparallelo & $1.757123$ & $0.047465$ & $????$ & $97.19\%$ \\\hline
+        \end{tabular}
+        \caption{Valori di $e/m$ e relativi errori per ciascuna configurazione.}
+        \label{em-values}
+    \end{table}
+    Dal test effettuato emerge che il valore di $e/m$ ottenuto con il campo magnetico delle bobine posto ortogonalmente al campo magnetico terrestre non supera la soglia minima di compatibilità stabilita al $5\%$. Spiegazione ???.
+    La leggera sovrastima del valore nel caso di campo magnetico parallelo e la sottostima nel caso di campo magnetico antiparallelo può essere dovuta a una sottostima dell'effettivo valore della componente orizzontale del campo magnetico terrestre.\\
+    Sempre mediante test di Student si è inoltre eseguito un confronto tra i valori di $e/m$ ottenuti da ciascuna configurazione:
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{||c|c|c|c||}
+            \hline
+            $ $ & ortogonale & parallelo & antiparallelo \\\hline\hline
+            ortogonale & $ $ & $ 1.02\cdot 10^{-9}\% $ & $3.43\cdot 10^{-4}\%$  \\\hline
+            parallelo & $ 1.02\cdot 10^{-9}\% $ & $ $ & $4.88\cdot 10^{-3}\% $ \\\hline
+            antiparallelo & $3.43\cdot 10^{-4}\% $ & $4.88\cdot 10^{-3}\%$ & $ $ \\\hline
+        \end{tabular}
+        \caption{Compatibilità reciproche tra valori di $e/m$.}
+        \label{comp}
+    \end{table}
 
     \section{Conclusione}
 
@@ -383,46 +430,46 @@
 
 
     $0.0$ & $1$ \\\hline
-    $0.2$ & $0,99999$ \\\hline
-    $0.4$ & $0,99999$ \\\hline
-    $0.6$ & $0,99999$ \\\hline
-    $0.8$ & $0,99999$ \\\hline
-    $1.0$ & $0,99999$ \\\hline
-    $1.2$ & $0,99998$ \\\hline
-    $1.4$ & $0,99997$ \\\hline
-    $1.6$ & $0,99995$ \\\hline
-    $1.8$ & $0,99992$ \\\hline
-    $2.0$ & $0,99987$ \\\hline
-    $2.2$ & $0,99982$ \\\hline
-    $2.4$ & $0,99974$ \\\hline
-    $2.6$ & $0,99964$ \\\hline
-    $2.8$ & $0,99952$ \\\hline
-    $3.0$ & $0,99937$ \\\hline
-    $3.2$ & $0,99918$ \\\hline
-    $3.4$ & $0,99895$ \\\hline
-    $3.6$ & $0,99868$ \\\hline
-    $3.8$ & $0,99835$ \\\hline
-    $4.0$ & $0,99796$ \\\hline
-    $4.2$ & $0,99751$ \\\hline
-    $4.4$ & $0,99698$ \\\hline
-    $4.6$ & $0,99637$ \\\hline
-    $4.8$ & $0,99567$ \\\hline
-    $5.0$ & $0,99486$ \\\hline
-    $5.2$ & $0,99395$ \\\hline
-    $5.4$ & $0,99291$ \\\hline
-    $5.6$ & $0,99173$ \\\hline
-    $5.8$ & $0,99041$ \\\hline
-    $6.0$ & $0,98893$ \\\hline
-    $6.2$ & $0,98727$ \\\hline
-    $6.4$ & $0,98542$ \\\hline
-    $6.6$ & $0,98337$ \\\hline
-    $6.8$ & $0,98109$ \\\hline
-    $7.0$ & $0,97857$ \\\hline
-    $7.2$ & $0,97578$ \\\hline
-    $7.4$ & $0,97272$ \\\hline
-    $7.6$ & $0,96936$ \\\hline
+    $0.2$ & $0.99999$ \\\hline
+    $0.4$ & $0.99999$ \\\hline
+    $0.6$ & $0.99999$ \\\hline
+    $0.8$ & $0.99999$ \\\hline
+    $1.0$ & $0.99999$ \\\hline
+    $1.2$ & $0.99998$ \\\hline
+    $1.4$ & $0.99997$ \\\hline
+    $1.6$ & $0.99995$ \\\hline
+    $1.8$ & $0.99992$ \\\hline
+    $2.0$ & $0.99987$ \\\hline
+    $2.2$ & $0.99982$ \\\hline
+    $2.4$ & $0.99974$ \\\hline
+    $2.6$ & $0.99964$ \\\hline
+    $2.8$ & $0.99952$ \\\hline
+    $3.0$ & $0.99937$ \\\hline
+    $3.2$ & $0.99918$ \\\hline
+    $3.4$ & $0.99895$ \\\hline
+    $3.6$ & $0.99868$ \\\hline
+    $3.8$ & $0.99835$ \\\hline
+    $4.0$ & $0.99796$ \\\hline
+    $4.2$ & $0.99751$ \\\hline
+    $4.4$ & $0.99698$ \\\hline
+    $4.6$ & $0.99637$ \\\hline
+    $4.8$ & $0.99567$ \\\hline
+    $5.0$ & $0.99486$ \\\hline
+    $5.2$ & $0.99395$ \\\hline
+    $5.4$ & $0.99291$ \\\hline
+    $5.6$ & $0.99173$ \\\hline
+    $5.8$ & $0.99041$ \\\hline
+    $6.0$ & $0.98893$ \\\hline
+    $6.2$ & $0.98727$ \\\hline
+    $6.4$ & $0.98542$ \\\hline
+    $6.6$ & $0.98337$ \\\hline
+    $6.8$ & $0.98109$ \\\hline
+    $7.0$ & $0.97857$ \\\hline
+    $7.2$ & $0.97578$ \\\hline
+    $7.4$ & $0.97272$ \\\hline
+    $7.6$ & $0.96936$ \\\hline
     $7.8$ & $0.96567$ \\\hline
-    $8.0$ & $0,96164$ \\\hline
+    $8.0$ & $0.96164$ \\\hline
 
 \end{tabular}
 \caption{Termini correttivi}
@@ -434,26 +481,24 @@
     \centering
 
 
-\begin{tabular}{||c|c|c|c|c|c||}
+\begin{tabular}{||c|c|c|c|c|c|c||}
     \hline
-    $Angolo [\text{\degree}] $ & $I\, \text{[A]} $ & $B_r\, [\text{mG}] $ & $B_z\, [\text{mG}] $ & $B_t\, \text{[mG]} $ & $I_0\, \text{[A]} $\\
+    $Angolo [\text{\degree}] $ & $I\, \text{[A]} $ & $B_r\, [\text{mG}] $ & $B_z\, [\text{mG}] $ & $B_t\, \text{[mG]} $ & $ \sigma_{Bt} \, \text{[mG]} $ & $I_0\, \text{[A]} $\\
     \hline\hline
 
-
-
-    $65$ & $0,03700$ & $2,50$ & $0,0015450$ & $0,925266565$ & $0,1$ \\\hline
-    $60$ & $0,03145$ & $6,20$ & $0,0015472$ & $1,950180935$ & $0,1$ \\\hline
-    $55$ & $0,02565$ & $11.0$ & $0,0015480$ & $2,821778026$ & $0,1$ \\\hline
-    $50$ & $0,02179$ & $16,7$ & $0,0015471$ & $3,639212871$ & $0,1$ \\\hline
-    $45$ & $0,01698$ & $22,8$ & $0,0015438$ & $3,871702137$ & $0,1$ \\\hline
-    $40$ & $0,01369$ & $28,6$ & $0,0015379$ & $3,915590910$ & $0,1$ \\\hline
-    $35$ & $0,01312$ & $33,3$ & $0,0015295$ & $4,369246587$ & $0,1$ \\\hline
-    $30$ & $0,00973$ & $36,2$ & $0,0015190$ & $3,522515995$ & $0,1$ \\\hline
-    $25$ & $0,00725$ & $36,7$ & $0,0015072$ & $2,660984335$ & $0,1$ \\\hline
-    $20$ & $0,00539$ & $34,2$ & $0,0014951$ & $1,843601408$ & $0,1$ \\\hline
-    $15$ & $0,00409$ & $28,9$ & $0,0014839$ & $1,182236504$ & $0,1$ \\\hline
-    $10$ & $0,00196$ & $20,9$ & $0,0014750$ & $0,409803957$ & $0,1$ \\\hline
-    $5 $ & $0,00060$ & $11.0$ & $0,0014691$ & $0,066100751$ & $0,1$ \\\hline
+    $65$ & $0.03700$ & $2.50$ & $0.0015450$ & $0.925266565$ & $0.265644256$ & $0.1$ \\\hline
+    $60$ & $0.03145$ & $6.20$ & $0.0015472$ & $1.950180935$ & $0.271636923$ & $0.1$ \\\hline
+    $55$ & $0.02565$ & $11.0$ & $0.0015480$ & $2.821778026$ & $0.286433055$ & $0.1$ \\\hline
+    $50$ & $0.02179$ & $16.7$ & $0.0015471$ & $3.639212871$ & $0.312785624$ & $0.1$ \\\hline
+    $45$ & $0.01698$ & $22.8$ & $0.0015438$ & $3.871702137$ & $0.349188416$ & $0.1$ \\\hline
+    $40$ & $0.01369$ & $28.6$ & $0.0015379$ & $3.915590910$ & $0.389548449$ & $0.1$ \\\hline
+    $35$ & $0.01312$ & $33.3$ & $0.0015295$ & $4.369246587$ & $0.425258814$ & $0.1$ \\\hline
+    $30$ & $0.00973$ & $36.2$ & $0.0015190$ & $3.522515995$ & $0.44833532$  & $0.1$ \\\hline
+    $25$ & $0.00725$ & $36.7$ & $0.0015072$ & $2.660984335$ & $0.452387263$ & $0.1$ \\\hline
+    $20$ & $0.00539$ & $34.2$ & $0.0014951$ & $1.843601408$ & $0.432358195$ & $0.1$ \\\hline
+    $15$ & $0.00409$ & $28.9$ & $0.0014839$ & $1.182236504$ & $0.391783771$ & $0.1$ \\\hline
+    $10$ & $0.00196$ & $20.9$ & $0.0014750$ & $0.409803957$ & $0.337131256$ & $0.1$ \\\hline
+    $5 $ & $0.00060$ & $11.0$ & $0.0014691$ & $0.066100751$ & $0.286493422$ & $0.1$ \\\hline
 
 \end{tabular}
 \caption{Componenti del campo magnetico terrestre $B_t$, $B_r$ e $B_z$ ottenute mediante la misura della deflessione angolare dell'ago magnetico in senso orario. Si riportano inoltre i valori dell'intensità della corrente indotta nelle bobine $I$ e del valore iniziale $I_0$}
@@ -464,26 +509,26 @@
 \begin{table}
     \centering
 
-\begin{tabular}{||c|c|c|c|c|c||}
+\begin{tabular}{||c|c|c|c|c|c|c||}
     \hline
-    $Angolo [\text{\degree}]$ & $I\, \text{[A]} $ & $B_r\, \text{[mG]} $ & $B_z\, \text{[mG]} $ & $B_t\, \text{[mG]} $ & $I_0\, \text{[A]} $\\
+    $Angolo [\text{\degree}]$ & $I\, \text{[A]} $ & $B_r\, \text{[mG]} $ & $B_z\, \text{[mG]} $ & $B_t\, \text{[mG]} $ & $ \sigma_{Bt} \, \text{[mG]} $ & $I_0\, \text{[A]} $\\
     \hline\hline
 
 
 
-    $65$ & $0,03685$ & $2,50$ & $0,0015450$ & $0,921515484$ & $0,1$ \\\hline
-    $60$ & $0,03136$ & $6,20$ & $0,0015472$ & $1,944600131$ & $0,1$ \\\hline
-    $55$ & $0,02310$ & $11.0$ & $0,0015480$ & $2,541250386$ & $0,1$ \\\hline
-    $50$ & $0,02082$ & $16,7$ & $0,0015471$ & $3,477210279$ & $0,1$ \\\hline
-    $45$ & $0,01686$ & $22,8$ & $0,0015438$ & $3,844340285$ & $0,1$ \\\hline
-    $40$ & $0,01383$ & $28,6$ & $0,0015379$ & $3,955633476$ & $0,1$ \\\hline
-    $35$ & $0,01210$ & $33,3$ & $0,0015295$ & $4,029564307$ & $0,1$ \\\hline
-    $30$ & $0,00980$ & $36,2$ & $0,0015190$ & $3,547857837$ & $0,1$ \\\hline
-    $25$ & $0,00765$ & $36,7$ & $0,0015072$ & $2,807797263$ & $0,1$ \\\hline
-    $20$ & $0,00570$ & $34,2$ & $0,0014951$ & $1,949634142$ & $0,1$ \\\hline
-    $15$ & $0,00360$ & $28,9$ & $0,0014839$ & $1,040599368$ & $0,1$ \\\hline
-    $10$ & $0,00152$ & $20,9$ & $0,0014750$ & $0,317807150$ & $0,1$ \\\hline
-    $5 $ & $0,00066$ & $11.0$ & $0,0014691$ & $0,072710826$ & $0,1$ \\\hline
+    $65$ & $0.03685$ & $2.50$ & $0.0015450$ & $0.921515484$ & $0.265644256 $ & $0.1$ \\\hline
+    $60$ & $0.03136$ & $6.20$ & $0.0015472$ & $1.944600131$ & $0.271636923 $ & $0.1$ \\\hline
+    $55$ & $0.02310$ & $11.0$ & $0.0015480$ & $2.541250386$ & $0.286433055 $ & $0.1$ \\\hline
+    $50$ & $0.02082$ & $16.7$ & $0.0015471$ & $3.477210279$ & $0.312785624 $ & $0.1$ \\\hline
+    $45$ & $0.01686$ & $22.8$ & $0.0015438$ & $3.844340285$ & $0.349188416 $ & $0.1$ \\\hline
+    $40$ & $0.01383$ & $28.6$ & $0.0015379$ & $3.955633476$ & $0.389548449 $ & $0.1$ \\\hline
+    $35$ & $0.01210$ & $33.3$ & $0.0015295$ & $4.029564307$ & $0.425258814 $ & $0.1$ \\\hline
+    $30$ & $0.00980$ & $36.2$ & $0.0015190$ & $3.547857837$ & $0.44833532 $ & $0.1$ \\\hline
+    $25$ & $0.00765$ & $36.7$ & $0.0015072$ & $2.807797263$ & $0.452387263 $ & $0.1$ \\\hline
+    $20$ & $0.00570$ & $34.2$ & $0.0014951$ & $1.949634142$ & $0.432358195 $ & $0.1$ \\\hline
+    $15$ & $0.00360$ & $28.9$ & $0.0014839$ & $1.040599368$ & $0.391783771 $ & $0.1$ \\\hline
+    $10$ & $0.00152$ & $20.9$ & $0.0014750$ & $0.317807150$ & $0.337131256 $ & $0.1$ \\\hline
+    $5 $ & $0.00066$ & $11.0$ & $0.0014691$ & $0.072710826$ & $0.286493422 $ & $0.1$ \\\hline
 
 \end{tabular}
 \caption{Componenti del campo magnetico terrestre $B_t$, $B_r$ e $B_z$ ottenute mediante la misura della deflessione angolare dell'ago magnetico in senso antiorario. Si riportano inoltre i valori dell'intensità della corrente indotta nelle bobine $I$ e del valore iniziale $I_0$}
