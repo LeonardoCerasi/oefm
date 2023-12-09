@@ -1,0 +1,33 @@
+Risultati delle regressioni:
+
+Ortogonale:
+e/m: 168529534540.02698
+err: 3177333186.675143
+
+Parallelo:
+e/m: 183800246126.37558
+err: 5991278444.406544
+
+Antiparallelo:
+e/m: 175712370309.18185
+err: 4746550188.811433
+
+
+
+Test di compatibilità col valore atteso (t di Student):
+
+Ortogonale: 3.201718313892421 %
+
+Parallelo: 20.198557236490068 %
+
+Antiparallelo: 97.18643121256005 %
+
+
+
+Test di cross-compatibility (t di Student):
+
+Ortogonale - parallelo: 1.0200565926942683e-09 %
+
+Parallelo - antiparallelo: 0.004881909049303102 %
+
+Antiparallelo - ortogonale: 0.00034289697782024966 %
