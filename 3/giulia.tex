@@ -151,12 +151,17 @@
         \label{misura_Rb}
         R_b = (15.63 \pm 0.07) \, \text{cm}
     \end{equation} 
-    Dopo aver determinato, mediante ago magnetico, la direzione della componente orizzontale del campo magnetico terrestre, si orienta l'asse delle bobine ortogonale a tale direzione, e, al variare della differenza di potenziale $\Delta V $ tra catodo e anodo e dell'intensità di corrente $I$ che alimenta le bobine di Helmholtz, si misura il raggio $R$ della circonferenza percorsa dagli elettroni. Alle misure del raggio $R$ è stata attribuita come incertezza la risoluzione del calibro adoperato, ovvero $0.01 \text{mm}$. I valori di differenza di potenziale e intensità di corrente, invece, sono stati misurati attraverso un multimetro digitale in modalità, rispettivamente, di Voltmetro (con risoluzione di $0.1 \text{V}$) e di Amperometro (con risoluzione di $0.001 \text{A}$). In entrambi i casi è stata attribuita come incertezza la risoluzione dello strumento, poiché risultava sempre superiore all'intervallo di stabilizzazione del generatore ($\pm 0.1 \%$). Tale set di misure è riportato in Tab. \ref{CM_ortogonale}. \\
+    Dopo aver determinato, mediante ago magnetico, la direzione della componente orizzontale del campo magnetico terrestre, si orienta l'asse delle bobine ortogonale a tale direzione, e, al variare della differenza di potenziale $\Delta V $ tra catodo e anodo e dell'intensità di corrente $I$ che alimenta le bobine di Helmholtz, si misura il diametro $D$ della circonferenza percorsa dagli elettroni, da cui si ottiene il valore del raggio $R$ della medesima. L'incertezza a tali misure del raggio ($\sigma_{R}$) è stata attribuita mediante propagazione dell'incertezza sul diametro, stimata pari alla risoluzione del calibro adoperato, ovvero  $\sigma_{D}= 0.01 \text{mm}$: 
+    \begin{equation}
+        \label{sigma_raggioCirc}
+        \sigma_{R} = \frac{\sigma_{D}}{\sqrt{2} }
+    \end{equation}
+    I valori di differenza di potenziale e intensità di corrente, invece, sono stati misurati attraverso un multimetro digitale in modalità, rispettivamente, di Voltmetro (con risoluzione di $0.1 \text{V}$) e di Amperometro (con risoluzione di $0.001 \text{A}$). In entrambi i casi è stata attribuita come incertezza la risoluzione dello strumento, poiché risultava sempre superiore all'intervallo di stabilizzazione del generatore ($\pm 0.1 \%$). Tale set di misure è riportato in Tab. \ref{CM_ortogonale}. \\
     
     Si è ripetuto il medesimo set di misure orientando l'asse delle bobine in direzione parallela ( Tab. \ref{CM_parallelo} ) e antiparallela ( Tab. \ref{CM_antiparallelo} ) rispetto alla componente orizzontale del campo magnetico terrestre.
 
     \subsection{Per la determinzione del campo magnetico terrestre}
-    Nelle condizioni in cui la strumentazione viene posta parallelela e antiparallela al campo magnetico terrestre, questo influisce sull'effettivo campo magnetico a cui sono sottoposti gli elettroni lungo la loro orbita: risulta, dunque, necessario dare un valore a questa grandezza in modo da poter correggere le errate stime del rapporto $e/m$. In mezzo ad una coppia di bobine di geometria nota è posto un ago magnetico: questo viene fatto deflettere di angoli noti facendo variare l'intensità di corrente che alimenta le bobine (generatrici del campo magnetico). L'intensità di corrente viene misurata mediante multimetro in modalità di Amperometro, con risoluzione di $0.001 \text{A}$ (attribuita come incertezza della misura, poiché maggiore all'intervallo di stabilizzazione del generatore $\pm 0.1 \%$). L'angolo di deflessione, invece, viene misurato con un goniometro, solidale alle bobine, orientato in modo che, a corrente nulla, l'ago magnetico risulti diretto nella direzione $0-180 \degree $ di esso. Come incertezza a tali misure viene attribuita la risoluzione dello strumento: $1 \degree$. Tali misure sono state prese facendo deflettere l'ago magnetico sia in senso orario sia in senso antiorario, e sono riportate in Tabb. \ref{campomagneticoterrestre_sensoorario} , \ref{campomagneticoterrestre_sensoantiorario}.
+    Nelle condizioni in cui la strumentazione viene posta parallelela e antiparallela al campo magnetico terrestre, questo influisce sull'effettivo campo magnetico a cui sono sottoposti gli elettroni lungo la loro orbita: risulta, dunque, necessario dare un valore a questa grandezza in modo da poter correggere le errate stime del rapporto $e/m$. In mezzo ad una coppia di bobine di geometria nota è posto un ago magnetico, che viene fatto deflettere di angoli noti facendo variare l'intensità di corrente che alimenta le bobine (generatrici del campo magnetico). L'intensità di corrente viene misurata mediante multimetro in modalità di Amperometro, con risoluzione di $0.001 \text{A}$ (attribuita come incertezza della misura, poiché maggiore all'intervallo di stabilizzazione del generatore $\pm 0.1 \%$). L'angolo di deflessione, invece, viene misurato con un goniometro, solidale alle bobine, orientato in modo che, a corrente nulla, l'ago magnetico risulti diretto nella direzione $0-180 \degree $ di esso. Come incertezza a tali misure viene attribuita la risoluzione dello strumento: $1 \degree$. Tali misure sono state prese facendo deflettere l'ago magnetico sia in senso orario sia in senso antiorario, e sono riportate in Tabb. \ref{campomagneticoterrestre_sensoorario} , \ref{campomagneticoterrestre_sensoantiorario}.
     
 
     \section {Analisi Dati}
@@ -266,26 +271,26 @@
 
 
  
-        $334.4$ & $0.09542$ & $0.047710$ & $1.667$ & $0.995670$ & $0.001246620$ & $0.001241223$ & $0.00001$ & $5.74547$ \\\hline
-        $275.0$ & $0.09542$ & $0.047710$ & $1.545$ & $0.995670$ & $0.001155386$ & $0.001150383$ & $0.00001$ & $5.33238$ \\\hline
-        $297.8$ & $0.09814$ & $0.049070$ & $1.497$ & $0.995265$ & $0.001119491$ & $0.001114190$ & $0.00001$ & $5.17002$ \\\hline
-        $321.5$ & $0.09814$ & $0.049070$ & $1.597$ & $0.995265$ & $0.001194273$ & $0.001188618$ & $0.00001$ & $5.50838$ \\\hline
-        $300.6$ & $0.09542$ & $0.047710$ & $1.518$ & $0.995670$ & $0.001135195$ & $0.001130279$ & $0.00001$ & $5.24104$ \\\hline
-        $258.3$ & $0.09814$ & $0.049070$ & $1.393$ & $0.995265$ & $0.001041717$ & $0.001036785$ & $0.00001$ & $4.81864$ \\\hline
-        $298.0$ & $0.09814$ & $0.049070$ & $1.545$ & $0.995265$ & $0.001155386$ & $0.001149915$ & $0.00001$ & $5.33238$ \\\hline
-        $330.5$ & $0.09814$ & $0.049070$ & $1.628$ & $0.995265$ & $0.001217455$ & $0.001211691$ & $0.00001$ & $5.61335$ \\\hline
-        $386.6$ & $0.09814$ & $0.049070$ & $1.739$ & $0.995265$ & $0.001300464$ & $0.001294306$ & $0.00001$ & $5.98950$ \\\hline
-        $353.6$ & $0.09814$ & $0.049070$ & $1.689$ & $0.995265$ & $0.001263073$ & $0.001257092$ & $0.00001$ & $5.82001$ \\\hline
-        $310.8$ & $0.09300$ & $0.046500$ & $1.639$ & $0.995265$ & $0.001225681$ & $0.001219878$ & $0.00001$ & $5.65061$ \\\hline
-        $340.4$ & $0.11010$ & $0.055050$ & $1.503$ & $0.995265$ & $0.001123978$ & $0.001118656$ & $0.00001$ & $5.19031$ \\\hline
-        $365.7$ & $0.08635$ & $0.043175$ & $1.859$ & $0.995265$ & $0.001390202$ & $0.001383620$ & $0.00001$ & $6.39657$ \\\hline
-        $334.5$ & $0.09814$ & $0.046500$ & $1.692$ & $0.995265$ & $0.001265316$ & $0.001259325$ & $0.00001$ & $5.83018$ \\\hline
-        $302.2$ & $0.09814$ & $0.049070$ & $1.575$ & $0.994860$ & $0.001177821$ & $0.001171767$ & $0.00001$ & $5.43391$ \\\hline
-        $326.5$ & $0.09814$ & $0.049070$ & $1.637$ & $0.995265$ & $0.001224186$ & $0.001218389$ & $0.00001$ & $5.64384$ \\\hline
-        $344.0$ & $0.09814$ & $0.049070$ & $1.721$ & $0.995265$ & $0.001287003$ & $0.001280909$ & $0.00001$ & $5.92848$ \\\hline
-        $358.4$ & $0.09814$ & $0.049070$ & $1.779$ & $0.995265$ & $0.001330377$ & $0.001324077$ & $0.00001$ & $6.12515$ \\\hline
-        $342.7$ & $0.09814$ & $0.049070$ & $1.676$ & $0.995265$ & $0.001253351$ & $0.001247416$ & $0.00001$ & $5.77596$ \\\hline
-        $314.0$ & $0.09814$ & $0.049070$ & $1.617$ & $0.995265$ & $0.001209229$ & $0.001203504$ & $0.00001$ & $5.57610$ \\\hline
+        $334.4$ & $0.09542$ & $0.047710$ & $1.667$ & $0.995670$ & $0.001246620$ & $0.001241223$ & $7 \cdot 10^{-6}$ & $5.74547$ \\\hline
+        $275.0$ & $0.09542$ & $0.047710$ & $1.545$ & $0.995670$ & $0.001155386$ & $0.001150383$ & $7 \cdot 10^{-6}$ & $5.33238$ \\\hline
+        $297.8$ & $0.09814$ & $0.049070$ & $1.497$ & $0.995265$ & $0.001119491$ & $0.001114190$ & $7 \cdot 10^{-6}$ & $5.17002$ \\\hline
+        $321.5$ & $0.09814$ & $0.049070$ & $1.597$ & $0.995265$ & $0.001194273$ & $0.001188618$ & $7 \cdot 10^{-6}$ & $5.50838$ \\\hline
+        $300.6$ & $0.09542$ & $0.047710$ & $1.518$ & $0.995670$ & $0.001135195$ & $0.001130279$ & $7 \cdot 10^{-6}$ & $5.24104$ \\\hline
+        $258.3$ & $0.09814$ & $0.049070$ & $1.393$ & $0.995265$ & $0.001041717$ & $0.001036785$ & $7 \cdot 10^{-6}$ & $4.81864$ \\\hline
+        $298.0$ & $0.09814$ & $0.049070$ & $1.545$ & $0.995265$ & $0.001155386$ & $0.001149915$ & $7 \cdot 10^{-6}$ & $5.33238$ \\\hline
+        $330.5$ & $0.09814$ & $0.049070$ & $1.628$ & $0.995265$ & $0.001217455$ & $0.001211691$ & $7 \cdot 10^{-6}$ & $5.61335$ \\\hline
+        $386.6$ & $0.09814$ & $0.049070$ & $1.739$ & $0.995265$ & $0.001300464$ & $0.001294306$ & $7 \cdot 10^{-6}$ & $5.98950$ \\\hline
+        $353.6$ & $0.09814$ & $0.049070$ & $1.689$ & $0.995265$ & $0.001263073$ & $0.001257092$ & $7 \cdot 10^{-6}$ & $5.82001$ \\\hline
+        $310.8$ & $0.09300$ & $0.046500$ & $1.639$ & $0.995265$ & $0.001225681$ & $0.001219878$ & $7 \cdot 10^{-6}$ & $5.65061$ \\\hline
+        $340.4$ & $0.11010$ & $0.055050$ & $1.503$ & $0.995265$ & $0.001123978$ & $0.001118656$ & $7 \cdot 10^{-6}$ & $5.19031$ \\\hline
+        $365.7$ & $0.08635$ & $0.043175$ & $1.859$ & $0.995265$ & $0.001390202$ & $0.001383620$ & $7 \cdot 10^{-6}$ & $6.39657$ \\\hline
+        $334.5$ & $0.09814$ & $0.046500$ & $1.692$ & $0.995265$ & $0.001265316$ & $0.001259325$ & $7 \cdot 10^{-6}$ & $5.83018$ \\\hline
+        $302.2$ & $0.09814$ & $0.049070$ & $1.575$ & $0.994860$ & $0.001177821$ & $0.001171767$ & $7 \cdot 10^{-6}$ & $5.43391$ \\\hline
+        $326.5$ & $0.09814$ & $0.049070$ & $1.637$ & $0.995265$ & $0.001224186$ & $0.001218389$ & $7 \cdot 10^{-6}$ & $5.64384$ \\\hline
+        $344.0$ & $0.09814$ & $0.049070$ & $1.721$ & $0.995265$ & $0.001287003$ & $0.001280909$ & $7 \cdot 10^{-6}$ & $5.92848$ \\\hline
+        $358.4$ & $0.09814$ & $0.049070$ & $1.779$ & $0.995265$ & $0.001330377$ & $0.001324077$ & $7 \cdot 10^{-6}$ & $6.12515$ \\\hline
+        $342.7$ & $0.09814$ & $0.049070$ & $1.676$ & $0.995265$ & $0.001253351$ & $0.001247416$ & $7 \cdot 10^{-6}$ & $5.77596$ \\\hline
+        $314.0$ & $0.09814$ & $0.049070$ & $1.617$ & $0.995265$ & $0.001209229$ & $0.001203504$ & $7 \cdot 10^{-6}$ & $5.57610$ \\\hline
     
     \end{tabular}
     \caption{Campo magnetico terrestre ortogonale al campo magnetico generato dalle bobine di Helmholz. Si riportano i valori della differenza di potenziale $\Delta V$, del diametro $ d $ della circonferenza percorsa dagli elettroni e del conseguente raggio $ R $, dell'intensità di corrente $ I $ e del termine correttivo utilizzato per correggere il campo magnetico $B(0)$ - colonna 5 - all'effettivo valore B(R) - colonna 6 -.}
@@ -303,26 +308,26 @@
 
 
 
-    $3270.2$ & $0.09814$ & $0.04907$ & $1.624$ & $0.995265$ & $0.00121470$ & $0.00120895$ & $0.00001$ & $5.59987$ \\\hline
-    $2990.0$ & $0.09814$ & $0.04907$ & $1.504$ & $0.995265$ & $0.00112496$ & $0.00111964$ & $0.00001$ & $5.19376$ \\\hline
-    $2760.1$ & $0.09814$ & $0.04907$ & $1.478$ & $0.995265$ & $0.00110552$ & $0.00110028$ & $0.00001$ & $5.10586$ \\\hline
-    $3270.0$ & $0.09814$ & $0.04907$ & $1.566$ & $0.995265$ & $0.00117133$ & $0.00116578$ & $0.00001$ & $5.40351$ \\\hline
-    $3040.1$ & $0.09814$ & $0.04907$ & $1.494$ & $0.995265$ & $0.00111748$ & $0.00111219$ & $0.00001$ & $5.15995$ \\\hline
-    $3370.1$ & $0.09814$ & $0.04907$ & $1.639$ & $0.995265$ & $0.00122592$ & $0.00122011$ & $0.00001$ & $5.65067$ \\\hline
-    $3090.4$ & $0.09814$ & $0.04907$ & $1.589$ & $0.995265$ & $0.00118853$ & $0.00118290$ & $0.00001$ & $5.48136$ \\\hline
-    $3410.2$ & $0.09814$ & $0.04907$ & $1.600$ & $0.995265$ & $0.00119675$ & $0.00119109$ & $0.00001$ & $5.51860$ \\\hline
-    $3070.6$ & $0.09814$ & $0.04907$ & $1.574$ & $0.995265$ & $0.00117731$ & $0.00117174$ & $0.00001$ & $5.43058$ \\\hline
-    $3380.9$ & $0.09814$ & $0.04907$ & $1.628$ & $0.995265$ & $0.00121769$ & $0.00121193$ & $0.00001$ & $5.61341$ \\\hline
-    $3200.3$ & $0.09814$ & $0.04907$ & $1.629$ & $0.995265$ & $0.00121844$ & $0.00121267$ & $0.00001$ & $5.61680$ \\\hline
-    $3220.4$ & $0.09814$ & $0.04907$ & $1.619$ & $0.995265$ & $0.00121096$ & $0.00120523$ & $0.00001$ & $5.58294$ \\\hline
-    $3470.9$ & $0.09814$ & $0.04907$ & $1.638$ & $0.995265$ & $0.00122517$ & $0.00121937$ & $0.00001$ & $5.64728$ \\\hline
-    $3190.8$ & $0.09814$ & $0.04907$ & $1.595$ & $0.995265$ & $0.00119301$ & $0.00118737$ & $0.00001$ & $5.50167$ \\\hline
-    $2990.3$ & $0.09814$ & $0.04907$ & $1.544$ & $0.995265$ & $0.00115488$ & $0.00114941$ & $0.00001$ & $5.32906$ \\\hline
-    $3440.0$ & $0.09814$ & $0.04907$ & $1.660$ & $0.995265$ & $0.00124162$ & $0.00123574$ & $0.00001$ & $5.72181$ \\\hline
-    $2990.7$ & $0.09814$ & $0.04907$ & $1.536$ & $0.995265$ & $0.00114889$ & $0.00114345$ & $0.00001$ & $5.30200$ \\\hline
-    $3260.5$ & $0.09814$ & $0.04907$ & $1.626$ & $0.995265$ & $0.00121620$ & $0.00121044$ & $0.00001$ & $5.60664$ \\\hline
-    $3010.8$ & $0.09814$ & $0.04907$ & $1.574$ & $0.995265$ & $0.00117731$ & $0.00117174$ & $0.00001$ & $5.43058$ \\\hline
-    $3470.0$ & $0.09814$ & $0.04907$ & $1.704$ & $0.995265$ & $0.00127453$ & $0.00126849$ & $0.00001$ & $5.87091$ \\\hline
+    $3270.2$ & $0.09814$ & $0.04907$ & $1.624$ & $0.995265$ & $0.00121468$ & $0.00120895$ & $7 \cdot 10^{-6}$ & $5.59987$ \\\hline
+    $2990.0$ & $0.09814$ & $0.04907$ & $1.504$ & $0.995265$ & $0.00112494$ & $0.00111964$ & $7 \cdot 10^{-6}$ & $5.19376$ \\\hline
+    $2760.1$ & $0.09814$ & $0.04907$ & $1.478$ & $0.995265$ & $0.00110550$ & $0.00110028$ & $7 \cdot 10^{-6}$ & $5.10586$ \\\hline
+    $3270.0$ & $0.09814$ & $0.04907$ & $1.566$ & $0.995265$ & $0.00117130$ & $0.00116578$ & $7 \cdot 10^{-6}$ & $5.40351$ \\\hline
+    $3040.1$ & $0.09814$ & $0.04907$ & $1.494$ & $0.995265$ & $0.00111746$ & $0.00111219$ & $7 \cdot 10^{-6}$ & $5.15995$ \\\hline
+    $3370.1$ & $0.09814$ & $0.04907$ & $1.639$ & $0.995265$ & $0.00122590$ & $0.00122011$ & $7 \cdot 10^{-6}$ & $5.65067$ \\\hline
+    $3090.4$ & $0.09814$ & $0.04907$ & $1.589$ & $0.995265$ & $0.00118850$ & $0.00118290$ & $7 \cdot 10^{-6}$ & $5.48136$ \\\hline
+    $3410.2$ & $0.09814$ & $0.04907$ & $1.600$ & $0.995265$ & $0.00119673$ & $0.00119109$ & $7 \cdot 10^{-6}$ & $5.51860$ \\\hline
+    $3070.6$ & $0.09814$ & $0.04907$ & $1.574$ & $0.995265$ & $0.00117729$ & $0.00117174$ & $7 \cdot 10^{-6}$ & $5.43058$ \\\hline
+    $3380.9$ & $0.09814$ & $0.04907$ & $1.628$ & $0.995265$ & $0.00121767$ & $0.00121193$ & $7 \cdot 10^{-6}$ & $5.61341$ \\\hline
+    $3200.3$ & $0.09814$ & $0.04907$ & $1.629$ & $0.995265$ & $0.00121842$ & $0.00121267$ & $7 \cdot 10^{-6}$ & $5.61680$ \\\hline
+    $3220.4$ & $0.09814$ & $0.04907$ & $1.619$ & $0.995265$ & $0.00121094$ & $0.00120523$ & $7 \cdot 10^{-6}$ & $5.58294$ \\\hline
+    $3470.9$ & $0.09814$ & $0.04907$ & $1.638$ & $0.995265$ & $0.00122515$ & $0.00121937$ & $7 \cdot 10^{-6}$ & $5.64728$ \\\hline
+    $3190.8$ & $0.09814$ & $0.04907$ & $1.595$ & $0.995265$ & $0.00119299$ & $0.00118737$ & $7 \cdot 10^{-6}$ & $5.50167$ \\\hline
+    $2990.3$ & $0.09814$ & $0.04907$ & $1.544$ & $0.995265$ & $0.00115485$ & $0.00114941$ & $7 \cdot 10^{-6}$ & $5.32906$ \\\hline
+    $3440.0$ & $0.09814$ & $0.04907$ & $1.660$ & $0.995265$ & $0.00124160$ & $0.00123574$ & $7 \cdot 10^{-6}$ & $5.72181$ \\\hline
+    $2990.7$ & $0.09814$ & $0.04907$ & $1.536$ & $0.995265$ & $0.00114887$ & $0.00114345$ & $7 \cdot 10^{-6}$ & $5.30200$ \\\hline
+    $3260.5$ & $0.09814$ & $0.04907$ & $1.626$ & $0.995265$ & $0.00121617$ & $0.00121044$ & $7 \cdot 10^{-6}$ & $5.60664$ \\\hline
+    $3010.8$ & $0.09814$ & $0.04907$ & $1.574$ & $0.995265$ & $0.00117729$ & $0.00117174$ & $7 \cdot 10^{-6}$ & $5.43058$ \\\hline
+    $3470.0$ & $0.09814$ & $0.04907$ & $1.704$ & $0.995265$ & $0.00127450$ & $0.00126849$ & $7 \cdot 10^{-6}$ & $5.87091$ \\\hline
 
 \end{tabular}
     \caption{Campo magnetico terrestre parallelo al campo magnetico generato dalle bobine di Helmholz. Si riportano i valori della differenza di potenziale $\Delta V$, del diametro $ d $ della circonferenza percorsa dagli elettroni e del conseguente raggio $ R $, dell'intensità di corrente $ I $ e del termine correttivo utilizzato per correggere il campo magnetico $B(0)$ - colonna 5 - all'effettivo valore B(R) - colonna 6 -.}
@@ -340,26 +345,26 @@
 
 
 
-    $347.3$ & $0.09814$ & $0.04907$ & $1.605$ & $0.995265$ & $0.00120026$ & $0.00119457$ & $0.00001$ & $5.53547$ \\\hline
-    $303.4$ & $0.09814$ & $0.04907$ & $1.439$ & $0.995265$ & $0.00107612$ & $0.00107102$ & $0.00001$ & $4.97399$ \\\hline
-    $347.2$ & $0.09814$ & $0.04907$ & $1.569$ & $0.995265$ & $0.00117333$ & $0.00116778$ & $0.00001$ & $5.41360$ \\\hline
-    $302.9$ & $0.09814$ & $0.04907$ & $1.416$ & $0.995265$ & $0.00105892$ & $0.00105390$ & $0.00001$ & $4.89630$ \\\hline
-    $348.3$ & $0.09814$ & $0.04907$ & $1.579$ & $0.995265$ & $0.00118081$ & $0.00117522$ & $0.00001$ & $5.44744$ \\\hline
-    $302.0$ & $0.09814$ & $0.04907$ & $1.486$ & $0.995265$ & $0.00111126$ & $0.00110600$ & $0.00001$ & $5.13283$ \\\hline
-    $344.4$ & $0.09814$ & $0.04907$ & $1.566$ & $0.995265$ & $0.00117109$ & $0.00116555$ & $0.00001$ & $5.40344$ \\\hline
-    $299.1$ & $0.09814$ & $0.04907$ & $1.447$ & $0.995265$ & $0.00108210$ & $0.00107698$ & $0.00001$ & $5.00102$ \\\hline
-    $340.8$ & $0.09814$ & $0.04907$ & $1.546$ & $0.995265$ & $0.00115613$ & $0.00115066$ & $0.00001$ & $5.33576$ \\\hline
-    $337.2$ & $0.09814$ & $0.04907$ & $1.582$ & $0.995265$ & $0.00118306$ & $0.00117745$ & $0.00001$ & $5.45760$ \\\hline
-    $301.9$ & $0.09814$ & $0.04907$ & $1.497$ & $0.995265$ & $0.00111949$ & $0.00111419$ & $0.00001$ & $5.17002$ \\\hline
-    $358.7$ & $0.09814$ & $0.04907$ & $1.635$ & $0.995265$ & $0.00122269$ & $0.00121690$ & $0.00001$ & $5.63706$ \\\hline
-    $307.8$ & $0.09814$ & $0.04907$ & $1.464$ & $0.995265$ & $0.00109481$ & $0.00108963$ & $0.00001$ & $5.05847$ \\\hline
-    $336.0$ & $0.09814$ & $0.04907$ & $1.565$ & $0.995265$ & $0.00117034$ & $0.00116480$ & $0.00001$ & $5.40006$ \\\hline
-    $304.8$ & $0.09814$ & $0.04907$ & $1.498$ & $0.995265$ & $0.00112024$ & $0.00111493$ & $0.00001$ & $5.17341$ \\\hline
-    $336.4$ & $0.09814$ & $0.04907$ & $1.553$ & $0.995265$ & $0.00116137$ & $0.00115587$ & $0.00001$ & $5.35945$ \\\hline
-    $293.3$ & $0.09814$ & $0.04907$ & $1.425$ & $0.995265$ & $0.00106565$ & $0.00106060$ & $0.00001$ & $4.92670$ \\\hline
-    $327.7$ & $0.09814$ & $0.04907$ & $1.552$ & $0.995265$ & $0.00116062$ & $0.00115513$ & $0.00001$ & $5.35607$ \\\hline
-    $301.1$ & $0.09814$ & $0.04907$ & $1.476$ & $0.995265$ & $0.00110379$ & $0.00109856$ & $0.00001$ & $5.09903$ \\\hline
-    $333.7$ & $0.09814$ & $0.04907$ & $1.544$ & $0.995265$ & $0.00115464$ & $0.00114917$ & $0.00001$ & $5.32900$ \\\hline
+    $347.3$ & $0.09814$ & $0.04907$ & $1.605$ & $0.995265$ & $0.00120026$ & $0.00119457$ & $7 \cdot 10^{-6}$ & $5.53547$ \\\hline
+    $303.4$ & $0.09814$ & $0.04907$ & $1.439$ & $0.995265$ & $0.00107612$ & $0.00107102$ & $7 \cdot 10^{-6}$ & $4.97399$ \\\hline
+    $347.2$ & $0.09814$ & $0.04907$ & $1.569$ & $0.995265$ & $0.00117333$ & $0.00116778$ & $7 \cdot 10^{-6}$ & $5.41360$ \\\hline
+    $302.9$ & $0.09814$ & $0.04907$ & $1.416$ & $0.995265$ & $0.00105892$ & $0.00105390$ & $7 \cdot 10^{-6}$ & $4.89630$ \\\hline
+    $348.3$ & $0.09814$ & $0.04907$ & $1.579$ & $0.995265$ & $0.00118081$ & $0.00117522$ & $7 \cdot 10^{-6}$ & $5.44744$ \\\hline
+    $302.0$ & $0.09814$ & $0.04907$ & $1.486$ & $0.995265$ & $0.00111126$ & $0.00110600$ & $7 \cdot 10^{-6}$ & $5.13283$ \\\hline
+    $344.4$ & $0.09814$ & $0.04907$ & $1.566$ & $0.995265$ & $0.00117109$ & $0.00116555$ & $7 \cdot 10^{-6}$ & $5.40344$ \\\hline
+    $299.1$ & $0.09814$ & $0.04907$ & $1.447$ & $0.995265$ & $0.00108210$ & $0.00107698$ & $7 \cdot 10^{-6}$ & $5.00102$ \\\hline
+    $340.8$ & $0.09814$ & $0.04907$ & $1.546$ & $0.995265$ & $0.00115613$ & $0.00115066$ & $7 \cdot 10^{-6}$ & $5.33576$ \\\hline
+    $337.2$ & $0.09814$ & $0.04907$ & $1.582$ & $0.995265$ & $0.00118306$ & $0.00117745$ & $7 \cdot 10^{-6}$ & $5.45760$ \\\hline
+    $301.9$ & $0.09814$ & $0.04907$ & $1.497$ & $0.995265$ & $0.00111949$ & $0.00111419$ & $7 \cdot 10^{-6}$ & $5.17002$ \\\hline
+    $358.7$ & $0.09814$ & $0.04907$ & $1.635$ & $0.995265$ & $0.00122269$ & $0.00121690$ & $7 \cdot 10^{-6}$ & $5.63706$ \\\hline
+    $307.8$ & $0.09814$ & $0.04907$ & $1.464$ & $0.995265$ & $0.00109481$ & $0.00108963$ & $7 \cdot 10^{-6}$ & $5.05847$ \\\hline
+    $336.0$ & $0.09814$ & $0.04907$ & $1.565$ & $0.995265$ & $0.00117034$ & $0.00116480$ & $7 \cdot 10^{-6}$ & $5.40006$ \\\hline
+    $304.8$ & $0.09814$ & $0.04907$ & $1.498$ & $0.995265$ & $0.00112024$ & $0.00111493$ & $7 \cdot 10^{-6}$ & $5.17341$ \\\hline
+    $336.4$ & $0.09814$ & $0.04907$ & $1.553$ & $0.995265$ & $0.00116137$ & $0.00115587$ & $7 \cdot 10^{-6}$ & $5.35945$ \\\hline
+    $293.3$ & $0.09814$ & $0.04907$ & $1.425$ & $0.995265$ & $0.00106565$ & $0.00106060$ & $7 \cdot 10^{-6}$ & $4.92670$ \\\hline
+    $327.7$ & $0.09814$ & $0.04907$ & $1.552$ & $0.995265$ & $0.00116062$ & $0.00115513$ & $7 \cdot 10^{-6}$ & $5.35607$ \\\hline
+    $301.1$ & $0.09814$ & $0.04907$ & $1.476$ & $0.995265$ & $0.00110379$ & $0.00109856$ & $7 \cdot 10^{-6}$ & $5.09903$ \\\hline
+    $333.7$ & $0.09814$ & $0.04907$ & $1.544$ & $0.995265$ & $0.00115464$ & $0.00114917$ & $7 \cdot 10^{-6}$ & $5.32900$ \\\hline
 
 \end{tabular}
     \caption{Campo magnetico terrestre antiparallelo al campo magnetico generato dalle bobine di Helmholz. Si riportano i valori della differenza di potenziale $\Delta V$, del diametro $ d $ della circonferenza percorsa dagli elettroni e del conseguente raggio $ R $, dell'intensità di corrente $ I $ e del termine correttivo utilizzato per correggere il campo magnetico $B(0)$ - colonna 5 - all'effettivo valore B(R) - colonna 6 -.}
