@@ -3,6 +3,7 @@
 \usepackage[english]{babel}
 
 \usepackage[]{csvsimple}
+\usepackage[]{float}
 
 \usepackage{ragged2e}
 \usepackage[left=25mm, right=25mm, top=15mm]{geometry}
@@ -88,7 +89,7 @@
     Mediante l'utilizzo di un prisma a sezione isoscele, si vuole misurare l'indice di rifrazione del materiale che lo compone. Si vuole inoltre verificare la legge di dispersione secondo la formula di Cauchy:
     \begin{equation}
         \label{cauchy}
-        n(\lambda) = A + \frac{B}{\lambda^2}
+        n^2(\lambda) = A + \frac{B}{\lambda^2}
     \end{equation}
     Dove dove $n$ è l'indice di rifrazione, $\lambda$ è la lunghezza d'onda, $A$ e $B$ sono i coefficienti che possono essere determinati per un materiale interpolando l'equazione ad indici di rifrazione misurati per lunghezze d'onda note.
 
@@ -123,7 +124,7 @@
 
     \section{Analisi dati}
     \subsection{Elaborazione dati}
-    \subsubsection{Valore dell'angolo $\alpha$ del prisma}
+    \subsubsection{Angolo $\alpha$ del prisma}
     Dalla misura della posizione del fascio di luce riflessa da due delle facce del prisma, si ricava la posizione dell'angolo $\alpha$ compreso tra le due facce attraverso la seguente relazione:
     \begin{equation}
         \label{alpha}
@@ -137,16 +138,124 @@
     \end{equation}
     Dove l'errore è stato attribuito come da Par. \ref{par:alpha_err}.
 
+    \subsubsection{Angolo di deviazione minima}
+    Per determinare la posizione angolare $\theta_0$ del cannocchiale nella direzione da cui proviene l'immagine diretta della fenditura, si è eseguita la media aritmetica tra i valori di $\theta_0$ misurati (\ref{}):
+    \begin{equation}
+        \label{theta-0}
+        \theta_0 = -(1 \degree \, 18' \, 0'' \pm 40'') 
+    \end{equation}
+    Per ciascuna lunghezza d'onda dello spettro del mercurio, si determina l'angolo di inversione $\delta$ del moto dell'immagine osservata mediante il cannocchiale attraverso la seguente relazione:
+    \begin{equation}
+        \label{delta}
+        \delta = | \theta_0 - \theta_{\lambda}|
+    \end{equation}
+    Dove $\theta_{\lambda}$ è la posizione angolare misurata del punto di inversione del moto.
+    Attraverso la media aritmetica dei valori di $\delta$ ottenuti, se ne determina la miglior stima. I valori ottenuti di $\delta$ per ciascuna lunghezza d'onda osservata, con le loro incertezze (ricavate come da Par. \ref{par:dev_min_err}), sono riportati nella seguente tabella:
+    \begin{table} [H]
+        \centering
+        \begin{tabular}{||c|c||}
+            \hline
+            Colore & $\delta \pm \sigma_{\delta}$\\
+            \hline \hline
+            Viola 1 & $ 74 \degree \, 9' \, 0'' \pm 1' \, 8'' $ \\\hline
+            Viola 2 & $ 73 \degree \, 53'\, 0'' \pm 1' \, 44'' $ \\\hline
+            Indaco & $ 71 \degree \, 47'\, 0'' \pm 27'  $ \\\hline
+            Ciano & $ 68 \degree \, 58'\, 0'' \pm 1' \, 32'' $ \\\hline
+            Verde & $ 67 \degree \, 16'\, 0'' \pm 23'' $ \\\hline
+            Giallo 1 & $ 66 \degree \, 33'\, 0'' \pm 23'' $ \\\hline
+            Giallo 2 & $ 66 \degree \, 32' \, 0''\pm 23'' $ \\\hline
+        \end{tabular}
+        \caption{Valori di $\delta$ e relativi errori.}
+        \label{d-values}
+    \end{table}
+
+    \subsubsection{Indice di rifrazione del vetro}
+    Ottenuti i valori dell'angolo di deviazione minima $\delta$ per ciascuna lunghezza d'onda e dell'angolo $\alpha$ al vertice del prisma, attraverso la relazione \ref{indice_rifrazione}, si ricavano i seguenti valori di indice di rifrazione del vetro del prisma $n$ in funzione della lunghezza d'onda $\lambda$:
+    \begin{table} [H]
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            Colore & $\lambda \pm \sigma_{\lambda} [\cdot 10^{-9} \text{m}]$ & $ n(\lambda) \pm \sigma_n $\\
+            \hline \hline
+            Viola 1  & $404.32 \pm 0.08 $ & $1.845 \pm 0.004$   \\\hline
+            Viola 2  & $407.70 \pm 0.10 $ & $1.843 \pm 0.004$    \\\hline
+            Indaco   & $435.57 \pm 0.08 $ & $1.828 \pm 0.004$  \\\hline
+            Ciano    & $491.21 \pm 0.08 $ & $1.807 \pm 0.004$  \\\hline
+            Verde    & $545.44 \pm 0.08 $ & $1.794 \pm 0.004$ \\\hline
+            Giallo 1 & $576.46 \pm 0.08 $ & $1.789 \pm 0.004$   \\\hline
+            Giallo 2 & $578.41 \pm 0.08 $ & $1.789 \pm 0.004$   \\\hline
+        \end{tabular}
+        \caption{Valori di $n(\lambda)$.}
+        \label{n-values}
+    \end{table}
+    Per verificare la relazione di Cauchy \ref{cauchy}, sono stati riportati sul grafico $riferimento-al-grafico$ i valori ottenuti dalle misure e dalla loro elaborazione. In particolare, si è posto sulle ascisse il termine $\frac{1}{\lambda^2}$ e sulle ordinate il valore $n^2$. Attraverso la regressione lineare pesata si sono ottenuti come valori del coefficiente angolare $A$ e del termine noto $B$ i seguenti:
+    \begin{equation}
+        \label{A}
+        A = (3.002 \pm 0.006) 
+    \end{equation}
+    \begin{equation}
+        \label{B}
+        B = (6.5 \pm 0.1) \cdot 10^{-14} \text{m}^2
+    \end{equation}
+    Per verificare l'effettivo andamento lineare dei risultati ottenuti è stato effettuato un test del $\chi^2$:
+    \begin{equation}
+        \label{chi2}
+        \chi^2 = 5.623 \cdot 10^{-1} 
+    \end{equation}
+    Tale valore restituisce una compatibilità con un andamento lineare di probabilità $76.07 \% $.
+    
     \subsection{Stima degli errori}
-    \subsubsection{Valore dell'angolo $\alpha$ del prisma}
+    \subsubsection{Angolo $\alpha$ del prisma}
     L'errore attribuito ai singoli valori di $\alpha$ è stato ottenuto propagando l'errore su $\theta_1$ e $\theta_2$ nella \ref{alpha}:
     \begin{equation}
         \label{alpha-err}
         \alpha = \sqrt{2} \cdot \sigma_{\theta} 
     \end{equation}
-    Ai singoli valori di $\alpha$ ottenuti per ciascun set di misure è stata attribuita come incertezza 
-     la risoluzione dello strumento, pari a $1'$. Al valore finale di $\alpha$
-    Ad $\alpha$ è stato attribuito come errore il massimo tra la deviazione standard della singola misura e la risoluzione dello strumento, pari a $1'$.
+    Al valore finale di $\alpha$ è stata attribuita come incertezza la deviazione standard della media delle misure effettuate. Si è scelto di attribuire l'incertezza statistica come errore poiché superiore all'incertezza sistematica, pari a
+    \begin{equation}
+        \label{alpha-err-sist}
+        \sigma_{\alpha, sist}= \frac{\sqrt{2} \cdot \sigma_{\theta}}{\sqrt{10}}=27''
+    \end{equation}
     \label{par:alpha_err}
+
+    \subsubsection{Angolo di deviazione minima}
+    L'errore attribuito al valore medio di $\theta_0$ è stato ricavato attraverso la deviazione standard della media delle misure effettuate. Tale valore è superiore all'incertezza sistematica, ottenuta dalla propagazione dell'errore sulla singola misura di $\theta_0$ nella formula per calcolare la media aritmetica:
+    \begin{equation}
+        \label{theta0-err-sist}
+        \sigma_{\theta_0,sist} = \frac{\sigma_{\theta_0}}{\sqrt{10}} = 19''
+    \end{equation}
+    Dove $\sigma_{\theta_0}$ è l'incertezza attribuita alle singole misure di $\theta_0$.
+    L'errore sul valore di $\delta$ ottenuto per i primi quattro colori osservati (Viola 1, Viola 2, Indaco e Ciano) è stato attribuito attraverso la deviazione standard della medie delle misure effettuate. Tale valore è risultato superiore rispetto all'incertezza sistematica, calcolabile attraverso la propagazione degli errori su $\theta_0$ e $\theta_{\lambda}$ nella \ref{delta}:
+    \begin{equation}
+        \label{delta-err-sist}
+        \sigma_{\delta, sist}= \frac{\sqrt{ \sigma_{\theta_0}^2 + \sigma_{\theta_{\lambda}}^2 }}{\sqrt{10}} = 23''
+    \end{equation}
+    Dove $\sigma_{\theta_0}$ è l'incertezza attribuita alle singole misure di $\theta_0$ e $\sigma_{\theta_{\lambda}}$ è l'incertezza attribuita alle singole misure di $\theta_{\lambda}$.
+    Nel caso degli ultimi 3 colori (Verde, Giallo 1 e Giallo 2), l'incertezza sistematica risulta invece superiore a quella statistica, ed è dunque stata attribuita come errore su $\delta$. Le incertezze statistiche sono riportate nella seguente tabella:
+    \begin{table} [H]
+        \centering
+        \begin{tabular}{||c|c||}
+            \hline
+            Colore & $\sigma_{\delta_{stat}}$\\
+            \hline \hline
+            Verde & $ 0.3'' $ \\\hline
+            Giallo 1 & $ 0.2'' $ \\\hline
+            Giallo 2 & $ 0.2''  $ \\\hline
+        \end{tabular}
+        \caption{Valori dell'incertezza statistica su $\delta$.}
+        \label{d-err-stat}
+    \end{table}
+    \label{par:dev_min_err}
+
+    \subsubsection{Indice di rifrazione del vetro}
+    L'incertezza attribuita a ciascun valore dell'indice di rifrazione del vetro $n$ è stata ottenuta mediante propagazione degli errori su $\delta$ e $\alpha$ nella \ref{indice_rifrazione}:
+    \begin{equation}
+        \label{sigma-n}
+        \sigma_n = \sqrt{ \left(\frac{\sin{\frac{\delta}{2}}}{\cos{\alpha}-1}\right)^2 \cdot \sigma_{\alpha}^2 + \left(\frac{cos{\frac{\delta + \alpha}{2}}}{\sin{\frac{\alpha}{2}}}\right)^2 \cdot \sigma_{\delta}^2   }
+    \end{equation}
+    Dove $\sigma_{delta}$ è l'incertezza attribuita all'angolo di deviazione minima $\delta$ e $\sigma_{\alpha}$ è l'incertezza attribuita all'angolo al centro del prisma $\alpha$.
+
+    \section{Conclusioni}
+    I risultati ottenuti hanno permesso di verificare con ottima compatibilità la relazione di Cauchy.
 
 \end{document}
