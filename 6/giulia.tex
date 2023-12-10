@@ -71,12 +71,11 @@
 
 \DeclareCaptionLabelFormat{andtable}{#1~#2  \&  \tablename~\thetable}
 
-%opening
 \title{%
-    \Huge Misura indiretta della velocità della luce \\
-    \Large C.d.L. in Fisica, a.a. 2022-2023 \\ Università degli Studi di Milano}
-\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi}
-\date{}
+    \Huge Misura dell'indice di rifrazione di un vetro con lo spettrometro a prisma \\
+    \Large Laboratorio di Ottica, Elettronica e Fisica Moderna \\ C.d.L. in Fisica, a.a. 2023-2024 \\ Università degli Studi di Milano}
+\author{\LARGE Lucrezia Bioni, Leonardo Cerasi, Giulia Federica Bianca Coppi \\ Matricole: 13655A, 11410A, 11823A}
+\date{23 novembre 2023}
 
 \begin{document}
 
@@ -86,7 +85,12 @@
 
     \subsection{Scopo}
 
-    Mediante l'utilizzo di un prisma a sezione isoscele, si vuole misurare l'indice di rifrazione del materiale che lo compone.
+    Mediante l'utilizzo di un prisma a sezione isoscele, si vuole misurare l'indice di rifrazione del materiale che lo compone. Si vuole inoltre verificare la legge di dispersione secondo la formula di Cauchy:
+    \begin{equation}
+        \label{cauchy}
+        n(\lambda) = A + \frac{B}{\lambda^2}
+    \end{equation}
+    Dove dove $n$ è l'indice di rifrazione, $\lambda$ è la lunghezza d'onda, $A$ e $B$ sono i coefficienti che possono essere determinati per un materiale interpolando l'equazione ad indici di rifrazione misurati per lunghezze d'onda note.
 
     \subsection{Metodo}
 
@@ -97,8 +101,7 @@
         \label{dev_minima}
         \cos i \cdot \cos r' = \cos r \cdot \cos i'
     \end{equation}
-
-    dove $i$ è l'algolo di incidenza, $i'$ è l'angolo di emergenza $r$ è l'angolo di rifrazione sulla faccia di entrata del prisma e $r'$ l'angolo di incidenza sulla seconda faccia del prisma.
+    Dove $i$ è l'algolo di incidenza, $i'$ è l'angolo di emergenza $r$ è l'angolo di rifrazione sulla faccia di entrata del prisma e $r'$ l'angolo di incidenza sulla seconda faccia del prisma.
 
     Queste quantità sono legate a $\delta$ dalle seguenti relazioni:
 
@@ -107,8 +110,7 @@
         r + r' = \alpha
         \delta = i + i' - \alpha
     \end{equation}
-
-    dove $\alpha$ è l'angolo al vertice del prisma.
+    Dove $\alpha$ è l'angolo al vertice del prisma.
 
     L'indice di rifrazione del prisma, in condizioni di minima deviazione, risulterà essere quindi:
 
@@ -116,7 +118,35 @@
         \label{indice_rifrazione}
         n(\lambda)=\frac{\sin \frac{\alpha + \delta _m} {2}}{\sin \frac{\alpha}{2}}
     \end{equation}
+    Dove $n(\lambda)$ è l'indice di rifrazione del materiale in funzione della lunghezza d'onda $\lambda$ considerata, $\alpha$ l'angolo al vertice della sezione del prisma, $\delta _m $ l'angolo di minima deviazione della lunghezza d'onda considerata.
 
-    dove $n(\lambda)$ è l'indice di rifrazione del materiale in funzione della lunghezza d'onda $\lambda$ considerata, $\alpha$ l'angolo al vertice della sezione del prisma, $\delta _m $ l'angolo di minima deviazione della lunghezza d'onda considerata.
+
+    \section{Analisi dati}
+    \subsection{Elaborazione dati}
+    \subsubsection{Valore dell'angolo $\alpha$ del prisma}
+    Dalla misura della posizione del fascio di luce riflessa da due delle facce del prisma, si ricava la posizione dell'angolo $\alpha$ compreso tra le due facce attraverso la seguente relazione:
+    \begin{equation}
+        \label{alpha}
+        \alpha = 180° - \Delta\theta
+    \end{equation}
+    Dove $\Delta\theta=\theta_2-\theta_1$, e $\theta_1$ è la posizione angolare del fascio riflesso dalla prima faccia, mentre $\theta_2$ è la posizione angolare del fascio riflesso dalla seconda.
+    Tale calcolo è stato eseguito per ogni set di misure di $\theta_1$ e $\theta_2$, ed è stata effettuata una media aritmetica per determinare il valore finale di $\alpha$, pari a: 
+    \begin{equation}
+        \label{alpha-value}
+        \alpha = 59 \degree \, 53' \pm 12'
+    \end{equation}
+    Dove l'errore è stato attribuito come da Par. \ref{par:alpha_err}.
+
+    \subsection{Stima degli errori}
+    \subsubsection{Valore dell'angolo $\alpha$ del prisma}
+    L'errore attribuito ai singoli valori di $\alpha$ è stato ottenuto propagando l'errore su $\theta_1$ e $\theta_2$ nella \ref{alpha}:
+    \begin{equation}
+        \label{alpha-err}
+        \alpha = \sqrt{2} \cdot \sigma_{\theta} 
+    \end{equation}
+    Ai singoli valori di $\alpha$ ottenuti per ciascun set di misure è stata attribuita come incertezza 
+     la risoluzione dello strumento, pari a $1'$. Al valore finale di $\alpha$
+    Ad $\alpha$ è stato attribuito come errore il massimo tra la deviazione standard della singola misura e la risoluzione dello strumento, pari a $1'$.
+    \label{par:alpha_err}
 
 \end{document}

@@ -3,6 +3,7 @@
 \usepackage[english]{babel}
 
 \usepackage[]{csvsimple}
+\usepackage{float}
 
 \usepackage{ragged2e}
 \usepackage[left=25mm, right=25mm, top=15mm]{geometry}
@@ -97,9 +98,84 @@
     \end{equation}
     Il passo $d$ del reticolo si ottiene dalle misure delle posizioni angolari dei massimi di interferenza del doppietto del sodio, le cui lunghezze d'onda si assumono note:
     \begin{equation}
-        \label{lambda-sodio}
+        \label{lambda-sodio-1}
         \lambda_1 = 5.890 \cdot 10^{-7} \text{m}
     \end{equation}
 
+    \section{Analisi dati}
+    \subsection{Elaborazione dati}
+    \subsubsection{Passo del reticolo}
+    Attraverso la relazione seguente, si è determinato il passo $d$ del reticolo: 
+    \begin{equation}
+        \label{passo}
+        d = \frac{k \, \, \lambda_1}{\sin{\Delta\theta}}
+    \end{equation}
+    Dove $\Delta\theta$ è la posizione angolare del massimo di ordine $k=4$ della lunghezza d'onda $\lambda_1$ del Na.
+    I valori ottenuti per ciascuna misura presa sono riportati nella seguente tabella:
+    \begin{table} [H]
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            N° misura & $d [\cdot 10^{-6}\text{ m }] $ & $ \sigma_d [\cdot 10^{-6}\text{ m}] $\\
+            \hline \hline
+            $ 1 $ & $ 3.3770 $ & $ 0.0014 $ \\\hline
+            $ 2 $ & $ 3.3798 $ & $ 0.0014 $ \\\hline
+            $ 3 $ & $ 3.3729 $ & $ 0.0014 $ \\\hline
+        \end{tabular}
+        \caption{Valori di $d$ e relativi errori.}
+        \label{d-values}
+    \end{table}
+    Dove $\sigma_d$ è stato attribuito come da Par. \ref{par:errore_passo}.
+    Il valore finale di $d$ si ottiene mediante media pesata dei valori riportati in tabella:
+    \begin{equation}
+        \label{d-value}
+        d = (3.3766 \pm 0.0008 ) \cdot 10^{-6} \text{m}
+    \end{equation}
+
+    \subsubsection{Lunghezze d'onda di Hg}
+    Di ogni componente dello spettro del mercurio osservata, noto l'ordine e la posizione angolare del massimo considerato, si è calcolata la lunghezza d'onda $\lambda$, come da \ref{lambda}. Si è poi effettuata una media ponderata tra tutti i valori di $\lambda$ ottenuti per ciascuna componente. I valori ottenuti sono riportati nella seguente tabella:
+    \begin{table} [H]
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            Colore & $\lambda [\cdot 10^{-7}\text{ m }] $ & $ \sigma_{\lambda} [\cdot 10^{-7}\text{ m}] $\\
+            \hline \hline
+            Viola & $ 4.0432 $ & $ 0.0008 $ \\\hline
+            Indaco & $ 4.3557 $ & $ 0.0008 $ \\\hline
+            Ciano & $ 4.9121 $ & $ 0.0008 $ \\\hline
+            Verde & $ 5.4544 $ & $ 0.0008 $ \\\hline
+            Giallo 1 & $ 5.7646 $ & $ 0.0008 $ \\\hline
+            Giallo 2 & $ 5.7841 $ & $ 0.0008 $ \\\hline
+            Rosso & $ 6.2309 $ & $ 0.0010 $ \\\hline
+        \end{tabular}
+        \caption{Valori di $\lambda$ di ogni componente di Hg e relativi errori.}
+        \label{lambda-Hg-values}
+    \end{table}
+    Dove $\sigma_{\lambda}$ è stato attribuito come da Par. \ref{par:errore_lambda}.
+
+    \subsubsection{Potere dispersivo}
+    Attraverso le misure effettuate, si è potuto determinare il potere dispersivo $D$ del reticolo fornito attraverso la seguente relazione:
+
+    \subsubsection{Potere risolutivo}
+    
+
+
+    \subsection{Stima degli errori}
+    \subsubsection{Passo del reticolo}
+    Per ogni misurazione effettuata, si è attribuito al valore di $d$ ottenuto un errore stimato mediante propagazione degli errori sulla grandezza $\Delta \theta$ nella formula \ref{passo}:
+    \begin{equation}
+        \label{d-error}
+        \sigma_d = \frac{k \, \lambda \, \cos{\Delta\theta} \, \sigma_{\Delta \theta}}{\sin^2{\Delta\theta}}
+    \end{equation}
+    Invece, l'incertezza sul valore finale di $d$ è stata calcolata come errore di una media ponderata dei valori riportati in Tab. \ref{d-values}.
+    \label{par:errore_passo}
+
+    \subsubsection{Lunghezze d'onda di Hg}
+    Per ogni misurazione effettuata, si è attribuito al valore di $\lambda$ ottenuto un errore stimato mediante propagazione degli errori sulle grandezze $\Delta \theta$ e $d$ nella formula \ref{lambda}:
+    \begin{equation}
+        \label{lambda-error}
+        \sigma_{\lambda} = \sqrt{\left( \frac{\sin{\Delta\theta}}{k}  \cdot \sigma_d \right)^2 + \left(\frac{d}{k} \cdot \cos{\Delta\theta} \cdot \sigma_{\Delta\theta}\right)^2  } 
+    \end{equation}
+    \label{par:errore_lambda}
 
 \end{document}
