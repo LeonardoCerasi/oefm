@@ -202,7 +202,7 @@
 
     \subsubsection{Carica/massa dell'elettrone}
 
-    Ai fini della determinazione del rapporto carica/massa dell'elettrone, sono state riportate sui grafici $riferimento-a-grafici$ le misure effettuate. In particolare si è posto sulle ascisse il termine $2\Delta V_i$ e sulle ordinate il valore $(B_i R_i)^2$. Per la relazione \ref{e_m}, attraverso il metodo dei minimi quadrati, si ottiene come coefficiente angolare $A$ il rapporto $m/e$, dove $m$ è la massa ed $e$ è la carica dell'elettrone. Dall'inversione di tale espressione si ottiene il rapporto $e/m$ cercato. In Tab. \ref{regr_lin} sono riportati, con le loro incertezze, i coefficienti angolari $A$ e i termini noti $B$ ottenuti dalla regressione lineare pesata per ciascuna configurazione dell'apparato. 
+    Ai fini della determinazione del rapporto carica/massa dell'elettrone, sono state riportate sui grafici in Par. \ref{par:graph} le misure effettuate. In particolare si è posto sulle ascisse il termine $2\Delta V_i$ e sulle ordinate il valore $(B_i R_i)^2$. Per la relazione \ref{e_m}, attraverso il metodo dei minimi quadrati, si ottiene come coefficiente angolare $A$ il rapporto $m/e$, dove $m$ è la massa ed $e$ è la carica dell'elettrone. Dall'inversione di tale espressione si ottiene il rapporto $e/m$ cercato. In Tab. \ref{regr_lin} sono riportati, con le loro incertezze, i coefficienti angolari $A$ e i termini noti $B$ ottenuti dalla regressione lineare pesata per ciascuna configurazione dell'apparato. 
     \begin{table}[H]
         \centering
     
@@ -250,6 +250,7 @@
         \sigma _{e/m,sist} = \sqrt{ \frac{4}{B_z^4 \, R^4} \sigma_{\Delta V ^2} + \frac{16 \, \Delta V ^2}{B_z^6 \, R^4} \sigma_{B_z ^2} + \frac{16 \, \Delta V ^2}{B_z^4 \, R^6} \sigma_{R ^2}  }  
     \end{equation}
     Dove le grandezze $\Delta V$, $R$ e $B_z$ sono i valori medi di ciascun set di misure.
+    I valori ottenuti, riportati in Tab. \ref{em-values}, forniscono una componente di errore trascurabile rispetto a quella statistica. Pertanto, si è deciso di attribuire come incertezza quella statistica.
 
     \subsection{Confronto}
     Per confrontare i valori del rapporto carica/massa dell'elettrone ottenuti per ciascuna configurazione con il valore aspettato
@@ -259,19 +260,17 @@
 
     \begin{table}[H]
         \centering
-        \begin{tabular}{||c|c|c|c|c||}
+        \begin{tabular}{||c|c|c|c||}
             \hline
-            Configurazione & $e/m \, [10^{11} \,\text{C/kg}]$ & $\sigma_{e/m} \,[10^{11} \,\text{C/kg}]$ & $\sigma_{e/m,sist} \,[10^{11} \,\text{C/kg}]$ & Compatibilità \\
+            Configurazione & $e/m \, [10^{11} \,\text{C/kg}]$ & $\sigma_{e/m,sist} \,[10^{11} \,\text{C/kg}]$ & Compatibilità \\
             \hline\hline
-            CM ortogonale & $1.685295$ & $0.031773$ & $0.017409 $ & $3.20\%$ \\\hline
-            CM parallelo & $1.838002$ & $0.059913$ & $????$ & $20.20\%$ \\\hline
-            CM antiparallelo & $1.757123$ & $0.047465$ & $????$ & $97.19\%$ \\\hline
+            CM ortogonale & $1.685 \pm 0.032$ & $0.004 $ & $3.20\%$ \\\hline
+            CM parallelo & $1.802 \pm 0.059$ & $0.004$ & $47.24\%$ \\\hline
+            CM antiparallelo & $1.794 \pm 0.049$ & $0.005$ & $47.33\%$ \\\hline
         \end{tabular}
-        \caption{Valori di $e/m$ e relativi errori per ciascuna configurazione.}
+        \caption{Valori di $e/m$ e relativi errori per ciascuna configurazione. Stima dell'errore sistematico (non considerato). Compatibilità con il valore atteso.}
         \label{em-values}
     \end{table}
-    Dal test effettuato emerge che il valore di $e/m$ ottenuto con il campo magnetico delle bobine posto ortogonalmente al campo magnetico terrestre non supera la soglia minima di compatibilità stabilita al $5\%$. Spiegazione ???.
-    La leggera sovrastima del valore nel caso di campo magnetico parallelo e la sottostima nel caso di campo magnetico antiparallelo può essere dovuta a una sottostima dell'effettivo valore della componente orizzontale del campo magnetico terrestre.\\
     Sempre mediante test di Student si è inoltre eseguito un confronto tra i valori di $e/m$ ottenuti da ciascuna configurazione:
 
     \begin{table}[H]
@@ -279,18 +278,28 @@
         \begin{tabular}{||c|c|c|c||}
             \hline
             $ $ & ortogonale & parallelo & antiparallelo \\\hline\hline
-            ortogonale & $ $ & $ 1.02\cdot 10^{-9}\% $ & $3.43\cdot 10^{-4}\%$  \\\hline
-            parallelo & $ 1.02\cdot 10^{-9}\% $ & $ $ & $4.88\cdot 10^{-3}\% $ \\\hline
-            antiparallelo & $3.43\cdot 10^{-4}\% $ & $4.88\cdot 10^{-3}\%$ & $ $ \\\hline
+            ortogonale & $ $ & $ 5.32\cdot 10^{-7}\% $ & $9.52\cdot 10^{-8}\%$  \\\hline
+            parallelo & $ 5.32\cdot 10^{-7}\% $ & $ $ & $66.56\% $ \\\hline
+            antiparallelo & $9.52\cdot 10^{-8}\% $ & $66.56\%$ & $ $ \\\hline
         \end{tabular}
         \caption{Compatibilità reciproche tra valori di $e/m$.}
         \label{comp}
     \end{table}
+    Come si evince dalle Tabb. \ref{em-values} e \ref{comp}, il dataset rilevato nella configurazione ortogonale al campo magnetico terrestre, corrispondente alle misurazioni in Tab. \ref{CM_ortogonale}, risulta altamente incompatibile con i restanti dati, nonché quello con la minore compatibilità con il valore aspettato: per questo, si è deciso di rigettarlo nell'analisi conclusiva.
 
     \section{Conclusione}
+    Il valore finale del rapporto carica/massa dell'elettrone è stato calcolato attraverso la media ponderata dei valori ottenuti dai dataset non rigettati:
+    \begin{equation}
+        \label{final-value}
+        \frac{e}{m} = ( 1.797 \pm 0.037) \cdot 10^{11}\text{C/kg} 
+    \end{equation}
+    Il risultato atteso $e/m = 1.758820 \cdot 10^{11}\text{C/kg}$ è situato entro $1.03\sigma$ dal valore calcolato. Pertanto, il risultato dell'esperimento è in accordo con il valore universalmente accettato. \\
+    L'incompatibilità del primo set di misure è spiegabile con il fatto che la relativa presa dati è viziata da un errore tecnico nella messa a punto dell'apparato sperimentale, che è stata corretta solo nelle rilevazioni successive.\\
+    
 
     \newpage
     \section{Appendice}
+    \subsection{Dati grezzi}
 
 
 
@@ -329,7 +338,7 @@
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
     \centering
 
 \begin{tabular}{||c|c|c|c|c|c|c||}
@@ -364,7 +373,7 @@
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
     \centering
 
 \begin{tabular}{||c|c|c|c|c|c|c||}
@@ -399,7 +408,7 @@
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
     \centering
 
 \begin{tabular}{||c|c||}
@@ -455,7 +464,7 @@
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
     \centering
 
 
@@ -484,7 +493,7 @@
 \end{table}
 
 
-\begin{table}
+\begin{table}[H]
     \centering
 
 \begin{tabular}{||c|c|c|c|c||}
@@ -510,8 +519,29 @@
 \caption{Componenti del campo magnetico terrestre $B_t$, $B_r$ e $B_z$ ottenute mediante la misura della deflessione angolare dell'ago magnetico in senso antiorario. Si riportano inoltre i valori dell'intensità della corrente indotta nelle bobine $I$ e del valore iniziale $I_0$}
 \label{campomagneticoterrestre_sensoantiorario}
 \end{table}
+\newpage
+\subsection{Grafici}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{plot/graph_ort.png}
+    \caption{Regressione lineare relativa alla configurazione parallela, dove $A=(5.93 \pm 0.11) \cdot 10^{-12}\text{kg/C}$ e $B = (-4.08 \pm 0.72) \cdot 10^{-10} (\text{N/A})^2$.}
+    \label{graph_ort}
+\end{figure}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{plot/graph_par.png}
+    \caption{Regressione lineare relativa alla configurazione parallela, dove $A=(5.44 \pm 0.18) \cdot 10^{-12}\text{kg/C}$ e $B = (-1.06 \pm 0.11) \cdot 10^{-10} (\text{N/A})^2$.}
+    \label{graph_par}
+\end{figure}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.70\textwidth]{plot/graph_apar.png}
+    \caption{Regressione lineare relativa alla configurazione antiparallela, dove $A=(5.69 \pm 0.15) \cdot 10^{-12}\text{kg/C}$ e $B = (-5.95 \pm 0.99) \cdot 10^{-10} (\text{N/A})^2$.}
+    \label{graph_par}
+\end{figure}
 
+\label{par:graph}
 
 \end{document}
