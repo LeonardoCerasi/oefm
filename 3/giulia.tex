@@ -192,7 +192,7 @@
         B_t= \left(\frac{I}{I_0}\right) (B_z \cot(\theta) \, + B_r)
     \end{equation}
     dove $ I_0 = 100 \text{mA} $, $ I $ è l'intensità di corrente di alimentazione delle bobine necessaria per deflettere l'ago di un angolo $\theta $, $B_z$ e $B_r$ sono le componenti di campo magnetico generato dalle bobine (tabulate in base alla lunghezza dell'ago magnetico e all'angolo di deflessione). Per ciascuna misura di angolo $\theta$ e di intensità di corrente $I$, è stato ricavato un valore di $B_t$, cui è stata attribuita un'incertezza come da Par. \ref{par:sigma_campo_magnetico_terrestre}. 
-    Attraverso una media ponderata dei valori ottenuti, riportati nelle Tabb. \ref{campomagneticoterrestre_sensoorario} e \ref{campomagneticoterrestre_sensoantiorario}, si ottiene il seguente valore per la componente orizzontale del campo magnetico terrestre:
+    Attraverso una media aritmetica dei valori ottenuti, riportati nelle Tabb. \ref{campomagneticoterrestre_sensoorario} e \ref{campomagneticoterrestre_sensoantiorario}, si ottiene il seguente valore per la componente orizzontale del campo magnetico terrestre:
     \begin{equation}
         \label{misura_campomagneticoterrestre}
         B_t = ( 2.14\pm 0.07) \, \cdot 10^{-7} \, \text{T}
@@ -208,7 +208,7 @@
     
         \begin{tabular} {||c||c|c||c|c||c||}
             \hline
-            $ \text{Configurazione} $ & $ A \, [10^{-12} kg/C] $ & $ \sigma_A \, [10^{-12} kg/C] $ & $ B \, [10^{-10} N^2 / A^2] $ & $ \sigma_B \, [10^{-10} N^2 / A^2] $ \\
+            $ \text{Configurazione} $ & $ A \, [10^{-12} \text{kg/C}] $ & $ \sigma_A \, [10^{-12} \text{kg/C}] $ & $ B \, [10^{-10} \left(\text{N/A}\right)^2] $ & $ \sigma_B \, [10^{-10} \left(\text{N/A}\right)^2] $ \\
             \hline \hline
     
             $ \text{Ortogonale} $ & $ 5.93 $ & $0.11 $ & $-4.08 $ & $ 0.72 $  \\\hline
@@ -216,7 +216,7 @@
             $ \text{Antiparallelo} $ & $ 5.69 $ & $0.15 $ & $-5.95 $ & $ 0.99 $  \\\hline
     
         \end{tabular}
-        \caption{Valori del coefficiente angolare $A$ e del termine noto $B$ della regressione lineare per la determianzione di $e/m$ nei casi di campo magnetico ortogonale, parallelo e antiparallelo al campo magnetico terrestre.}
+        \caption{Valori del coefficiente angolare $A$ e del termine noto $B$ della regressione lineare per la determinazione di $e/m$ nei casi di campo magnetico ortogonale, parallelo e antiparallelo al campo magnetico terrestre.}
         \label{regr_lin}
     
     \end{table}
@@ -224,7 +224,7 @@
 
     \subsection {Stima degli errori}
     \subsubsection{Campo magnetico generato dalle bobine di Helmholtz}
-    L'errore attribuito al campo magnetico generato dalle bobine di Helmholtz $\sigma _{Bz} $, riportato in Tabb. \ref{CM_ortogonale}, \ref{CM_parallelo} e \ref{CM_antiparallelo}, è stato determinato attraverso la propagazione degli errori sull'intensità di corrente $I$ e sul raggio delle bobine $R_b$ nella relazione \ref{B_z0}:
+    L'incertezza attribuita al campo magnetico generato dalle bobine di Helmholtz $\sigma _{Bz} $, riportatp in Tabb. \ref{CM_ortogonale}, \ref{CM_parallelo} e \ref{CM_antiparallelo}, è stata determinata attraverso la propagazione degli errori sull'intensità di corrente $I$ e sul raggio delle bobine $R_b$ nella relazione \ref{B_z0}:
     \begin{equation}
         \label{sigma_B}
         \sigma _{Bz} = \sqrt{\left(- \mu _0 \frac{8 N}{5\sqrt{5}} \frac{I}{R_b^2}\right)^2 \sigma_{Rb}^2 + \left(\mu _0 \frac{8 N}{5\sqrt{5}} \frac{1}{R_B} \right)^2 \sigma _I ^2} 
@@ -234,21 +234,7 @@
 
 
     \subsubsection{Campo magnetico terrestre}
-    Il valore della componente orizzontale del campo magnetico terrestre $B_t$ ottenuto da ciascun set di misure è affetto dall'errore sulle grandezze da cui è ricavato, ovvero l'intensità di corrente di alimentazione delle bobine $I$ e l'angolo di deviazione dell'ago magnetico $\theta$. Di tali incertezze si è tenuto conto attribuendo all'errore sul campo magnetico terrestre $\sigma_{B_t}$ una componente statistica e una componente sistematica. La prima, $\sigma_{B_t,stat}$, è stata calcolata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$.
-    La seconda, $\sigma_{B_t,sist}$, invece, è stata calcolata attraverso la propagazione degli errori su $I$ nella formula \ref{mag_terr}. In tale procedimento si considerano le grandezze $B_z$ e $B_r$ come prive di errore, poiché tabulate, e ugualmente $\theta$, poiché già considerato nella componente statistica dell'errore:
-    \begin{equation}
-        \label{sigma_Bt_sist}
-        \sigma_{B_t,sist} = \sigma_I \cdot \left(\frac{1}{I_0}\right) (B_z \cot(\theta) \, + B_r)
-    \end{equation}
-    La scelta di considerare l'incertezza su $\theta$ nella componente statistica dell'errore, e non in quella sistematica, è legata a (??)
-    
-    alla dipendenza di $B_t$ dalla cotangente dell'angolo $\theta$. Infatti, per piccoli valori di $\theta$, questa dipendenza avrebbe portato a valori molto elevati di $\sigma_{B_t,sist}$
-
-    L'incertezza attribuita al campo magnetico terrestre, e riportata in \ref{misura_campomagneticoterrestre}, è stata ricavata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$. Il numero di misure effettuate, infatti, ha reso significativa la rilevazione dell'errore statistico, e ha reso ininfluente la componente sistematica dell'errore $\sigma _{Bt, sist}$, dovuta alla propagazione delle incertezze sulle misure di $I$ e di $\theta$ nell'espresione per ottenere il campo magnetico terrestre:
-    \begin{equation}
-        \label{sigma_Bt_stat}
-        \sigma _{Bt, sist} = ? formula ? = ? valore ? 
-    \end{equation}
+    L'incertezza attribuita al campo magnetico terrestre, e riportata in \ref{misura_campomagneticoterrestre}, è stata ricavata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$. Si è utilizzata la componente statistica dell'errore poiché quella sistematica, in quanto proporzionale a $\csc^2{x}$, per angoli tendenti a $0 \degree $, tende a $+ \infty $; di conseguenza, per angoli bassi, l'errore risulterebbe sovrastimato.
 
     \label{par:sigma_campo_magnetico_terrestre}
 
