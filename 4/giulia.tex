@@ -268,11 +268,17 @@ A partire dalle equazioni \ref{lambda_laser} e \ref{n_a}, si possono ricavare le
     n = \frac{N_1 D}{N_1 D - N_2 \Delta x} \qquad
     \lambda_a = \frac{2\Delta x D}{N_1 D - N_2 \Delta x}
 \end{equation}
-A questo punto, incrociando i dati in Tab. \ref{lambda} con quelli riportati nel Par. \ref{par:n_a}, si ottengono i valori riportati in Tab. $riferimento-alla-tabella$. Il valore finale e la rispettiva incertezza di $n$ e $\lambda_a$ sono stati determinati tramite media ponderata:
+A questo punto, incrociando i dati in Tab. \ref{lambda} con quelli riportati nel Par. \ref{par:n_a}, si ottengono i valori riportati in Tab. \ref{tab:n_a}, nella quale i valori delle incertezze sono stati ricavati tramite le relative propagazioni degli errori:
+\begin{align}
+    \label{rifrazione-err}
+    \sigma_n &= \frac{N_1 N_2 D \Delta x}{\left(N_1 D - N_2 \Delta x\right)^2} \sqrt{\left(\frac{\sigma_{N_1}}{N_1}\right)^2 + \left(\frac{\sigma_{\Delta x}}{\Delta x}\right)^2 + \left(\frac{\sigma_{N_2}}{N_2}\right)^2 + \left(\frac{\sigma_{D}}{D}\right)^2} \\
+    \sigma_{\lambda} &= \frac{\Delta x^2 D^2}{2\left(N_1 D - N_2 \Delta x\right)^2} \sqrt{\left(\frac{N_1}{\Delta x}\right)^2\left(\left(\frac{\sigma_{N_1}}{N_1}\right)^2 + \left(\frac{\sigma_{\Delta x}}{\Delta x}\right)^2\right) + \left(\frac{N_2}{D}\right)^2\left(\left(\frac{\sigma_{N_2}}{N_2}\right)^2 + \left(\frac{\sigma_{D}}{D}\right)^2\right)}
+\end{align}
+Il valore finale e la rispettiva incertezza di $n$ e $\lambda_a$ sono stati determinati tramite media ponderata:
 \begin{equation}
     \label{n_a-lambda}
     n = 1.000259 \pm 0.000007 \qquad
-    \lambda_a = 616 \pm 7 \, \text{nm}
+    \lambda_a = 617 \pm 8 \, \text{nm}
 \end{equation}
 
 \subsection{Lunghezza dei pacchetti d'onda di una sorgente non monocromatica}
@@ -349,5 +355,51 @@ Inoltre, i due valori della lunghezza d'onda del laser, ottenuti con e senza app
 La lunghezza di coerenza del pacchetto di luce non monocromatica $L= 7 \pm 1 \, \mu \text{m}$ è consistente con quanto atteso: poiché la sorgente è policromatica, genera casualmente dei pacchetti non coerenti tra loro.
 
 Infine, il valore della differenza tra le lunghezze d'onda del doppietto del sodio $\Delta \lambda = (0.587 \pm 0.002) \, \text{nm}$ è in buon accordo con il valore atteso, $\Delta \bar{\lambda} = (0.600) \text{nm}$.
+
+\section*{Appendice}
+
+\begin{table}[H]
+    \centering
+    
+    \begin{tabular}{||c|c||c|c||c|c||}
+
+        \hline
+        $N_1$ & $\Delta x \pm \sigma_{\Delta x} \, [\text{mm}]$ & $N_2$ & $D \, [\text{mm}]$ & $n \pm \sigma_n$ & $\lambda \pm \sigma_{\lambda} \, [\text{nm}]$ \\
+        \hline\hline
+
+        $195$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000259 \pm 0.000034$ & $616 \pm 33$ \\\hline
+        $195$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000259 \pm 0.000034$ & $616 \pm 33$ \\\hline
+        $195$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000259 \pm 0.000034$ & $616 \pm 33$ \\\hline
+        $195$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000259 \pm 0.000034$ & $616 \pm 33$ \\\hline
+        $195$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000259 \pm 0.000034$ & $616 \pm 33$ \\\hline
+        \hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 43$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 43$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 43$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 43$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 43$ \\\hline
+        \hline
+        $180$ & $0.056 \pm 0.003$ & $42$ & $0.05$ & $1.000261 \pm 0.000035$ & $622 \pm 44$ \\\hline
+        $180$ & $0.056 \pm 0.003$ & $42$ & $0.05$ & $1.000261 \pm 0.000035$ & $622 \pm 44$ \\\hline
+        $180$ & $0.056 \pm 0.003$ & $42$ & $0.05$ & $1.000261 \pm 0.000035$ & $622 \pm 44$ \\\hline
+        $180$ & $0.056 \pm 0.003$ & $42$ & $0.05$ & $1.000261 \pm 0.000035$ & $622 \pm 44$ \\\hline
+        $180$ & $0.056 \pm 0.003$ & $42$ & $0.05$ & $1.000261 \pm 0.000035$ & $622 \pm 44$ \\\hline
+        \hline
+        $194$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000260 \pm 0.000034$ & $619 \pm 33$ \\\hline
+        $194$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000260 \pm 0.000034$ & $619 \pm 33$ \\\hline
+        $194$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000260 \pm 0.000034$ & $619 \pm 33$ \\\hline
+        $194$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000260 \pm 0.000034$ & $619 \pm 33$ \\\hline
+        $194$ & $0.060 \pm 0.003$ & $42$ & $0.05$ & $1.000260 \pm 0.000034$ & $619 \pm 33$ \\\hline
+        \hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 33$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 33$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 33$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 33$ \\\hline
+        $150$ & $0.046 \pm 0.003$ & $42$ & $0.05$ & $1.000258 \pm 0.000036$ & $613 \pm 33$ \\\hline
+        
+    \end{tabular}
+    \caption{non so che scriverci.}
+    \label{tab:n_a}
+\end{table}
 
 \end{document}
