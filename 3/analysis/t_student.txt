@@ -37,4 +37,5 @@ Dopo aver rigettato il primo set di dati, il valore finale è:
 
 e/m: 179739095202.40677
 err: 3741247880.324437
-sigma dal val. asp.: 46.01158723028737
+sigma dal val. asp.: 1.030964600525824
+P: 30.907488301354864 %

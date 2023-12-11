@@ -128,4 +128,5 @@ with open("t_student.txt", 'w') as text:
     e_m_err_final = 1. / np.sqrt(1. / par['s']**2 + 1. / ant['s']**2)
     print("e/m:", e_m_final, file=text)
     print("err:", e_m_err_final, file=text)
-    print("sigma dal val. asp.:", np.abs(e_m_err_final - e_m_th) / e_m_err_final, file=text)
+    print("sigma dal val. asp.:", np.abs(e_m_final - e_m_th) / e_m_err_final, file=text)
+    print("P:", 200*t.sf(np.abs(e_m_final - e_m_th) / e_m_err_final, 38), "%", file=text)
