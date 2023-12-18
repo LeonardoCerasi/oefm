@@ -24,9 +24,17 @@ for i in range(len(q)):
     if (S(q[i]) < S(min)):
         min = q[i]
 print("min:", min)
-print("err-stat:", np.sqrt(S(min) / (len(charges) * (len(charges) - 1))))
+err_stat = np.sqrt(S(min) / (len(charges) * (len(charges) - 1)))
+print("err-stat:", err_stat)
 
-err = 0
+err_sist = 0
 for i in range(len(charges)):
-    err += charges_err[i] / (len(charges) * np.floor(0.5 + (charges[i] / min)))
-print("err-sist:", err)
+    err_sist += (charges_err[i] / (len(charges) * np.floor(0.5 + (charges[i] / min))))**2
+err_sist = np.sqrt(err_sist)
+print("err-sist:", err_sist)
+
+err = np.sqrt(err_stat**2 + err_sist**2)
+print("err:", err)
+
+e = 1.602176634e-19
+print("sigma:", np.abs(min - e) / err)
