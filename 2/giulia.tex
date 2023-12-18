@@ -1,3 +1,17 @@
+% chktex-file 1
+% chktex-file 2
+% chktex-file 3
+% chktex-file 8
+% chktex-file 9
+% chktex-file 12
+% chktex-file 13
+% chktex-file 16
+% chktex-file 18
+% chktex-file 24
+% chktex-file 26
+% chktex-file 35
+% chktex-file 44
+% chktex-file 45
 \documentclass[]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
@@ -86,6 +100,7 @@
     \section{Misure}
 
     \subsection{Misure preliminari}
+    \label{par:misure-preliminari}
 
     Innanzi tutto si prendono 6 misure - mediante l'utilizzo di un calibro di sensibilità $ 0.01\, mm $ - dello spessore $ d $ del disantaziale della camera di Millikan
 
@@ -116,30 +131,103 @@
         \label{misura_Rb}
         d = (7.64 \pm 0.01) \, \text{mm}
     \end{equation} 
-
-    Ogni volta che viene scelta una gocciolina da seguire, si prende la misura della temperatura attuale. Tale grandezza è variata durante l'esperimento tra i $ 21.5\, °C $ e i $ 22.0\, °C $: la temperatura relativa a ciascuna goccia è riportata nelle relative Tabb \ref{G1_withoutE}, \ref{G1_downE}, \ref{G1_upE}, \ref{G2_withoutE}, \ref{G2_downE}, \ref{G2_upE}, \ref{G3_withoutE}, \ref{G3_downE}, \ref{G3_upE}, \ref{G4_withoutE}, \ref{G4_downE}, \ref{G4_upE}, \ref{G5_withoutE}, \ref{G5_downE}, \ref{G5_upE}, \ref{G6_withoutE}, \ref{G6_downE}, \ref{G6_upE}, \ref{G7_withoutE}, \ref{G7_downE}, \ref{G7_upE}, \ref{G8_withoutE}, \ref{G8_downE}, \ref{G8_upE}, \ref{G9_withoutE}, \ref{G9_downE}, \ref{G9_upE}, \ref{G10_withoutE}, \ref{G10_downE}, \ref{G10_upE}. \\
+    Per ciascun set di misure, si è misurata la temperatura della cameretta in cui avviene il moto delle gocce di olio. In particolare, mediante multitmetro, si è misurata la resistenza elettrica di un termistore. Attraverso una apposita tabella di conversione, poi, si è determinato il valore della temperatura sulla base di quello della resistenza. L'incertezza attribuita alla temperatura è la semiampiezza del minimo intervallo risolubile dalla tabella utilizzata, ovvero $5 \degree \text{C}$.
+    La temperatura relativa a ciascuna goccia è riportata nelle relative Tabb \ref{G1_withoutE}, \ref{G1_downE}, \ref{G1_upE}, \ref{G2_withoutE}, \ref{G2_downE}, \ref{G2_upE}, \ref{G3_withoutE}, \ref{G3_downE}, \ref{G3_upE}, \ref{G4_withoutE}, \ref{G4_downE}, \ref{G4_upE}, \ref{G5_withoutE}, \ref{G5_downE}, \ref{G5_upE}, \ref{G6_withoutE}, \ref{G6_downE}, \ref{G6_upE}, \ref{G7_withoutE}, \ref{G7_downE}, \ref{G7_upE}, \ref{G8_withoutE}, \ref{G8_downE}, \ref{G8_upE}, \ref{G9_withoutE}, \ref{G9_downE}, \ref{G9_upE}, \ref{G10_withoutE}, \ref{G10_downE}, \ref{G10_upE}.
 
     \subsection {Costanti}
+    \label{par:costanti}
 
-    le seuenti quantità, che saranno necessarie per la determinazione della grandezza in esame, vengno assunte costanti:
+    le seguenti quantità, che saranno necessarie per la determinazione della grandezza in esame, vengno assunte costanti:
 
     \begin{itemize}
 
         \item accelerazione di gravità $g = 9.806 \, \frac{m}{s^2}$
         \item densità dell'olio $\rho_o = 860 \, \frac{kg}{m^3}$
         \item densità dell'aria $\rho_a = 1.293 \, \frac{kg}{m^3}$
-        \item pressione atmosferica $ P = 101325 \, Pa $
+        \item pressione atmosferica $ p = 101325 \, Pa $
         \item costante legata alla viscosità dell'aria $b = 0.0082 \,  Pa \cdot m $
         \item distanza delle righe del reticolo $ \Delta z = 5 \cdot 10 ^{-4} \, m$
         
     \end{itemize}
 
     \subsection {Misure effettive}
-
-    Si scelgono 10 gocce di cui registrare il moto nelle due condizioni: in assenza e in presenza di campo elettrico $ E $, la presenza del cmamo elettrico fornisce due set di misure - moto discendente o ascendente - per ogni goccia. Si misura quindi la differenza di potenziale applicata e il tempo che ogni goccia impiega a percorrere $ 0.5 mm $. A tali grandezze si corredano ulteriori informazioni: il verso del moto - se sale o se scende - e dati qualitativi come eventuale presenza di rumore e comportamenti anomali.
-    Tutti i dati vegono riporati nelle Tabbelle riportate al paragrafo $Misure \, Preliminari$. \\ 
+    Si scelgono 10 gocce di cui registrare il moto nelle due condizioni: in assenza e in presenza di campo elettrico $ E $. In presenza del campo, a seconda del segno della forza elettrica agente sulla goccia $F_e = qE$, si osserva, attraverso microscopio, un moto ascendente o discendente. Si misura quindi la differenza di potenziale applicata e il tempo che ogni goccia impiega a percorrere $ \Delta z = 0.5 \, \text{mm} $. La porzione di spazio percorsa viene considerata priva di errore. A tali grandezze si corredano ulteriori informazioni: il verso del moto - se sale o se scende - e dati qualitativi come eventuale presenza di rumore e comportamenti anomali.
+    Tutti i dati vegono riporati nelle Tabelle riportate al paragrafo \ref{par:misure-preliminari}. \\ 
     
-    La misurazione del tempo di volo è stata effetuata mediante un cronometro digitale di precisione $ 0.01 s $ - attribuita come incertezza - e la misurazione della differenza di potenziale $ \Delta V $ è stata effettuata mediante un multimetro digitale a cui viene attribuita come incertezza $ 10 V $.
+    La misura del tempo di volo è stata effetuata mediante un cronometro digitale di risuluzione $ 0.01 \, \text{s} $: l'incertezza attribuita alle misure, però, è $0.5 \, \text{s}$, per tenere conto del tempo di reazione dello sperimentatore. La misurazione della differenza di potenziale $ \Delta V $ è stata effettuata mediante un multimetro digitale a cui viene attribuita come incertezza $ 1 \, \text{V} $.
+
+
+    \section{Analisi Dati}
+    \subsection{Misura del raggio delle gocce}
+    Nella configurazione di assenza di campo, si determina il raggio delle gocce di olio osservate.
+    Una volta raggiunta la velocità limite nel mezzo $v_0$, il moto della goccia risulta essere rettilineo uniforme. Dunque, dallo studio del moto della goccia, si determina la sua velocità di caduta, cui si attribuisce incertezza mediante propagazione degli errori sull'intervallo di tempo $t$. I valori di velocità così ottenuti sono riportati in Tab. $riferimento-a-tabella$.
+
+    Ai fini della determinazione del raggio della goccia, è inoltre necessario stimare il coefficiente di viscosità del mezzo:
+    \begin{equation}
+        \label{viscosita}
+        \eta(T) = \left[ 1.800 + 4.765 \cdot 10^{-3} \, \degree \text{C}^{-1} \left( T - 15 \degree \text{C} \right) \right] 10^{-5} \,\text{N s m}^{-2}  
+    \end{equation}
+    A tale valore è stata attribuita un'incertezza mediante propagazione degli errori:
+    \begin{equation}
+        \label{sigma-eta}
+        \sigma_{\eta}= 4.765 \cdot 10^{-8} \text{N s m}^{-2}
+    \end{equation}
+    Grazie ai valori di $\eta$ e di $v_0$ ottenuti è possibile determinare il raggio di ciascuna goccia attraverso la seguente relazione:
+    \begin{equation}
+        \label{raggio}
+        r = \sqrt{\left( \frac{b}{2p} \right)^2 + \frac{9 \eta v_0}{2g \left( \rho_{o} - \rho_a\right)}} - \frac{b}{2p}
+    \end{equation}
+    dove $p$, $g$, $\rho_o$ e $\rho_a$ sono costanti riportate in Par. \ref{par:costanti}, $b$ è un parametro empirico per correggere $\eta$, pari a $8.2 \cdot 10^{-3} \text{Pa m}$. Tale correzione è necessaria poiché il libero cammino medio di una molecola di aria, dell'ordine di $10^{-6} \text{m}$, è confrontabile con il raggio delle gocce di olio osservate al microscopio, dell'ordine di $10^{-7} \text{m}$.
+    A ciascun valore di raggio $r$ è stata attribuita incertezza mediante propagazione degli errori sulle grandezze $t$ ed $T$, la cui dipendenza è situata in $v_0$ ed $\eta$:
+    \begin{equation}
+        \sigma_r= \frac{9 \eta}{ 4 g \Delta t \left(\rho_o - \rho_a \right) \left(r+\frac{b}{2p} \right)} \sqrt{ \left(v \sigma_t\right)^2 + \left( \frac{\Delta z}{\eta} \sigma_{\eta} \sigma_T \right)^2}
+    \end{equation}
+    I valori ottenuti sono riportati in Tab. $riferimento-a-tabelle$.
+
+    \subsection{Misura della carica delle gocce}
+    \label{par:cariche-olio}
+    In presenza di campo elettrico $E = \frac{\Delta V}{d}$, si determina la velocità $v_E$ limite delle medesime gocce di cui si è determinato il raggio $r$, attraverso la relazione per un moto rettilineo uniforme, cui si attribuisce un segno in base al verso del moto (positivo se verso il basso, negativo se verso l'alto). A tali valori di velocità è stata attribuita incertezza mediante propagazione degli errori sulla grandezza $t$. I risultati ottenuti sono riportati in Tab. $riferimento-a-tabella$.
+    
+    Si determina poi la carica $Q$ di ciascuna goccia di olio attraverso la seguente relazione:
+    \begin{equation}
+        \label{Q}
+        Q = -\frac{4}{3} \pi r^3 \left( \rho_o - \rho_a \right) \frac{g d}{\Delta V} \left( 1 - \frac{v_E}{v_r} \right)
+    \end{equation}
+    dove $r$ è il raggio della goccia osservata precedentemente determinato, $v_E$ è la velocità limite della goccia in presenza di campo elettrico $E$ e $v_r$ è la media delle velocità limite della goccia registrate in assenza di campo elettrico.
+    I valori così calcolati sono riportati in Tab. $riferimento-a-tabelle$: i valori contrassegnati da asterisco * sono stati rigettati poiché non coerenti con il dataset.
+    L'incertezza associata a ciascuna misura di $Q$ è stata determinata mediante propagazione degli errori nella \ref{Q} sulle grandezze $r$, $d$, $\Delta V$, $t$ (tramite $v_E$) e $v_r$. L'incertezza su $v_r$ è stata attribuita mediante deviazione standard.
+    \begin{equation}
+        \label{sigma-Q}
+        \sigma_Q = \abs{Q} \sqrt{ \left( 3 \frac{\sigma_r}{r} \right)^2 + \left( \frac{\sigma_d}{d} \right)^2 + \left( \frac{\sigma_{\Delta V}}{\Delta V} \right)^2 + \frac{1}{\left( v_r - v_E \right)^2} \left( \left( \frac{v_E}{t} \sigma_t \right)^2 + \left( \frac{v_E}{v_r} \sigma_{v_r} \right)^2 \right) }
+    \end{equation}
+
+    \subsection{Misura della carica elementare}
+    Una buona della stima della carica elementare $q_e$ si può trovare come punto di minimo della funzione:
+    \begin{equation}
+        \label{S-function}
+        S(q) = \sum_{n=1}^{N} \left( \frac{Q_i}{k_i \left(q \right)} - q \right)^2
+    \end{equation}
+    dove $Q_i$ sono i valori di carica delle gocce di olio ricavati come da Par. \ref{par:cariche-olio}, $N$ è il numero dei dati di carica elettronica misurati e $k_i(q)=\lfloor\frac{Q_i}{q} + 0.5 \rfloor$.
+    Il grafico della funzione $S(q)$ nell'intorno del valore aspettato è:
+    %inserire grafico
+    
+    L'espressione analitica di $q_e$ risulta dunque essere:
+    \begin{equation}
+        \label{qe}
+        q_e = \frac{1}{N} \sum_{n=1}^{N} \frac{Q_i}{k_i}
+    \end{equation}
+    Al valore di $q_e$ sono state attribuite due componenti di errore: una statistica $\sigma_{\text{stat}}$ e una sistematica $\sigma_{\text{sist}}$. La componente statistica è stata determinata mediante deviazione standard della media dei valori ottenuti tramite la \ref{qe}:
+    \begin{equation}
+        \label{sigma-stat}
+        \sigma_{\text{stat}} = \sqrt{ \frac{S(q_e)}{N \left(N-1 \right)} }
+    \end{equation}
+    La compomente sistematica dell'errore è stata determinata mediante propagazione degli errori sulle $Q_i$ nella \ref{qe}:
+    \begin{equation}
+        q_e = \frac{1}{N} \sqrt{\sum_{n=1}^{N} \left(\frac{\sigma_{Q_i}}{k_i} \right)^2}
+    \end{equation}
+    Dalla somma in quadratura delle due componenti di errore, si ottiene l'incertezza su $q_e$.
+    
+
 
     \section{Appendice}
 
