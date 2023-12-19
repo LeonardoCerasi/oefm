@@ -17,7 +17,10 @@ def S(q):
 q = np.linspace(1.4e-19, 1.8e-19, 10000)
 
 plt.plot(q, S(q))
-plt.savefig("graph_py.png")
+plt.grid(True)
+plt.xlabel("q [C]")
+plt.ylabel("S(q) [C²]")
+plt.savefig("graph.png", dpi=240)
 
 min = q[0]
 for i in range(len(q)):
