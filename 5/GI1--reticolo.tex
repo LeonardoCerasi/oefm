@@ -118,6 +118,26 @@
     \end{equation}
 
     \section{Misure}
+    \label{par:misure}
+
+    \subsection{Ortogonalità}
+    Per procede alle misure del passo del reticolo e delle lunghezze d'onda delle righe spettrali, è necessario preliminarmente porre il reticolo in condizione di ortogonalità rispetto al fascio di luce incidente. \\
+    Per fare ciò, si misura la posizione angolare di due massimi dello stesso ordine dello spettro di una lampada a Na rispetto al massimo di diffrazione centrale e, se si evidenzia una differenza angolare superiore alla decina di primi di grado, si procede ad una rotazione del reticolo di un fattore correttivo definito da:
+    \begin{equation}
+        \label{beta}
+        \tan{\beta} = \sin{\frac{\Delta\theta_2 - \Delta\theta_1}{2}} \frac{\cos{\frac{\Delta\theta_1 + \Delta\theta_2}{2}}}{1 - \cos{\frac{\Delta\theta_1 + \Delta\theta_2}{2}} \cos{\frac{\Delta\theta_2 - \Delta\theta_1}{2}}} \quad\Longrightarrow\quad
+        \beta = \frac{\Delta\theta_2 - \Delta\theta_1}{2} \frac{\cos{\frac{\Delta\theta_1 + \Delta\theta_2}{2}}}{1 - \cos{\frac{\Delta\theta_1 + \Delta\theta_2}{2}}}
+    \end{equation}
+    dove $\Delta\theta_{1,2} = \theta_0 - \theta_{1,2}$ sono le posizioni angolari dei due massimi e $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$ è la misura del massimo centrale, ottenuta come media ponderata delle misure in Tab. \ref{prel-max-c}. Poiché $\Delta\theta_1 \approx \Delta\theta_2$, è stato possibile approssimare al prim'ordine l'espressione per $\beta$. \\
+    È stato necessario correggere la posizione del reticolo solo tre volte per contenere $\beta$ entro qualche primo di grado: i dati solo riportati in Tab. \ref{prel-ort}. \\
+    Per non appesantire le tabelle, si è occasionalmente omesso l'errore sulla misura delle posizioni angolari assoluti: essi sono sempre pari ad $1'$.
+
+    \subsection{Passo del reticolo}
+    Per misurare il passo del reticolo, si procede all'analisi delle righe spettrali della lampada a Na, ed in particolare si è utilizzata la riga spettrale $\lambda_1 = 589.0\,\text{nm}$ all'ordine $k=4$. Le misure sono riportare in Tab. \ref{d-Na}: si è di nuovo preso $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$ media ponderata dei valori in Tab. \ref{max-Na}.
+
+    \subsection{Lunghezze d'onda del mercurio}
+    Una volta determinato il passo del reticolo, si può utilizzare la relazione \ref{lambda} per determinare le lunghezze d'onda delle righe spettrali della lampada ad Hg: per fare ciò, basta effettuare varie misure delle loro posizioni angolari rispetto al massimo di diffrazione centrale, la cui posizione $\theta_0 = 0.978548 \pm 0.000092$ è calcolata come media ponderata dei valori in Tab. \ref{max-Hg}. \\
+    I dati relativi a ciascuna riga spettrale sono riportati in Tabb. \ref{viola-1} - \ref{rosso}.
 
     \section{Analisi dati}
     \subsection{Elaborazione dati}
@@ -127,39 +147,25 @@
         \label{passo}
         d = \frac{k \, \, \lambda_1}{\sin{\Delta\theta}}
     \end{equation}
-    Dove $\Delta\theta$ è la posizione angolare del massimo di ordine $k=4$ della lunghezza d'onda $\lambda_1$ del Na.
-    I valori ottenuti per ciascuna misura presa sono riportati nella seguente tabella:
-    \begin{table} [H]
-        \centering
-        \begin{tabular}{||c|c||}
-            \hline
-            N° misura & $d \pm \sigma_d \, \left[\cdot 10^{-6}\text{ m}\right] $\\
-            \hline \hline
-            $ 1 $ & $ 3.3770 \pm 0.0014 $ \\\hline
-            $ 2 $ & $ 3.3798 \pm 0.0014 $ \\\hline
-            $ 3 $ & $ 3.3729 \pm 0.0014 $ \\\hline
-        \end{tabular}
-        \caption{Valori di $d$ e relativi errori.}
-        \label{d-values}
-    \end{table}
-    Dove $\sigma_d$ è stato attribuito come da Par. \ref{par:errore_passo}.
+    dove $\Delta\theta = \theta - \theta_0$.
+    I valori ottenuti per ciascuna misura presa sono riportati nella seguente Tab. \ref{d-Na}: $\sigma_d$ è stato attribuito come da Par. \ref{par:errore_passo}.
     Il valore finale di $d$ si ottiene mediante media pesata dei valori riportati in tabella:
     \begin{equation}
         \label{d-value}
-        d = (3.3766 \pm 0.0008 ) \cdot 10^{-6} \text{m}
+        d = 3.3766 \pm 0.0008 \,\mu\text{m}
     \end{equation}
 
-    \subsubsection{Lunghezze d'onda di Hg}
+    \subsubsection{Lunghezze d'onda del mercurio}
     Di ogni componente dello spettro del mercurio osservata, noto l'ordine e la posizione angolare del massimo considerato, si è calcolata la lunghezza d'onda $\lambda$, come da \ref{lambda}. Si è poi effettuata una media ponderata tra tutti i valori di $\lambda$ ottenuti per ciascuna componente. I valori ottenuti sono riportati nella seguente tabella:
-    \begin{table} [H]
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c||}
             \hline
             Colore & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right] $\\
             \hline \hline
-            Viola    & $ 404.32 \pm 0.08 $ \\\hline
-            Indaco   & $ 435.57 \pm 0.08 $ \\\hline
-            Ciano    & $ 491.21 \pm 0.08 $ \\\hline
+            Viola    & $ 404.32 \pm 0.09 $ \\\hline
+            Indaco   & $ 435.57 \pm 0.09 $ \\\hline
+            Ciano    & $ 491.21 \pm 0.09 $ \\\hline
             Verde    & $ 545.44 \pm 0.08 $ \\\hline
             Giallo 1 & $ 576.46 \pm 0.08 $ \\\hline
             Giallo 2 & $ 578.41 \pm 0.08 $ \\\hline
@@ -176,7 +182,7 @@
         \label{D-m}
         D_m = \frac{\Delta \theta}{\Delta \lambda} \qquad \sigma_{D_m} = \sqrt{\left(\frac{\sigma_{\Delta\theta}}{\Delta\lambda}\right)^2 + \left(\frac{\Delta\theta \, \sigma_{\Delta\lambda}}{\Delta\lambda^2}\right)^2}
     \end{equation}
-    In particolare, per sondare varie distanze angolari, sono state considerate le coppie di righe spettrali Viola 1 - Indaco, Giallo 1 - Giallo 2 e Viola 1 - Giallo 2: i relativi dati sono riportati in Tab. $riferimento-a-tabella-D$. \\
+    In particolare, per sondare varie distanze angolari, sono state considerate le coppie di righe spettrali Viola 1 - Indaco, Giallo 1 - Giallo 2 e Viola 1 - Giallo 2: i relativi dati sono riportati in Tabb. \ref{viola-1-indaco}, \ref{giallo-1-giallo-2}, \ref{viola-1-giallo-2}. \\
     I valori così ottenuti vengono confrontati con quelli ricavati dalle caratteristiche del reticolo stesso tramite la relazione:
     \begin{equation}
         \label{D-t}
@@ -186,9 +192,9 @@
     \subsubsection{Potere risolutivo}
     Dalle caratteristiche del reticolo è possibile anche giustificare a posteriori il fatto che le righe spettrali Giallo 1 e 2 possano essere chiaramente distinte tra loro agli ordini $k = 2, 3, 4$; infatti, confrontando il potere risolutivo del reticolo $R(k) = k N$, dove $N$ è il numero totale di fenditure illuminate, con il rapporto $\frac{\Delta\lambda}{\bar{\lambda}}$ delle righe considerate, si può stabilire se esse appariranno separate o meno. \\
     Assumento che tutte le fenditure del reticolo siano investite dal fascio luminoso (lecito poiché, essendo la fenditura di fronte al collimatore dell'ordine dei decimi di mm, la sorgente può essere considerata puntiforme e sita nel fuoco del collimatore), e che quindi $N = \frac{L}{d}$, dove $L = 2 \,\text{cm}$ è la lunghezza del reticolo, si ottengono i seguenti valori:
-    \begin{table}
+    \begin{table}[H]
         \centering
-        \begin{tabular}[H]{||c|c|c|c|c||}
+        \begin{tabular}{||c|c|c|c|c||}
             \hline
             $k$ & $\bar{\lambda} \, \left[\text{nm}\right]$ & $\Delta\lambda \, \left[\text{nm}\right]$ & $\Delta\lambda/\bar{\lambda}$ & $R(k)$ \\
             \hline\hline
@@ -196,8 +202,8 @@
             $3$ & $577.3$ & $2.0$ & $293.4$ & $18000$ \\\hline
             $4$ & $577.5$ & $2.1$ & $268.7$ & $24000$ \\\hline
         \end{tabular}
-        \label{R}
         \caption{Confronto del potere risolutivo del reticolo a vari ordini.}
+        \label{R}
     \end{table}
 
     \subsection{Stima degli errori}
@@ -207,10 +213,10 @@
         \label{d-error}
         \sigma_d = \frac{k \, \lambda \, \cos{\Delta\theta} \, \sigma_{\Delta \theta}}{\sin^2{\Delta\theta}}
     \end{equation}
-    Invece, l'incertezza sul valore finale di $d$ è stata calcolata come errore di una media ponderata dei valori riportati in Tab. \ref{d-values}.
+    Invece, l'incertezza sul valore finale di $d$ è stata calcolata come errore di una media ponderata dei valori riportati in Tab. \ref{d-Na}.
     \label{par:errore_passo}
 
-    \subsubsection{Lunghezze d'onda di Hg}
+    \subsubsection{Lunghezze d'onda del mercurio}
     Per ogni misurazione effettuata, si è attribuito al valore di $\lambda$ ottenuto un errore stimato mediante propagazione degli errori sulle grandezze $\Delta \theta$ e $d$ nella formula \ref{lambda}:
     \begin{equation}
         \label{lambda-error}
@@ -225,11 +231,11 @@
 
     \section*{Appendice}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c||}
             \hline
-            $\theta_m \pm \sigma_{\theta_m}$ & $\theta_m \pm \sigma_{\theta_m} \, \left[\text{rad}\right]$ \\\hline
+            $\theta_0 \pm \sigma_{\theta_0}$ & $\theta_0 \pm \sigma_{\theta_0} \, \left[\text{rad}\right]$ \\\hline
             \hline
             $56\degree 3' \pm 1'$ & $0.978257 \pm 0.000291$ \\\hline
             $56\degree 5' \pm 1'$ & $0.978839 \pm 0.000291$ \\\hline
@@ -242,29 +248,64 @@
             $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
             $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
         \end{tabular}
+        \caption{Posizione angolare del massimo di diffrazione centrale della lampada a Na.}
         \label{prel-max-c}
-        \caption{Posizione angolare del massimo di rifrazione centrale della lampada a Na.}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c|c||}
             \hline
             $\theta_{sx} \pm \sigma_{\theta_{sx}}$ & $\Delta\theta_{sx} \pm \sigma_{\Delta\theta_{sx}} \, \left[\text{rad}\right]$ & $\theta_{dx} \pm \sigma_{\theta_{dx}}$ & $\Delta\theta_{dx} \pm \sigma_{\Delta\theta_{dx}} \, \left[\text{rad}\right]$ & $\beta$ \\\hline
             \hline
-            $99\degree  35' \pm 1'$ & $0.759044 \pm 0.000404$ & $10\degree 53' \pm 1'$ & $0.789063 \pm 0.000404$ & $130'$ \\\hline
-            $99\degree  32' \pm 1'$ & $0.758171 \pm 0.000404$ & $10\degree 50' \pm 1'$ & $0.789936 \pm 0.000404$ & $137'$ \\\hline
-            $100\degree 23' \pm 1'$ & $0.773006 \pm 0.000404$ & $11\degree 53' \pm 1'$ & $0.771610 \pm 0.000404$ & $ -6'$ \\\hline
+            $99\degree  35' \pm 1'$ & $0.759044 \pm 0.000404$ & $10\degree 53' \pm 1'$ & $0.789063 \pm 0.000411$ & $130'$ \\\hline
+            $99\degree  32' \pm 1'$ & $0.758171 \pm 0.000404$ & $10\degree 50' \pm 1'$ & $0.789936 \pm 0.000411$ & $137'$ \\\hline
+            $100\degree 23' \pm 1'$ & $0.773006 \pm 0.000404$ & $11\degree 53' \pm 1'$ & $0.771610 \pm 0.000411$ & $ -6'$ \\\hline
         \end{tabular}
-        \label{prel-ort}
         \caption{Fattore di correzione per l'ortogonalizzazione.}
+        \label{prel-ort}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c||}
             \hline
-            $\theta_m \pm \sigma_{\theta_m}$ & $\theta_m \pm \sigma_{\theta_m} \, \left[\text{rad}\right]$ \\\hline
+            $\theta_0 \pm \sigma_{\theta_0}$ & $\theta_0 \pm \sigma_{\theta_0} \, \left[\text{rad}\right]$ \\\hline
+            \hline
+            $56\degree 3' \pm 1'$ & $0.978257 \pm 0.000291$ \\\hline
+            $56\degree 5' \pm 1'$ & $0.978839 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+            $56\degree 6' \pm 1'$ & $0.979130 \pm 0.000291$ \\\hline
+        \end{tabular}
+        \caption{Posizione angolare del massimo di diffrazione centrale della lampada a Na.}
+        \label{max-Na}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{||c|c|c||}
+            \hline
+            $\theta \pm \sigma_{\theta}$ & $\Delta\theta_{sx} \pm \sigma_{\Delta\theta_{sx}} \, \left[\text{rad}\right]$ & $d \pm \sigma_d \,\left[\mu\text{m}\right]$ \\\hline
+            \hline
+            $100\degree 20' \pm 1'$ & $0.772134 \pm 0.000404$ & $3.377 \pm 0.001$ \\\hline
+            $ 11\degree 54' \pm 1'$ & $0.771319 \pm 0.000404$ & $3.380 \pm 0.001$ \\\hline
+            $100\degree 24' \pm 1'$ & $0.773297 \pm 0.000404$ & $3.373 \pm 0.001$ \\\hline
+        \end{tabular}
+        \caption{Passo del reticolo.}
+        \label{d-Na}
+    \end{table}
+
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{||c|c||}
+            \hline
+            $\theta_0 \pm \sigma_{\theta_0}$ & $\theta_0 \pm \sigma_{\theta_0} \, \left[\text{rad}\right]$ \\\hline
             \hline
             $56\degree 4' \pm 1'$ & $0.978548 \pm 0.000291$ \\\hline
             $56\degree 4' \pm 1'$ & $0.978548 \pm 0.000291$ \\\hline
@@ -277,165 +318,165 @@
             $56\degree 4' \pm 1'$ & $0.978548 \pm 0.000291$ \\\hline
             $56\degree 4' \pm 1'$ & $0.978548 \pm 0.000291$ \\\hline
         \end{tabular}
+        \caption{Posizione angolare del massimo di diffrazione centrale della lampada ad Hg.}
         \label{max-Hg}
-        \caption{Posizione angolare del massimo di rifrazione centrale della lampada ad Hg.}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $42\degree 13' \pm 1'$ & $0.241728 \pm 0.000291$ & $404.1 \pm 0.5$ \\\hline
-            $3$ & $35\degree  0' \pm 1'$ & $0.367683 \pm 0.000291$ & $404.5 \pm 0.3$ \\\hline
-            $4$ & $27\degree 25' \pm 1'$ & $0.500037 \pm 0.000291$ & $404.7 \pm 0.2$ \\\hline
-            $4$ & $27\degree 28' \pm 1'$ & $0.499164 \pm 0.000291$ & $404.1 \pm 0.2$ \\\hline
-            $4$ & $27\degree 27' \pm 1'$ & $0.499455 \pm 0.000291$ & $404.3 \pm 0.2$ \\\hline
-            $4$ & $27\degree 28' \pm 1'$ & $0.499164 \pm 0.000291$ & $404.1 \pm 0.2$ \\\hline
-            $4$ & $27\degree 28' \pm 1'$ & $0.499164 \pm 0.000291$ & $404.1 \pm 0.2$ \\\hline
-            $3$ & $35\degree  0' \pm 1'$ & $0.367683 \pm 0.000291$ & $404.6 \pm 0.3$ \\\hline
-            $3$ & $35\degree  0' \pm 1'$ & $0.367683 \pm 0.000291$ & $404.6 \pm 0.3$ \\\hline
-            $3$ & $35\degree  1' \pm 1'$ & $0.367392 \pm 0.000291$ & $404.3 \pm 0.3$ \\\hline
-            $3$ & $35\degree  1' \pm 1'$ & $0.367392 \pm 0.000291$ & $404.3 \pm 0.3$ \\\hline
+            $2$ & $42\degree 13' \pm 1'$ & $0.241728 \pm 0.000305$ & $404.1 \pm 0.5$ \\\hline
+            $3$ & $35\degree  0' \pm 1'$ & $0.367683 \pm 0.000305$ & $404.5 \pm 0.3$ \\\hline
+            $4$ & $27\degree 25' \pm 1'$ & $0.500037 \pm 0.000305$ & $404.7 \pm 0.2$ \\\hline
+            $4$ & $27\degree 28' \pm 1'$ & $0.499164 \pm 0.000305$ & $404.1 \pm 0.2$ \\\hline
+            $4$ & $27\degree 27' \pm 1'$ & $0.499455 \pm 0.000305$ & $404.3 \pm 0.2$ \\\hline
+            $4$ & $27\degree 28' \pm 1'$ & $0.499164 \pm 0.000305$ & $404.1 \pm 0.2$ \\\hline
+            $4$ & $27\degree 28' \pm 1'$ & $0.499164 \pm 0.000305$ & $404.1 \pm 0.2$ \\\hline
+            $3$ & $35\degree  0' \pm 1'$ & $0.367683 \pm 0.000305$ & $404.6 \pm 0.3$ \\\hline
+            $3$ & $35\degree  0' \pm 1'$ & $0.367683 \pm 0.000305$ & $404.6 \pm 0.3$ \\\hline
+            $3$ & $35\degree  1' \pm 1'$ & $0.367392 \pm 0.000305$ & $404.3 \pm 0.3$ \\\hline
+            $3$ & $35\degree  1' \pm 1'$ & $0.367392 \pm 0.000305$ & $404.3 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{viola-1}
         \caption{Analisi della riga spettrale Viola 1 a vari ordini.}
+        \label{viola-1}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $41\degree  8' \pm 1'$ & $0.260636 \pm 0.000291$ & $435.1 \pm 0.5$ \\\hline
-            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000291$ & $435.6 \pm 0.3$ \\\hline
-            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000291$ & $435.6 \pm 0.2$ \\\hline
-            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000291$ & $435.6 \pm 0.2$ \\\hline
-            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000291$ & $435.6 \pm 0.2$ \\\hline
-            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000291$ & $435.6 \pm 0.2$ \\\hline
-            $4$ & $25\degree  1' \pm 1'$ & $0.541925 \pm 0.000291$ & $435.4 \pm 0.2$ \\\hline
-            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000291$ & $435.6 \pm 0.3$ \\\hline
-            $3$ & $33\degree 17' \pm 1'$ & $0.397644 \pm 0.000291$ & $435.6 \pm 0.3$ \\\hline
-            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000291$ & $435.6 \pm 0.3$ \\\hline
-            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000291$ & $435.6 \pm 0.3$ \\\hline
+            $2$ & $41\degree  8' \pm 1'$ & $0.260636 \pm 0.000305$ & $435.1 \pm 0.5$ \\\hline
+            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000305$ & $435.6 \pm 0.3$ \\\hline
+            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000305$ & $435.6 \pm 0.2$ \\\hline
+            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000305$ & $435.6 \pm 0.2$ \\\hline
+            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000305$ & $435.6 \pm 0.2$ \\\hline
+            $4$ & $25\degree  0' \pm 1'$ & $0.542216 \pm 0.000305$ & $435.6 \pm 0.2$ \\\hline
+            $4$ & $25\degree  1' \pm 1'$ & $0.541925 \pm 0.000305$ & $435.4 \pm 0.2$ \\\hline
+            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000305$ & $435.6 \pm 0.3$ \\\hline
+            $3$ & $33\degree 17' \pm 1'$ & $0.397644 \pm 0.000305$ & $435.6 \pm 0.3$ \\\hline
+            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000305$ & $435.6 \pm 0.3$ \\\hline
+            $3$ & $33\degree 18' \pm 1'$ & $0.397353 \pm 0.000305$ & $435.6 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{indaco}
         \caption{Analisi della riga spettrale Indaco a vari ordini.}
+        \label{indaco}
     \end{table}
     
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $39\degree 10' \pm 1'$ & $0.294961 \pm 0.000291$ & $491.0 \pm 0.5$ \\\hline
-            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
-            $4$ & $20\degree 30' \pm 1'$ & $0.620755 \pm 0.000291$ & $491.0 \pm 0.2$ \\\hline
-            $4$ & $20\degree 28' \pm 1'$ & $0.621337 \pm 0.000291$ & $491.4 \pm 0.2$ \\\hline
-            $4$ & $20\degree 29' \pm 1'$ & $0.621046 \pm 0.000291$ & $491.2 \pm 0.2$ \\\hline
-            $4$ & $20\degree 30' \pm 1'$ & $0.620755 \pm 0.000291$ & $491.0 \pm 0.2$ \\\hline
-            $4$ & $20\degree 28' \pm 1'$ & $0.621337 \pm 0.000291$ & $491.4 \pm 0.2$ \\\hline
-            $3$ & $30\degree 12' \pm 1'$ & $0.451458 \pm 0.000291$ & $491.0 \pm 0.3$ \\\hline
-            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
-            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
-            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
+            $2$ & $39\degree 10' \pm 1'$ & $0.294961 \pm 0.000305$ & $491.0 \pm 0.5$ \\\hline
+            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
+            $4$ & $20\degree 30' \pm 1'$ & $0.620755 \pm 0.000305$ & $491.0 \pm 0.2$ \\\hline
+            $4$ & $20\degree 28' \pm 1'$ & $0.621337 \pm 0.000305$ & $491.4 \pm 0.2$ \\\hline
+            $4$ & $20\degree 29' \pm 1'$ & $0.621046 \pm 0.000305$ & $491.2 \pm 0.2$ \\\hline
+            $4$ & $20\degree 30' \pm 1'$ & $0.620755 \pm 0.000305$ & $491.0 \pm 0.2$ \\\hline
+            $4$ & $20\degree 28' \pm 1'$ & $0.621337 \pm 0.000305$ & $491.4 \pm 0.2$ \\\hline
+            $3$ & $30\degree 12' \pm 1'$ & $0.451458 \pm 0.000305$ & $491.0 \pm 0.3$ \\\hline
+            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
+            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
+            $3$ & $30\degree 11' \pm 1'$ & $0.451749 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{ciano}
         \caption{Analisi della riga spettrale Ciano a vari ordini.}
+        \label{ciano}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $37\degree 13' \pm 1'$ & $0.328995 \pm 0.000291$ & $545.5 \pm 0.5$ \\\hline
-            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000291$ & $545.4 \pm 0.3$ \\\hline
-            $4$ & $15\degree 49' \pm 1'$ & $0.702495 \pm 0.000291$ & $545.4 \pm 0.2$ \\\hline
-            $4$ & $15\degree 48' \pm 1'$ & $0.702786 \pm 0.000291$ & $445.6 \pm 0.2$ \\\hline
-            $4$ & $15\degree 49' \pm 1'$ & $0.702495 \pm 0.000291$ & $445.4 \pm 0.2$ \\\hline
-            $4$ & $15\degree 49' \pm 1'$ & $0.702495 \pm 0.000291$ & $445.4 \pm 0.2$ \\\hline
-            $4$ & $15\degree 48' \pm 1'$ & $0.702786 \pm 0.000291$ & $445.6 \pm 0.2$ \\\hline
-            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000291$ & $491.0 \pm 0.3$ \\\hline
-            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
-            $3$ & $27\degree  6' \pm 1'$ & $0.505564 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
-            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000291$ & $491.3 \pm 0.3$ \\\hline
+            $2$ & $37\degree 13' \pm 1'$ & $0.328995 \pm 0.000305$ & $545.5 \pm 0.5$ \\\hline
+            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000305$ & $545.4 \pm 0.3$ \\\hline
+            $4$ & $15\degree 49' \pm 1'$ & $0.702495 \pm 0.000305$ & $545.4 \pm 0.2$ \\\hline
+            $4$ & $15\degree 48' \pm 1'$ & $0.702786 \pm 0.000305$ & $445.6 \pm 0.2$ \\\hline
+            $4$ & $15\degree 49' \pm 1'$ & $0.702495 \pm 0.000305$ & $445.4 \pm 0.2$ \\\hline
+            $4$ & $15\degree 49' \pm 1'$ & $0.702495 \pm 0.000305$ & $445.4 \pm 0.2$ \\\hline
+            $4$ & $15\degree 48' \pm 1'$ & $0.702786 \pm 0.000305$ & $445.6 \pm 0.2$ \\\hline
+            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000305$ & $491.0 \pm 0.3$ \\\hline
+            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
+            $3$ & $27\degree  6' \pm 1'$ & $0.505564 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
+            $3$ & $27\degree  5' \pm 1'$ & $0.505855 \pm 0.000305$ & $491.3 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{verde}
         \caption{Analisi della riga spettrale Verde a vari ordini.}
+        \label{verde}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $36\degree  6' \pm 1'$ & $0.348484 \pm 0.000291$ & $576.5 \pm 0.5$ \\\hline
-            $3$ & $25\degree 16' \pm 1'$ & $0.537561 \pm 0.000291$ & $576.3 \pm 0.3$ \\\hline
-            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000291$ & $576.4 \pm 0.2$ \\\hline
-            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000291$ & $576.2 \pm 0.2$ \\\hline
-            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000291$ & $576.2 \pm 0.2$ \\\hline
-            $4$ & $13\degree  1' \pm 1'$ & $0.751364 \pm 0.000291$ & $576.4 \pm 0.2$ \\\hline
-            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000291$ & $576.2 \pm 0.2$ \\\hline
-            $3$ & $25\degree 14' \pm 1'$ & $0.538143 \pm 0.000291$ & $576.9 \pm 0.3$ \\\hline
-            $3$ & $25\degree 16' \pm 1'$ & $0.537561 \pm 0.000291$ & $576.3 \pm 0.3$ \\\hline
-            $3$ & $25\degree 14' \pm 1'$ & $0.538143 \pm 0.000291$ & $576.9 \pm 0.3$ \\\hline
-            $3$ & $25\degree 15' \pm 1'$ & $0.537852 \pm 0.000291$ & $576.6 \pm 0.3$ \\\hline
+            $2$ & $36\degree  6' \pm 1'$ & $0.348484 \pm 0.000305$ & $576.5 \pm 0.5$ \\\hline
+            $3$ & $25\degree 16' \pm 1'$ & $0.537561 \pm 0.000305$ & $576.3 \pm 0.3$ \\\hline
+            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000305$ & $576.4 \pm 0.2$ \\\hline
+            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000305$ & $576.2 \pm 0.2$ \\\hline
+            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000305$ & $576.2 \pm 0.2$ \\\hline
+            $4$ & $13\degree  1' \pm 1'$ & $0.751364 \pm 0.000305$ & $576.4 \pm 0.2$ \\\hline
+            $4$ & $13\degree  0' \pm 1'$ & $0.751655 \pm 0.000305$ & $576.2 \pm 0.2$ \\\hline
+            $3$ & $25\degree 14' \pm 1'$ & $0.538143 \pm 0.000305$ & $576.9 \pm 0.3$ \\\hline
+            $3$ & $25\degree 16' \pm 1'$ & $0.537561 \pm 0.000305$ & $576.3 \pm 0.3$ \\\hline
+            $3$ & $25\degree 14' \pm 1'$ & $0.538143 \pm 0.000305$ & $576.9 \pm 0.3$ \\\hline
+            $3$ & $25\degree 15' \pm 1'$ & $0.537852 \pm 0.000305$ & $576.6 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{giallo-1}
         \caption{Analisi della riga spettrale Giallo 1 a vari ordini.}
+        \label{giallo-1}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $36\degree  2' \pm 1'$ & $0.349648 \pm 0.000291$ & $578.3 \pm 0.5$ \\\hline
-            $3$ & $25\degree  9' \pm 1'$ & $0.539598 \pm 0.000291$ & $578.3 \pm 0.3$ \\\hline
-            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000291$ & $578.6 \pm 0.2$ \\\hline
-            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000291$ & $578.6 \pm 0.2$ \\\hline
-            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000291$ & $578.6 \pm 0.2$ \\\hline
-            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000291$ & $578.6 \pm 0.2$ \\\hline
-            $4$ & $12\degree 49' \pm 1'$ & $0.754855 \pm 0.000291$ & $578.4 \pm 0.2$ \\\hline
-            $3$ & $25\degree 10' \pm 1'$ & $0.539307 \pm 0.000291$ & $578.0 \pm 0.3$ \\\hline
-            $3$ & $25\degree  9' \pm 1'$ & $0.539598 \pm 0.000291$ & $578.3 \pm 0.3$ \\\hline
-            $3$ & $25\degree  9' \pm 1'$ & $0.539598 \pm 0.000291$ & $578.3 \pm 0.3$ \\\hline
-            $3$ & $25\degree 10' \pm 1'$ & $0.539307 \pm 0.000291$ & $578.0 \pm 0.3$ \\\hline
+            $2$ & $36\degree  2' \pm 1'$ & $0.349648 \pm 0.000305$ & $578.3 \pm 0.5$ \\\hline
+            $3$ & $25\degree  9' \pm 1'$ & $0.539598 \pm 0.000305$ & $578.3 \pm 0.3$ \\\hline
+            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000305$ & $578.6 \pm 0.2$ \\\hline
+            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000305$ & $578.6 \pm 0.2$ \\\hline
+            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000305$ & $578.6 \pm 0.2$ \\\hline
+            $4$ & $12\degree 48' \pm 1'$ & $0.755146 \pm 0.000305$ & $578.6 \pm 0.2$ \\\hline
+            $4$ & $12\degree 49' \pm 1'$ & $0.754855 \pm 0.000305$ & $578.4 \pm 0.2$ \\\hline
+            $3$ & $25\degree 10' \pm 1'$ & $0.539307 \pm 0.000305$ & $578.0 \pm 0.3$ \\\hline
+            $3$ & $25\degree  9' \pm 1'$ & $0.539598 \pm 0.000305$ & $578.3 \pm 0.3$ \\\hline
+            $3$ & $25\degree  9' \pm 1'$ & $0.539598 \pm 0.000305$ & $578.3 \pm 0.3$ \\\hline
+            $3$ & $25\degree 10' \pm 1'$ & $0.539307 \pm 0.000305$ & $578.0 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{giallo-2}
         \caption{Analisi della riga spettrale Giallo 2 a vari ordini.}
+        \label{giallo-2}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c|c|c||}
             \hline
             $k$ & $\theta \pm \sigma_{\theta}$ & $\Delta\theta \pm \sigma_{\Delta\theta} \, \left[\text{rad}\right]$ & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ \\\hline
             \hline
-            $2$ & $34\degree 25' \pm 1'$ & $0.377864 \pm 0.000291$ & $622.9 \pm 0.5$ \\\hline
-            $3$ & $22\degree 28' \pm 1'$ & $0.586431 \pm 0.000291$ & $622.9 \pm 0.3$ \\\hline
-            $3$ & $22\degree 28' \pm 1'$ & $0.586431 \pm 0.000291$ & $622.9 \pm 0.2$ \\\hline
-            $2$ & $22\degree 26' \pm 1'$ & $0.587012 \pm 0.000291$ & $622.3 \pm 0.2$ \\\hline
-            $3$ & $22\degree 28' \pm 1'$ & $0.586431 \pm 0.000291$ & $622.3 \pm 0.2$ \\\hline
-            $3$ & $22\degree 27' \pm 1'$ & $0.586722 \pm 0.000291$ & $622.3 \pm 0.2$ \\\hline
-            $3$ & $22\degree 27' \pm 1'$ & $0.586722 \pm 0.000291$ & $622.3 \pm 0.2$ \\\hline
-            $3$ & $22\degree 27' \pm 1'$ & $0.367683 \pm 0.000291$ & $623.1 \pm 0.3$ \\\hline
-            $3$ & $22\degree 27' \pm 1'$ & $0.367683 \pm 0.000291$ & $623.1 \pm 0.3$ \\\hline
-            $3$ & $22\degree 26' \pm 1'$ & $0.367392 \pm 0.000291$ & $623.4 \pm 0.3$ \\\hline
-            $3$ & $22\degree 27' \pm 1'$ & $0.367392 \pm 0.000291$ & $623.1 \pm 0.3$ \\\hline
+            $2$ & $34\degree 25' \pm 1'$ & $0.377864 \pm 0.000305$ & $622.9 \pm 0.5$ \\\hline
+            $3$ & $22\degree 28' \pm 1'$ & $0.586431 \pm 0.000305$ & $622.9 \pm 0.3$ \\\hline
+            $3$ & $22\degree 28' \pm 1'$ & $0.586431 \pm 0.000305$ & $622.9 \pm 0.2$ \\\hline
+            $2$ & $22\degree 26' \pm 1'$ & $0.587012 \pm 0.000305$ & $622.3 \pm 0.2$ \\\hline
+            $3$ & $22\degree 28' \pm 1'$ & $0.586431 \pm 0.000305$ & $622.3 \pm 0.2$ \\\hline
+            $3$ & $22\degree 27' \pm 1'$ & $0.586722 \pm 0.000305$ & $622.3 \pm 0.2$ \\\hline
+            $3$ & $22\degree 27' \pm 1'$ & $0.586722 \pm 0.000305$ & $622.3 \pm 0.2$ \\\hline
+            $3$ & $22\degree 27' \pm 1'$ & $0.367683 \pm 0.000305$ & $623.1 \pm 0.3$ \\\hline
+            $3$ & $22\degree 27' \pm 1'$ & $0.367683 \pm 0.000305$ & $623.1 \pm 0.3$ \\\hline
+            $3$ & $22\degree 26' \pm 1'$ & $0.367392 \pm 0.000305$ & $623.4 \pm 0.3$ \\\hline
+            $3$ & $22\degree 27' \pm 1'$ & $0.367392 \pm 0.000305$ & $623.1 \pm 0.3$ \\\hline
         \end{tabular}
-        \label{rosso}
         \caption{Analisi della riga spettrale Rosso a vari ordini.}
+        \label{rosso}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c|c||}
             \hline
@@ -451,11 +492,11 @@
             $3$ & $0.029671 \pm 0.000411$ & $31.0 \pm 0.5$ & $9.6 \pm 0.2$ & $1.074 \pm 0.003$ \\\hline
             $4$ & $0.042179 \pm 0.000411$ & $30.9 \pm 0.3$ & $14.0\pm 0.2$ & $13.200\pm 0.004$ \\\hline
         \end{tabular}
-        \label{viola-1-indaco}
         \caption{Potere dispersivo relativo alle righe spettrali Viola 1 e Indaco.}
+        \label{viola-1-indaco}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c|c||}
             \hline
@@ -471,11 +512,11 @@
             $3$ & $0.002036 \pm 0.000411$ & $2.0 \pm 0.4$ & $1 \pm 3$ & $9.820 \pm 0.003$ \\\hline
             $4$ & $0.003491 \pm 0.000411$ & $2.1 \pm 0.3$ & $16\pm 3$ & $12.150\pm 0.003$ \\\hline
         \end{tabular}
-        \label{giallo-1-2}
         \caption{Potere dispersivo relativo alle righe spettrali Giallo 1 e 2.}
+        \label{giallo-1-giallo-2}
     \end{table}
 
-    \begin{table}
+    \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c|c||}
             \hline
@@ -491,8 +532,8 @@
             $3$ & $0.169879 \pm 0.000411$ & $171.7 \pm 0.4$ & $9.89 \pm 0.04$ & $10.270\pm 0.003$ \\\hline
             $4$ & $0.251618 \pm 0.000411$ & $171.7 \pm 0.3$ & $14.70\pm 0.04$ & $12.620\pm 0.003$ \\\hline
         \end{tabular}
-        \label{viola-1-giallo-2}
         \caption{Potere dispersivo relativo alle righe spettrali Viola 1 e Giallo 2.}
+        \label{viola-1-giallo-2}
     \end{table}
 
 \end{document}
