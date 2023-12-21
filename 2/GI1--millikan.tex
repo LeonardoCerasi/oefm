@@ -255,11 +255,11 @@
     Al valore di $q_e$ sono state attribuite due componenti di errore: una statistica $\sigma_{\text{stat}}$ e una sistematica $\sigma_{\text{sist}}$. La componente statistica è stata determinata mediante deviazione standard della media dei valori ottenuti tramite la \ref{qe}:
     \begin{equation}
         \label{sigma-stat}
-        \sigma_{\text{stat}} = \sqrt{ \frac{S(q_e)}{N \left(N-1 \right)} }
+        \sigma_{\text{stat}} = \sqrt{ \frac{S(q_e)}{N \left(N-1 \right)} } = 0.02 \cdot 10^{-19} \, \text{C}
     \end{equation}
     La compomente sistematica dell'errore è stata determinata mediante propagazione degli errori sulle $Q_i$ nella \ref{qe}:
     \begin{equation}
-        q_e = \frac{1}{N} \sqrt{\sum_{n=1}^{N} \left(\frac{\sigma_{Q_i}}{k_i} \right)^2}
+        \sigma_{\text{sist}} = \frac{1}{N} \sqrt{\sum_{n=1}^{N} \left(\frac{\sigma_{Q_i}}{k_i} \right)^2} = 0.06 \cdot 10^{-19} \, \text{C}
     \end{equation}
     Dalla somma in quadratura delle due componenti di errore, si ottiene l'incertezza su $q_e$.
 
