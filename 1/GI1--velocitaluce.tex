@@ -108,32 +108,33 @@
 
     \subsection{Metodo}
     
-    La determinazione della velocità della luce viene effettuata utilizzando il metodo di Focault: 
-    viene diretto un fascio luminoso, proveniente da una sorgente, verso uno specchio rotante che ne causa la riflessione con uno spostamento angolare.\\
-    Il raggio di luce, dopo aver colpito lo specchio rotante, viene riflesso nella direzione opposta lungo la stessa traiettoria che aveva compiuto nel viaggio di andata. Poiché lo specchio è in rotazione, la posizione in cui il raggio colpisce lo specchio è in costante cambiamento: questo causa uno spostamento angolare tra il punto di arrivo del raggio riflesso e la posizione iniziale - misurata con specchio fermo.\\
+    La determinazione della velocità della luce viene effettuata utilizzando il metodo di Focault: lo schema dell'apparato sperimentale utilizzato viene riportato nella figura seguente:
+    \begin{figure}[!h]
+        \centering
+        \includegraphics[width=0.70\textwidth]{disegnetto-apparato.png}
+        \caption{Schema dell'apparato sperimentale.}
+        \label{schema}
+    \end{figure} \\ 
+    Viene diretto un fascio luminoso, proveniente da una sorgente, verso uno specchio rotante che ne causa la riflessione con uno spostamento angolare.
+    Il raggio di luce, dopo aver colpito lo specchio rotante, raggiunge uno specchio concavo e viene riflesso nella direzione opposta lungo la stessa traiettoria che aveva compiuto nel viaggio di andata. Poiché lo specchio è in rotazione, la posizione in cui il raggio colpisce lo specchio è in costante cambiamento: questo causa uno spostamento angolare tra il punto di arrivo del raggio riflesso e la posizione iniziale - misurata con specchio fermo.\\
     Misurando con precisione la posizione iniziale $ \delta _i $ dello spot luminoso - con specchio fermo - e la finale  $ \delta _f $ - con specchio in movimento - si riesce a dedurre lo spostamento angolare $ \Delta \delta = \delta_f - \delta_i $: questo rende possibile determinare la velocità della luce:
     \begin{equation}
         \label{eqn-c}
         c=4 f_2 D^2 \frac{(\omega -\omega_0)}{(D+a-f_2)\Delta \delta }
     \end{equation}
-    dove $ c $ è la velocità della luce, $ f_2 $ è la lunghezza focale della seconda lente posta nell'apparato, $ D $ è la lunghezza del percorso compiuto dal fascio luminoso, $ \omega_0 $ e $ \omega $ sono rispettivamente la velocità angolare iniziale e finale dello specchio rotante, $ a $ è la distanza tra la seconda lente dell'apparato e lo specchio rotante e $ \Delta\delta$ è lo spostamento dell'immagine nel punto di osservazione, quando la velocità angolare dello specchio rotante passa da $ \omega_0 $ a $ \omega $.
-    % da modificare
-    Per uno schema dell'apparato sperimentale si veda la Fig. \ref{schema}.
-    \begin{figure}[h]
-        \centering
-        \includegraphics[width=0.70\textwidth]{disegnetto-apparato.png}
-        \caption{Schema dell'apparato sperimentale.}
-        \label{schema}
-    \end{figure}
+    dove $ c $ è la velocità della luce, $ f_2 $ è la lunghezza focale della seconda lente posta nell'apparato, $ D $ è la lunghezza del percorso compiuto dal fascio luminoso, $ \omega_0 $ e $ \omega $ sono rispettivamente la velocità angolare iniziale e finale dello specchio rotante, $ a $ è la distanza tra la Lente 2 dell'apparato e lo specchio rotante e $ \Delta\delta$ è lo spostamento dell'immagine nel punto di osservazione, quando la velocità angolare dello specchio rotante passa da $ \omega_0 $ a $ \omega $.
+
+    
+    
 
     \section{Misure}
     
-    Si è inizialmente misurata la distanza $D$ tra lo specchio rotante e lo specchio concavo. La distanza $D$ è stata misurata mediante un metro di risoluzione $ 0.01 \, \text{m} $, la quale è stata attribuita come incertezza al valore della misura:
+    Si è inizialmente misurata la distanza $D$ tra lo specchio rotante e lo specchio concavo. La distanza $D$ è stata misurata mediante un metro di risoluzione $ 0.01 \, \text{m} $, la quale è stata attribuita come incertezza al valore della misura. Infatti, poiché sono state prese 2 sole misure della grandezza, l'incertezza statistica (determinabile come deviazione standard) non è significativa, e rappresenterebbe una sottostima dell'errore.
     \begin{equation}
         \label{equation-for-D}
         D = (13.28 \pm 0.01) \, \text{m}
     \end{equation} \\
-    Si è poi misurata la distanza $a$ tra la seconda lente dell'apparato e lo specchio rotante. La misura è stata effettuata attraverso un metro di risoluzione $ 0.001 \, \text{m} $, che è stata attribuita come incertezza di $a$:
+    Si è poi misurata la distanza $a$ tra la seconda lente dell'apparato e lo specchio rotante. Poiché lo specchio è collocato in una scatola, si è stimata come posizione effettiva dello specchio la metà della scatola. La misura è stata effettuata attraverso un metro di risoluzione $ 0.001 \, \text{m} $, che è stata attribuita come incertezza di $a$:
     \begin{equation}
         \label{equation for a}
         a = (0.474 \pm 0.001) \, \text{m}
@@ -225,9 +226,8 @@
         \label{final-value}
         c = \left( 2.979 \pm 0.090 \right) \cdot 10^8 \, \text{m/s}
     \end{equation}
-    Il valore aspettato $\bar{c} = 299792458.2 \,\text{m/s}$ è situato entro $2.1\sigma$ dal valore calcolato, dunque il risultato dell'esperimento è in accordo col valore universalmente accettato della velocità della luce.
-
-    Il valore leggermente sottostimato così ottenuto potrebbe essere giustificato dal fatto che l'esperimento non è stato svolto nel vuoto, dunque l'indice di rifrazione effettivo, cioè quello dell'aria, potrebbe aver influito sulle misurazioni. \\
+    Il valore aspettato $\bar{c} = 299792458.2 \,\text{m/s}$ è situato entro $2.1\sigma$ dal valore calcolato, dunque il risultato dell'esperimento è in accordo col valore universalmente accettato della velocità della luce. \\
+    Il valore leggermente sottostimato così ottenuto non è giustificabile dal fatto che l'esperimento non è stato svolto nel vuoto. Infatti, l'indice di rifrazione dell'aria, stimato attraverso l'esperimento di Michelson, risulta essere $ n = 1.000259 \pm 0.000007 $, dunque si discosta dal valore nel vuoto soltanto per lo $0.0259 \%$. Il cammino ottico effettivamente percorso dal fascio luminoso, rappresentanto dalle grandezze $D$ e $a$ nell'equazione per la determinazione di $c$, non risulta significativamente alterato.  \\
     I valori di $c$ meno compatibili con il valore atteso sono quelli ottenuti portando lo specchio a frequenza massima di rotazione: tale fenomeno potrebbe essere spiegato dal fatto che, in \virgolette{modalità turbo}, il valore della frequenza letto variava senza stabilizzarsi in intervalli di ampiezza di $\tildetext 20\,\text{Hz}$; invece, a frequenze minime e intermedie, esso variava in intervalli comparabili alla sensibilità strumentale. \\ 
     L'incompatibilità del dataset rigettato potrebbe essere dovuta al fatto che è stato il primo set di misure effettuato, dunque potrebbe aver inficiato l'imperizia iniziale degli sperimentatori.
 
