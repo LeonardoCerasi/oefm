@@ -100,13 +100,14 @@
 
     \section{Introduzione}
 
+    \subsection{Scopo}
+
     L'elettrone è una particella carica e massiva: in questa esperienza ci si propone di misurare il suo rapporto carica-massa $ \frac{e}{m} $ in condizioni non relativistiche. \\
     Le misurazioni vengono effettuate in tre casi distinti: perpendicolarmente, parallelamente e antiparallelamente al campo magnetico terrestre.
 
 
     \subsection{Metodo}
-    In un'ampolla contenente gas idrogeno a bassa pressione (circa $ 10^{-2}\, torr $), è posta una resistenza che, essendo percorsa da corrente elettrica alternata, scalda un catodo che emette elettroni per effetto termoelettrico. Questi, accelerati dalla differenza di potenziale $\Delta V$ presente tra il catodo e l'anodo, vengono fatti collimare in un unico fascio, la cui traiettoria viene deviata dalla forza di Lorentz - ortogonale al vettore velocità degli elettroni - generata dal campo magnetico $ B_z $ prodotto dalle bobine di Helmholz poste ai lati dell'ampolla: il cammino percorso dal fascio assume una forma circolare grazie alla regolazione dell'intensità di $B_z$. \\
-
+    In un'ampolla contenente gas idrogeno a bassa pressione (circa $ 10^{-2}\, \text{torr} $), è posta una resistenza che, essendo percorsa da corrente elettrica alternata, scalda un catodo che emette elettroni per effetto termoelettrico. Questi, accelerati dalla differenza di potenziale $\Delta V$ presente tra il catodo e l'anodo, vengono fatti collimare in un unico fascio, la cui traiettoria viene deviata dalla forza di Lorentz. Quest'ultima, ortogonale al vettore velocità degli elettroni, è generata dal campo magnetico $ B_z $, prodotto dalle bobine di Helmholz poste ai lati dell'ampolla: il cammino percorso dal fascio assume una forma circolare grazie alla regolazione dell'intensità di $B_z$. \\
     Lungo il loro cammino, gli elettroni collidono con le molecole di idrogeno, emettendo fotoni ad una lunghezza d'onda di circa $4500 \text{Å}$.
     Il raggio della circonferenza visibile risulta fondamentale per la determinazione della grandezza interessata, come mostrato dalla seguente equazione:
 
@@ -114,7 +115,7 @@
         \label{e_m}
         \frac{e}{m} = \frac{2 \Delta V}{(B_z R)^2}
     \end{equation}
-    dove $ e $ ed $ m $ rappresentano rispettivamente la carica elettrica e la massa dell'elettrone, $\Delta V$ rapprensenta la differenza di potenziale, $B_z$ rappresenta il campo elettrico generato dalle bobine di Helmholz e $ R $ rapprensenta il raggio della circonferezza compiuta dagli elettroni. \\
+    dove $ e $ ed $ m $ rappresentano rispettivamente la carica elettrica e la massa dell'elettrone, $\Delta V$ rapprensenta la differenza di potenziale, $B_z$ rappresenta il campo magnetico generato dalle bobine di Helmholz e $ R $ rapprensenta il raggio della circonferezza compiuta dagli elettroni. \\
 
     In base alla differente influenza del campo magnetico terrestre, il campo magnetico effettivo a cui è sottoposto il fascio di elettroni varia: è dunque necessario andare a stimare il contributo di quest'ultimo in modo da poter fornire un risultato più accurato al valore finale della grandezza interessata.
 
@@ -122,7 +123,7 @@
 
     \subsection{Per la determinazione del campo magnetico generato dalle bobine di Helmholtz}
 
-    La determinazione delle grandezze utili a fornire un valore di $e/m$ richiede la determinazione preliminare del raggio medio delle bobine di Helmholz: tale misurazione viene compiuta attraverso l'utilizzo di un calibro di risoluzione $0.02 \text{mm}$. Le bobine di Helmholz hanno la caratteristica di essere poste ad una distanza equivalente al loro raggio medio, dunque si procede misurando la loro distanza per eccesso e per difetto - 5 misurazioni per entrambe le distanze - e come valore finale si fornisce la media delle due medie ottenute dai due set di dati. Le misure effettuate sono riportate in Tab. ~\ref{Raggio_bobine} e ~\ref{media_devst_Rb}. Come incertezza, invece, si attribuisce la somma in quadratura delle deviazioni standard dei due set di dati, poiché tale valore è superiore alla risoluzione dello strumento.
+    La determinazione delle grandezze utili a fornire un valore di $e/m$ richiede la stima preliminare del raggio medio delle bobine di Helmholz: tale misurazione viene compiuta attraverso l'utilizzo di un calibro di risoluzione $0.02 \text{mm}$. Le bobine di Helmholz hanno la caratteristica di essere poste a una distanza equivalente al loro raggio medio. Pertanto, si procede misurando la loro distanza per eccesso e per difetto - 5 misurazioni per entrambe le distanze - e come valore finale si fornisce la media delle due medie ottenute dai due set di dati. Le misure effettuate sono riportate in Tab. ~\ref{Raggio_bobine} e ~\ref{media_devst_Rb}. Come incertezza, invece, si attribuisce la somma in quadratura delle deviazioni standard dei due set di dati, poiché tale valore è superiore alla risoluzione dello strumento.
 
 
     \begin{table}[H]
@@ -159,21 +160,20 @@
         \label{media_devst_Rb}
     
     \end{table}
-
     Il valore finale attribuito al raggio delle bobine di Helmholtz risulta dunque essere:
 
     \begin{equation}
         \label{misura_Rb}
         R_b = (15.63 \pm 0.07) \, \text{cm}
     \end{equation} 
-    Dopo aver determinato, mediante ago magnetico, la direzione della componente orizzontale del campo magnetico terrestre, si orienta l'asse delle bobine ortogonale a tale direzione, e, al variare della differenza di potenziale $\Delta V $ tra catodo e anodo e dell'intensità di corrente $I$ che alimenta le bobine di Helmholtz, si misura il diametro $D$ della circonferenza percorsa dagli elettroni, da cui si ottiene il valore del raggio $R$ della medesima. L'incertezza a tali misure del raggio ($\sigma_{R}$) è stata attribuita mediante propagazione dell'incertezza sul diametro, stimata pari alla risoluzione del calibro adoperato, ovvero  $\sigma_{D}= 0.01 \text{mm}$: 
+    Dopo aver determinato, mediante ago magnetico, la direzione della componente orizzontale del campo magnetico terrestre, si orienta l'asse delle bobine ortogonale a tale direzione. Al variare della differenza di potenziale $\Delta V $ tra catodo e anodo e dell'intensità di corrente $I$ che alimenta le bobine di Helmholtz, si misura, attraverso un calibro digitale di risoluzione $\sigma_{D}= 0.01 \text{mm}$, il diametro $D$ della circonferenza percorsa dagli elettroni, da cui si ottiene il valore del raggio $R$ della medesima. L'incertezza a tali misure del raggio ($\sigma_{R}$) è stata attribuita mediante propagazione dell'incertezza sul diametro, stimata pari alla risoluzione del calibro adoperato: 
     \begin{equation}
         \label{sigma_raggioCirc}
         \sigma_{R} = \frac{\sigma_{D}}{\sqrt{2} }
     \end{equation}
     I valori di differenza di potenziale e intensità di corrente, invece, sono stati misurati attraverso un multimetro digitale in modalità, rispettivamente, di Voltmetro (con risoluzione di $0.1 \text{V}$) e di Amperometro (con risoluzione di $0.001 \text{A}$). In entrambi i casi è stata attribuita come incertezza la risoluzione dello strumento, poiché risultava sempre superiore all'intervallo di stabilizzazione del generatore ($\pm 0.1 \%$). Tale set di misure è riportato in Tab. \ref{CM_ortogonale}. \\
     
-    Si è ripetuto il medesimo set di misure orientando l'asse delle bobine in direzione parallela ( Tab. \ref{CM_parallelo} ) e antiparallela ( Tab. \ref{CM_antiparallelo} ) rispetto alla componente orizzontale del campo magnetico terrestre.
+    Si è ripetuto il medesimo set di misure orientando l'asse delle bobine in direzione parallela (Tab. \ref{CM_parallelo}) e antiparallela (Tab. \ref{CM_antiparallelo}) rispetto alla componente orizzontale del campo magnetico terrestre.
 
     \subsection{Per la determinzione del campo magnetico terrestre}
     Nelle condizioni in cui la strumentazione viene posta parallelela e antiparallela al campo magnetico terrestre, questo influisce sull'effettivo campo magnetico a cui sono sottoposti gli elettroni lungo la loro orbita: risulta, dunque, necessario dare un valore a questa grandezza in modo da poter correggere le errate stime del rapporto $e/m$. In mezzo ad una coppia di bobine di geometria nota è posto un ago magnetico, che viene fatto deflettere di angoli noti facendo variare l'intensità di corrente che alimenta le bobine (generatrici del campo magnetico). L'intensità di corrente viene misurata mediante multimetro in modalità di Amperometro, con risoluzione di $0.001 \text{A}$ (attribuita come incertezza della misura, poiché maggiore all'intervallo di stabilizzazione del generatore $\pm 0.1 \%$). L'angolo di deflessione, invece, viene misurato con un goniometro, solidale alle bobine, orientato in modo che, a corrente nulla, l'ago magnetico risulti diretto nella direzione $0-180 \degree $ di esso. Come incertezza a tali misure viene attribuita la risoluzione dello strumento: $1 \degree$. Tali misure sono state prese facendo deflettere l'ago magnetico sia in senso orario sia in senso antiorario, e sono riportate in Tabb. \ref{campomagneticoterrestre_sensoorario} , \ref{campomagneticoterrestre_sensoantiorario}.
@@ -217,7 +217,7 @@
 
     \subsubsection{Carica/massa dell'elettrone}
 
-    Ai fini della determinazione del rapporto carica/massa dell'elettrone, sono state riportate sui grafici in Par. \ref{par:graph} le misure effettuate. In particolare si è posto sulle ascisse il termine $2\Delta V_i$ e sulle ordinate il valore $(B_i R_i)^2$. Per la relazione \ref{e_m}, attraverso il metodo dei minimi quadrati, si ottiene come coefficiente angolare $A$ il rapporto $m/e$, dove $m$ è la massa ed $e$ è la carica dell'elettrone. Dall'inversione di tale espressione si ottiene il rapporto $e/m$ cercato. In Tab. \ref{regr_lin} sono riportati, con le loro incertezze, i coefficienti angolari $A$ e i termini noti $B$ ottenuti dalla regressione lineare pesata per ciascuna configurazione dell'apparato. 
+    Ai fini della determinazione del rapporto $e/m$ dell'elettrone, sono state riportate sui grafici in Par. \ref{par:graph} le misure effettuate. In particolare si è posto sulle ascisse il termine $2\Delta V_i$ e sulle ordinate il valore $(B_i R_i)^2$. Per la relazione \ref{e_m}, attraverso il metodo dei minimi quadrati, si ottiene come coefficiente angolare $A$ il rapporto $m/e$, dove $m$ è la massa ed $e$ è la carica dell'elettrone. Dall'inversione di tale espressione si ottiene il rapporto $e/m$ cercato. In Tab. \ref{regr_lin} sono riportati, con le loro incertezze, i coefficienti angolari $A$ e i termini noti $B$ ottenuti dalla regressione lineare pesata per ciascuna configurazione dell'apparato. 
     \begin{table}[H]
         \centering
     
@@ -239,27 +239,27 @@
 
     \subsection {Stima degli errori}
     \subsubsection{Campo magnetico generato dalle bobine di Helmholtz}
-    L'incertezza attribuita al campo magnetico generato dalle bobine di Helmholtz $\sigma _{Bz} $, riportatp in Tabb. \ref{CM_ortogonale}, \ref{CM_parallelo} e \ref{CM_antiparallelo}, è stata determinata attraverso la propagazione degli errori sull'intensità di corrente $I$ e sul raggio delle bobine $R_b$ nella relazione \ref{B_z0}:
+    L'incertezza attribuita al campo magnetico generato dalle bobine di Helmholtz $\sigma _{Bz} $, riportato in Tabb. \ref{CM_ortogonale}, \ref{CM_parallelo} e \ref{CM_antiparallelo}, è stata determinata attraverso la propagazione degli errori sull'intensità di corrente $I$ e sul raggio delle bobine $R_b$ nella relazione \ref{B_z0}:
     \begin{equation}
         \label{sigma_B}
         \sigma _{Bz} = \sqrt{\left(- \mu _0 \frac{8 N}{5\sqrt{5}} \frac{I}{R_b^2}\right)^2 \sigma_{Rb}^2 + \left(\mu _0 \frac{8 N}{5\sqrt{5}} \frac{1}{R_B} \right)^2 \sigma _I ^2} 
     \end{equation}
-    dove $\mu _0 $ è la costante di permeabilità magnetica del vuoto e $N$ è i numero di spire che compongono le bobine di Helmholtz. \\
+    dove $\mu _0 $ è la costante di permeabilità magnetica del vuoto e $N$ è il numero di spire che compongono le bobine di Helmholtz. \\
     Nei casi di campo parallelo e antiparallelo al campo magnetico terrestre, al valore ottenuto con la \ref{sigma_B} è stato sommato in quadratura l'errore sulla componente ortogonale del campo magnetico terrestre, ricavata come da Par. \ref{par:sigma_campo_magnetico_terrestre}.
 
 
     \subsubsection{Campo magnetico terrestre}
-    L'incertezza attribuita al campo magnetico terrestre, e riportata in \ref{misura_campomagneticoterrestre}, è stata ricavata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$. Si è utilizzata la componente statistica dell'errore poiché quella sistematica, in quanto proporzionale a $\csc^2{x}$, per angoli tendenti a $0 \degree $, tende a $+ \infty $; di conseguenza, per angoli bassi, l'errore risulterebbe sovrastimato.
+    L'incertezza attribuita al campo magnetico terrestre, e riportata in \ref{misura_campomagneticoterrestre}, è stata ricavata mediante deviazione standard della media dei valori ottenuti con la \ref{mag_terr} per ciascuna misura di intensità di corrente $I$ e di angolo di deviazione $\theta$. Si è utilizzata la componente statistica dell'errore poiché quella sistematica, in quanto proporzionale a $\csc^2{\theta}$, per angoli tendenti a $0 \degree $, tende a $+ \infty $; di conseguenza, per angoli piccoli, l'errore risulterebbe sovrastimato.
 
     \label{par:sigma_campo_magnetico_terrestre}
 
     \subsubsection{Carica/massa dell'elettrone}
-    Poiché il rapporto carica/massa dell'elettrone è stato ricavato invertendo il coefficiente angolare $A$ ottenuto con il metodo dei minimi quadrati, l'errore di tale grandezza è stato attribuito con la propagazione dell'errore su $A$ in $\frac{e}{m}=\frac{1}{A}$:
+    Poiché il rapporto $e/m$ dell'elettrone è stato ricavato invertendo il coefficiente angolare $A$ ottenuto con il metodo dei minimi quadrati, l'errore di tale grandezza è stato attribuito con la propagazione dell'errore su $A$ in $\frac{e}{m}=\frac{1}{A}$:
     \begin{equation}
         \label{sigma_e/m}
         \sigma _{e/m} = \frac{\sigma_A}{A^2} 
     \end{equation}
-    Inoltre, per valutare anche l'errore sistematico di cui sono affette le misure del rapporto carica/massa dell'elettrone, si è effettuata una propagazione degli errori su $\Delta V$, $B_z$ e $R$ nell'espressione \ref{e_m}:
+    Inoltre, per valutare anche l'errore sistematico di cui sono affette le misure del rapporto $e/m$ dell'elettrone, si è effettuata una propagazione degli errori su $\Delta V$, $B_z$ e $R$ nell'espressione \ref{e_m}:
     \begin{equation}
         \label{sigma_e/m_sist}
         \sigma _{e/m,sist} = \sqrt{ \frac{4}{B_z^4 \, R^4} \sigma_{\Delta V ^2} + \frac{16 \, \Delta V ^2}{B_z^6 \, R^4} \sigma_{B_z ^2} + \frac{16 \, \Delta V ^2}{B_z^4 \, R^6} \sigma_{R ^2}  }  
@@ -268,7 +268,7 @@
     I valori ottenuti, riportati in Tab. \ref{em-values}, forniscono una componente di errore trascurabile rispetto a quella statistica. Pertanto, si è deciso di attribuire come incertezza quella statistica.
 
     \subsection{Confronto}
-    Per confrontare i valori del rapporto carica/massa dell'elettrone ottenuti per ciascuna configurazione con il valore aspettato
+    Per confrontare i valori del rapporto $e/m$ dell'elettrone ottenuti per ciascuna configurazione con il valore aspettato
     $e/m = 1.758820 \cdot 10^{11}\text{C/kg}$, si è utilizzato un test di Student a due code, con gradi di libertà pari a 19, ottenuti dalla differenza tra il numero totale di misure effettuate (20) e il numero di variabili statistiche estratte da queste (1).
     I valori di $e/m$ elaborati per ciascuna configurazione con i rispettivi errori sono riportati nella seguente
     tabella:
@@ -303,7 +303,7 @@
     Come si evince dalle Tabb. \ref{em-values} e \ref{comp}, il dataset rilevato nella configurazione ortogonale al campo magnetico terrestre, corrispondente alle misurazioni in Tab. \ref{CM_ortogonale}, risulta altamente incompatibile con i restanti dati, nonché quello con la minore compatibilità con il valore aspettato: per questo, si è deciso di rigettarlo nell'analisi conclusiva.
 
     \section{Conclusione}
-    Il valore finale del rapporto carica/massa dell'elettrone è stato calcolato attraverso la media ponderata dei valori ottenuti dai dataset non rigettati:
+    Il valore finale del rapporto $e/m$ dell'elettrone è stato calcolato attraverso la media ponderata dei valori ottenuti dai dataset non rigettati:
     \begin{equation}
         \label{final-value}
         \frac{e}{m} = ( 1.797 \pm 0.037) \cdot 10^{11}\text{C/kg} 
