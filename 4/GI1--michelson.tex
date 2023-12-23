@@ -102,55 +102,50 @@
 
 \subsection{Scopo}
 
-In questa esperienza ci si propone di misurare - mediante l'utilizzo dell'interferometro di Michelson - le seguenti quattro quantità: la lunghezza d'onda di un fascio di luce monocromatica, l'indice di rifrazione dell'aria a pressione atmosferica, la lunghezza dei pacchetti d'onda di una sorgente non monocromatica e la separazione tra le due lunghezze d'onda del doppietto del sodio.
+In questa esperienza ci si propone di misurare - mediante l'utilizzo dell'interferometro di Michelson - le seguenti quantità: la lunghezza d'onda di un fascio di luce monocromatica, l'indice di rifrazione dell'aria, la lunghezza di coerenza dei pacchetti d'onda di una sorgente non monocromatica e la separazione tra le due lunghezze d'onda del doppietto del sodio.
 
 \subsection{Metodo}
 
-Per la misurazione delle quattro grandezze interessate, si utilizza l'apparato sviluppato da Michelson riportato in figura $riferimento$. L'interferometro è costituito da quattro lastre di vetro ($S_1, \, S_2, \, S_3, \, L_c$): $S_1$ è una lastra semiriflettente - rivolta verso $S_2$ -a facce piane e parallele, $S_2$ e $S_3$ sono completamente riflettenti sulla faccia rivolta verso $S_1$, $L_c$ è una lastra trasparente il cui scopo è quello di rendere uguali i cammini ottici compiuti dai raggi lungo i due bracci dello strumento. \\ Essendosi assicurati che $S_2$ e $S_3$ siano perpendicolari e che formino un angolo di $45\degree$ con $S_1$, il raggio luminoso inciderà su $S_1$ sdoppiandosi: il primo verrà riflesso da $S_2$ e dalla faccia riflettente di $S_1$, per poi proseguire verso lo schermo, il secondo - riflesso da $S_1$ - verrà riflesso da $S_3$ ed inciderà sullo schermo dove formerà delle figure di interferenza con il primo raggio - douvuta alla coerenza dei due fasci luminosi- .
+Per la misurazione delle quattro grandezze interessate, si utilizza l'apparato sviluppato da Michelson riportato in figura $riferimento$. L'interferometro è costituito da quattro lastre di vetro ($S_1, \, S_2, \, S_3, \, L_c$): $S_1$ è semiriflettente - rivolta verso $S_2$ - a facce piane e parallele, $S_2$ ed $S_3$ sono completamente riflettenti sulla faccia rivolta verso $S_1$, $L_c$ è una lastra trasparente il cui scopo è quello di rendere uguali i cammini ottici compiuti dai raggi lungo i due bracci dello strumento. \\ Dopo aver verificato che $S_2$ ed $S_3$ siano perpendicolari e che formino un angolo di $45\degree$ con $S_1$, il raggio luminoso inciderà su $S_1$ sdoppiandosi: il primo verrà riflesso da $S_2$ e dalla faccia riflettente di $S_1$, per poi proseguire verso lo schermo, il secondo - riflesso da $S_1$ - verrà riflesso da $S_3$ ed inciderà sullo schermo dove formerà delle figure di interferenza con il primo raggio - douvuta alla coerenza dei due fasci luminosi.
 
 \subsubsection{Lunghezza d'onda di un fascio di luce monocromatica}
 
-Si vuole misurare la lunghezza d'ond di un fascio di luce laser: agendo sulla variazione di cammino ottico dei due fasci - spostando lo specchio $S_3$ - si conta il numero di frange chiare (o scure) passanti per un punto prefissato dello schermo. La misura della lunghezza d'onda è pertanto data dalla formula
-
+Si vuole misurare la lunghezza d'onda di un fascio di luce laser. Agendo sulla variazione di cammino ottico dei due fasci - spostando lo specchio $S_3$ - si conta il numero di frange chiare (o scure) passanti per un punto prefissato dello schermo. La misura della lunghezza d'onda è pertanto data dall'equazione:
 \begin{equation}
     \label{lambda_laser}
     \lambda = \frac{2 n_a \Delta x}{N_1}
 \end{equation}
-
-dove $\lambda$ è la lunghezza d'onda incognita, $n_a$ è l'indice di rifrazione dell'aria, $\Delta x$ è lo spostamento dello specchio $S_3$ e $N_1$ è il numero di frange chiare (o scure) contate.
+dove $\lambda$ è la lunghezza d'onda incognita, $n_a$ è l'indice di rifrazione dell'aria, $\Delta x$ è lo spostamento dello specchio $S_3$ ed $N_1$ è il numero di frange chiare (o scure) contate.
 
 \subsubsection{Indice di rifrazione dell'aria}
 
-Tra gli specchi $S_1$ e $S_2$ viene inserita una cameretta contenente una pompa per la creazione del vuoto. Il cammino ottico percorso dal fascio luminoso nel vuoto cambia - poichè questo è legato all'indice di rifrazione del mezzo che attraversa come mostrato dall'equazione \ref{lambda_laser} - e quindi, facendo rientrare lentamente l'aria nella cameretta e contando le frange di interferenza passanti per un dato punto sullo schermo, si riuscirà a fornire una stima del valore dell'indice di rifrazione dell'aria $n_a$ seocndo la seguente equazione:
-
+Tra gli specchi $S_1$ ed $S_2$ viene inserita una cameretta contenente una pompa per la creazione del vuoto. Il cammino ottico percorso dal fascio luminoso nel vuoto cambia, poichè questo è legato all'indice di rifrazione del mezzo che attraversa come mostrato dall'equazione \ref{lambda_laser}. Quindi, facendo rientrare lentamente l'aria nella cameretta e contando le frange di interferenza passanti per un dato punto sullo schermo, si riuscirà a fornire una stima del valore dell'indice di rifrazione dell'aria $n_a$ secondo la seguente equazione:
 \begin{equation}
     \label{n_a}
     2(n_a - 1) = N_2 \lambda
 \end{equation}
-
 dove $n_a$ è l'indice di rifrazione dell'aria, $N_2$ è il numero di frange contate su un punto dello schermo e $\lambda$ è la lunghezza d'onda del fascio emesso dalla sorgente monocromatica.
 
 \subsubsection{Lunghezza dei pacchetti d'onda di una sorgente non monocromatica}
+\label{par:123}
 
-Il fascio di luce prodotto da una sorgente non monocromatica è costituita da impulsi di lunghezza limitata. L'inferferenza dei fasci luminosi riflessi dagli specchi $S_2$ e $S_3$ si manifesta quando la distanza tra le due sorgenti immagine è inferiore alla lunghezza del pacchetto: quando viene superata tale lunghezza, si osserva sullo schermo una figura unifermemente illuminata e quindi si misura la distanza tra due zone di uniforme illuminazione - mediante la misura dello spostamento di $S_3$ - per quantificare tale grandezza.
+Il fascio di luce prodotto da una sorgente non monocromatica è costituito da impulsi di lunghezza limitata. L'inferferenza dei fasci luminosi riflessi dagli specchi $S_2$ ed $S_3$ si manifesta quando la distanza tra le due sorgenti immagine è inferiore alla lunghezza del pacchetto. Quando viene superata tale lunghezza, si osserva sullo schermo una figura uniformemente illuminata. Dunque, si misura la distanza tra due zone di uniforme illuminazione - mediante la misura dello spostamento di $S_3$ - per quantificare tale grandezza.
 
 \subsubsection{Differenza tra le lunghezze d'onda del doppietto del sodio}
 
-Si utilizza ora una sorgente luinosa al sodio per misurare le due lunghezze d'onda che emette e la loro cnseguente separazione: quando le frange di interferenza delle due lunghezze d'onda si vanno a sovrapporre, sullo schermo si vede una figura di interferenza con frange molto nette - in particolare quando la differenza di cammino ottico trta i fasci prpvenieni da $S_2$ ed $S_3$ è nulla -. 
-Si misura quindi lo spostamento dello specchio $S_3$ e di ricava:
-
+Si utilizza ora una sorgente luminosa al sodio per misurare le due lunghezze d'onda che emette e la loro conseguente separazione. Quando le frange di interferenza delle due lunghezze d'onda si vanno a sovrapporre, sullo schermo si vede una figura di interferenza con frange molto nette - in particolare quando la differenza di cammino ottico tra i fasci provenieni da $S_2$ ed $S_3$ è nulla. 
+Si misura quindi lo spostamento dello specchio $S_3$ e si ricava:
 \begin{equation}
     \label{Delta_lambda}
     \lambda _2 - \lambda _1 = \frac {m \bar{\lambda} ^2 }{2 \Delta x}
 \end{equation}
-
 dove $\lambda _1$ e $\lambda _2$ sono le due lunghezze d'onda del doppietto del sodio, $m$ è il numero di alternanze tra le condizioni di interferenza netta, $\bar{\lambda}$ è la media delle due lunghezze d'onda e $\Delta x$ è lo spostamento dello spcchio $S_3$.
 
 \section{Misure}
 
 \subsection {Lunghezza d'onda di un fascio di luce monocromatica}
 
-La misura della lunghezza d'onda del fascio laser viene effettuata prendendo 5 misure dello spostamento dello specchio mobile e contando le frange passanti per un punto fissato dello schermo, le misure sono riportate nella seguente Tabella.
+La misura della lunghezza d'onda del fascio laser viene effettuata prendendo 5 misure dello spostamento dello specchio mobile e contando le frange passanti per un punto fissato dello schermo. Le misure effettuate sono riportate nella seguente Tabella:
 
 \begin{table}[H]
     \centering
@@ -170,8 +165,7 @@ La misura della lunghezza d'onda del fascio laser viene effettuata prendendo 5 m
     \caption{Misure di $N_1$, $x_1$ e $x_2$ effetuate per valutare la lunghezza d'onda della sorgente laser}
     \label{lambda}    
 \end{table}
-
-Al conteggio $N_1$ viene fornito un errore di $ \pm 5$, a seguito di una valutazione dell'errore commesso dagli sperimentatori, mentre alle misure di $x_1$ e $x_2$ viene fornita come incertezza la risoluzione dello strumento, pari a $0.01 \, \text{mm}$. \\ Gli spostamenti $x_1$ e $x_2$ sono effettuati attraverso una vita micrometrica che permette spostamenti fini dello specchio $S_3$ pari ad $\frac{1}{5}$ di quelli impressi dallo sperimentatore. 
+Al conteggio $N_1$ viene fornito un errore di $ \pm 5$, a seguito di una valutazione dell'errore commesso dagli sperimentatori; mentre alle misure di $x_1$ e $x_2$ viene fornita come incertezza la risoluzione dello strumento, pari a $0.01 \, \text{mm}$. \\ Gli spostamenti $x_1$ e $x_2$ sono effettuati attraverso una vita micrometrica che permette spostamenti fini dello specchio $S_3$ pari ad $\frac{1}{5}$ di quelli impressi dallo sperimentatore. 
 
 
 \subsection{Indice di rifrazione dell'aria}
@@ -181,7 +175,7 @@ La camera usata per creare il vuoto ha lunghezza $D=0.05 \, \text{m}$ - valore c
 
 \subsection{Lunghezza dei pacchetti d'onda di una sorgente non monocromatica}
 
-Vengono fatte 6 misure dello spostamento dello specchio per valutare la lunghezza del treno di impulsi come descritto nel paragrafo 1.2.3. I risultati sono riportati in tabella.
+Vengono fatte, attraverso la lettura della posizione della vite micrometrica, 6 misure dello spostamento dello specchio per valutare la lunghezza del treno di impulsi come descritto nel Paragrafo \ref{par:123}. I risultati sono riportati in tabella:
 
 \begin{table}[H]
     \centering
@@ -206,8 +200,7 @@ A queste misure viene sempre fornita l'incertezza strumentale pari a $0.01\text{
 
 \subsection{Differenza tra le lunghezze d'onda del doppietto del sodio}
 
-Per valutare la differenza $\Delta \lambda$ tra le due lunghezze d'onda emesse dal sodio, si misura, attraverso la vite micrometrica, lo spostamento che intercorre tra due posizioni di $S_3$ tali per cui si osservi un pattern di interferenza completamente diffusa. 
-vegono prese 8 misure dello spostamento dello specchio $S_3$, fornendo anche il valore $m$ di numero di alternanze di interferenze nette viste sullo schermo durante lo spostamento dello specchio mobile. Le misure vengono riportate in tabella.
+Per valutare la differenza $\Delta \lambda$ tra le due lunghezze d'onda emesse dal sodio, si misura, attraverso la vite micrometrica, lo spostamento che intercorre tra due posizioni di $S_3$ tali per cui si osservi un pattern di interferenza completamente diffusa. Vengono prese 8 misure dello spostamento dello specchio $S_3$, fornendo anche il numero $m$ di alternanze di interferenze nette viste sullo schermo durante lo spostamento dello specchio mobile. Le misure vengono riportate in tabella:
 
 \begin{table}[H]
     \centering
@@ -235,7 +228,7 @@ Dove l'indice $m$ rappresenta il numero di interferenze nitide osservate tra le 
 
 \section{Analisi Dati}
 
-Ogni volta che si è misurato lo spostamento fine $\Delta x$, si è dovuto considerare quanto osservato in precedenza: lo spostamento effettivo dello specchio $S_3$ risulta essere $\frac{1}{5}$ di quello effettuato mediante vite micrometrica. Da una propagazione dell'errore sulla singola misura di posizione, e tenuto conto del meccanismo di funzionamento dello strumento, l'incertezza risulta essere:
+Ogni volta che si è misurato lo spostamento $\Delta x$, si è dovuto considerare quanto osservato in precedenza: lo spostamento effettivo dello specchio $S_3$ risulta essere $\frac{1}{5}$ di quello effettuato mediante vite micrometrica. Da una propagazione dell'errore sulla singola misura di posizione, e tenuto conto del meccanismo di funzionamento dello strumento, l'incertezza risulta essere:
 \begin{equation}
     \label{err-delta-x}
     \sigma_{\Delta x} = \sqrt{ \left(\frac{\sigma_{x_1}}{5}\right)^2 + \left(\frac{\sigma_{x_2}}{5}\right)^2} = 3 \, \mu \text{m}
@@ -243,7 +236,7 @@ Ogni volta che si è misurato lo spostamento fine $\Delta x$, si è dovuto consi
 
 \subsection{Lunghezza d'onda di un fascio di luce monocromatica}
 
-A partire dai dati in Tab. \ref{lambda} e approssimando l'indice di rifrazione dell'aria a $n_0=1$, tramite la relazione \ref{lambda_laser}, si sono ricavati i valori di $\lambda_0$:
+A partire dai dati in Tab. \ref{lambda} e approssimando l'indice di rifrazione dell'aria a $n_a \approx 1$, tramite la relazione \ref{lambda_laser}, si sono ricavati i valori di $\lambda_0$:
 
 \begin{table}[H]
     \centering
@@ -263,10 +256,10 @@ A partire dai dati in Tab. \ref{lambda} e approssimando l'indice di rifrazione d
     \caption{Valori della lunghezza d'onda ricavati dal set di misure.}
     \label{tab:lambda}
 \end{table}
-Dove l'incertezza è stata attribuita mediante propagazione degli errori sulle grandezze $\Delta x$ e $N_1$ nella \ref{lambda_laser}:
+dove l'incertezza è stata attribuita mediante propagazione degli errori sulle grandezze $\Delta x$ e $N_1$ nella \ref{lambda_laser}:
 \begin{equation}
 \label{err-lambda}
-\sigma_{\lambda_0} = \sqrt{ \left( \frac{2 \, n}{N_1}\right)^2 \sigma^2_{\Delta x} +  \left(\frac{2 n \Delta x}{N_1} \right)^2 \sigma^2_{\Delta x} }
+\sigma_{\lambda_0} = \sqrt{ \left( \frac{2 \, n_a}{N_1}\right)^2 \sigma^2_{\Delta x} +  \left(\frac{2 n_a \Delta x}{N_1} \right)^2 \sigma^2_{\Delta x} }
 \end{equation}
 Attraverso la media ponderata dei valori di $\lambda_0$ ottenuti, si ottiene una stima della misura della lunghezza d'onda della luce laser:
 \begin{equation}
@@ -277,10 +270,10 @@ dove l'incertezza è quella di una media ponderata.
 
 \subsection{Indice di rifrazione dell'aria}
 
-A partire dalle equazioni \ref{lambda_laser} e \ref{n_a}, si possono ricavare le seguenti espressioni per $n$ e $\lambda_a$:
+A partire dalle equazioni \ref{lambda_laser} e \ref{n_a}, si possono ricavare le seguenti espressioni per $n_a$ e $\lambda_a$:
 \begin{equation}
     \label{rifrazione}
-    n = \frac{N_1 D}{N_1 D - N_2 \Delta x} \qquad
+    n_a = \frac{N_1 D}{N_1 D - N_2 \Delta x} \qquad
     \lambda_a = \frac{2\Delta x D}{N_1 D - N_2 \Delta x}
 \end{equation}
 A questo punto, incrociando i dati in Tab. \ref{lambda} con quelli riportati nel Par. \ref{par:n_a}, si ottengono i valori riportati in Tab. \ref{tab:n_a}, nella quale i valori delle incertezze sono stati ricavati tramite le relative propagazioni degli errori:
@@ -289,10 +282,10 @@ A questo punto, incrociando i dati in Tab. \ref{lambda} con quelli riportati nel
     \sigma_n &= \frac{N_1 N_2 D \Delta x}{\left(N_1 D - N_2 \Delta x\right)^2} \sqrt{\left(\frac{\sigma_{N_1}}{N_1}\right)^2 + \left(\frac{\sigma_{\Delta x}}{\Delta x}\right)^2 + \left(\frac{\sigma_{N_2}}{N_2}\right)^2 + \left(\frac{\sigma_{D}}{D}\right)^2} \\
     \sigma_{\lambda} &= \frac{\Delta x^2 D^2}{2\left(N_1 D - N_2 \Delta x\right)^2} \sqrt{\left(\frac{N_1}{\Delta x}\right)^2\left(\left(\frac{\sigma_{N_1}}{N_1}\right)^2 + \left(\frac{\sigma_{\Delta x}}{\Delta x}\right)^2\right) + \left(\frac{N_2}{D}\right)^2\left(\left(\frac{\sigma_{N_2}}{N_2}\right)^2 + \left(\frac{\sigma_{D}}{D}\right)^2\right)}
 \end{align}
-Il valore finale e la rispettiva incertezza di $n$ e $\lambda_a$ sono stati determinati tramite media ponderata:
+Il valore finale e la rispettiva incertezza di $n_a$ e $\lambda_a$ sono stati determinati tramite media ponderata:
 \begin{equation}
     \label{n_a-lambda}
-    n = 1.000259 \pm 0.000007 \qquad
+    n_a = 1.000259 \pm 0.000007 \qquad
     \lambda_a = 617 \pm 8 \, \text{nm}
 \end{equation}
 
@@ -363,7 +356,7 @@ Attraverso la media ponderata, si è ottenuto il valore finale, con la sua incer
 \end{equation}
 
 \section{Conclusioni}
-L'indice di rifrazione dell'aria ottenuto, $n=1.000259 \pm 0.000007$, è in accordo, entro $2 \sigma$, con il valore universalmente accettato $\bar{n}=1.000273$ (assumendo condizioni STP).
+L'indice di rifrazione dell'aria ottenuto, $n_a=1.000259 \pm 0.000007$, è in accordo, entro $2 \sigma$, con il valore universalmente accettato $\bar{n}=1.000273$ (assumendo condizioni STP).
 
 Inoltre, i due valori della lunghezza d'onda del laser, ottenuti con e senza approssimazione dell'indice di rifrazione dell'aria, sono in perfetto accordo tra loro: $\lambda_{0} = 617 \pm 16 \, \text{nm}$ e $ \lambda_{a} =616 \pm 7 \, \text{nm}$.
 
