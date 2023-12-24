@@ -106,41 +106,36 @@
         \label{cauchy}
         n^2(\lambda) = A + \frac{B}{\lambda^2}
     \end{equation}
-    Dove dove $n$ è l'indice di rifrazione, $\lambda$ è la lunghezza d'onda, $A$ e $B$ sono i coefficienti che possono essere determinati per un materiale interpolando l'equazione ad indici di rifrazione misurati per lunghezze d'onda note.
+    dove dove $n$ è l'indice di rifrazione, $\lambda$ è la lunghezza d'onda, $A$ e $B$ sono dei coefficienti. Questi possono essere determinati per un materiale interpolando l'equazione ad indici di rifrazione misurati per lunghezze d'onda note.
 
     \subsection{Metodo}
 
     In seguito alla misurazione dello spettro di emissione della lampada ai vapori di mercurio - effettuata con il reticolo di diffrazione -, si utilizzano le lunghezze d'onda trovate per misurare l'indice di rifrazione del materiale vetroso che compone il prisma. \\
     Tale misurazione viene effettuata attraverso il metodo della deviazione minima: si può ricavare la dipendenza dell'angolo $\delta$ in funzione dell'angolo di incidenza $i$, dimostrando inoltre che la funzione $\delta (i)$ presenta un minimo. La condizione di deviazione minima si presenta nel momento in cui viene soddisfatta l'equazione:
-
     \begin{equation}
         \label{dev_minima}
         \cos i \cdot \cos r' = \cos r \cdot \cos i'
     \end{equation}
-    Dove $i$ è l'algolo di incidenza, $i'$ è l'angolo di emergenza $r$ è l'angolo di rifrazione sulla faccia di entrata del prisma e $r'$ l'angolo di incidenza sulla seconda faccia del prisma.
-
+    dove $i$ è l'algolo di incidenza, $i'$ è l'angolo di emergenza, $r$ è l'angolo di rifrazione sulla faccia di entrata del prisma e $r'$ l'angolo di incidenza sulla seconda faccia del prisma.\\
     Queste quantità sono legate a $\delta$ dalle seguenti relazioni:
-
     \begin{equation}
         \label{relazioni_delta}
-        r + r' = \alpha
+        r + r' = \alpha \qquad\qquad
         \delta = i + i' - \alpha
     \end{equation}
-    Dove $\alpha$ è l'angolo al vertice del prisma.
-
+    dove $\alpha$ è l'angolo al vertice del prisma.\\
     L'indice di rifrazione del prisma, in condizioni di minima deviazione, risulterà essere quindi:
-
     \begin{equation}
         \label{indice_rifrazione}
         n(\lambda)=\frac{\sin \frac{\alpha + \delta _m} {2}}{\sin \frac{\alpha}{2}}
     \end{equation}
-    Dove $n(\lambda)$ è l'indice di rifrazione del materiale in funzione della lunghezza d'onda $\lambda$ considerata, $\alpha$ l'angolo al vertice della sezione del prisma, $\delta _m $ l'angolo di minima deviazione della lunghezza d'onda considerata.
+    dove $n(\lambda)$ è l'indice di rifrazione del materiale in funzione della lunghezza d'onda $\lambda$ considerata, $\alpha$ l'angolo al vertice della sezione del prisma, $\delta _m $ l'angolo di minima deviazione della lunghezza d'onda considerata.
 
     \section{Misure}
     \label{par:misure}
 
     \subsection{Angolo del prisma}
-    Per misurare l'angolo $\alpha$ del prisma si sfrutta il fenomeno della riflessione: in particolare, si misurano le posizioni angolari $\theta_1$, $\theta_2$ delle immagini della fenditura riflesse da due facce consecutive del prisma. I dati sono riportati in Tab. \ref{theta-1-2-alpha}.
+    Per misurare l'angolo $\alpha$ del prisma si sfrutta il fenomeno della riflessione: in particolare, si misurano le posizioni angolari $\theta_1$, $\theta_2$ delle immagini della fenditura riflesse da due facce consecutive del prisma. tramite un nonio sessagesimale di risoluzione $1'$. I dati sono riportati in Tab. \ref{theta-1-2-alpha}.
 
     \subsection{Angolo di deviazione minima}
     Per procede alla misura dell'angolo di deviazione minima, bisogna prima determinare la posizione angolare iniziale $\theta_0$ della fenditura in assenza di prisma: le misurazioni sono riportate in Tab. \ref{theta-0}. \\
@@ -227,7 +222,7 @@
     Per verificare l'effettivo andamento lineare dei risultati ottenuti è stato effettuato un test del $\chi^2$:
     \begin{equation}
         \label{chi2}
-        \chi^2 = 5.623 \cdot 10^{-1} 
+        \chi^2 = 0.5623 
     \end{equation}
     Tale valore restituisce una compatibilità con un andamento lineare di probabilità $76.07 \% $.
     
@@ -236,7 +231,7 @@
     L'errore attribuito ai singoli valori di $\alpha$ è stato ottenuto propagando l'errore su $\theta_1$ e $\theta_2$ nella \ref{alpha}:
     \begin{equation}
         \label{alpha-err}
-        \alpha = \sqrt{2} \cdot \sigma_{\theta} 
+        \sigma_{\alpha} = \sqrt{2} \cdot \sigma_{\theta} = 12'
     \end{equation}
     Al valore finale di $\alpha$ è stata attribuita come incertezza la deviazione standard della media delle misure effettuate. Si è scelto di attribuire l'incertezza statistica come errore poiché superiore all'incertezza sistematica, pari a
     \begin{equation}
@@ -251,8 +246,8 @@
         \label{theta0-err-sist}
         \sigma_{\theta_0,sist} = \frac{\sigma_{\theta_0}}{\sqrt{10}} = 19''
     \end{equation}
-    Dove $\sigma_{\theta_0}$ è l'incertezza attribuita alle singole misure di $\theta_0$.
-    L'errore sul valore di $\delta$ ottenuto per i primi quattro colori osservati (Viola 1, Viola 2, Indaco e Ciano) è stato attribuito attraverso la deviazione standard della medie delle misure effettuate. Tale valore è risultato superiore rispetto all'incertezza sistematica, calcolabile attraverso la propagazione degli errori su $\theta_0$ e $\theta_{\lambda}$ nella \ref{delta}:
+    dove $\sigma_{\theta_0}$ è l'incertezza attribuita alle singole misure di $\theta_0$.\\
+    L'errore sul valore di $\delta$ ottenuto per i primi quattro colori osservati (Viola 1, Viola 2, Indaco e Ciano) è stato attribuito attraverso la deviazione standard della media delle misure effettuate. Tale valore è risultato superiore rispetto all'incertezza sistematica, calcolabile attraverso la propagazione degli errori su $\theta_0$ e $\theta_{\lambda}$ nella \ref{delta}:
     \begin{equation}
         \label{delta-err-sist}
         \sigma_{\delta, sist}= \frac{\sqrt{ \sigma_{\theta_0}^2 + \sigma_{\theta_{\lambda}}^2 }}{\sqrt{10}} = 23''
@@ -280,10 +275,10 @@
         \label{sigma-n}
         \sigma_n = \sqrt{ \left(\frac{\sin{\frac{\delta}{2}}}{\cos{\alpha}-1}\right)^2 \cdot \sigma_{\alpha}^2 + \left(\frac{cos{\frac{\delta + \alpha}{2}}}{\sin{\frac{\alpha}{2}}}\right)^2 \cdot \sigma_{\delta}^2   }
     \end{equation}
-    Dove $\sigma_{delta}$ è l'incertezza attribuita all'angolo di deviazione minima $\delta$ e $\sigma_{\alpha}$ è l'incertezza attribuita all'angolo al centro del prisma $\alpha$.
+    dove $\sigma_{\delta}$ è l'incertezza attribuita all'angolo di deviazione minima $\delta$ e $\sigma_{\alpha}$ è l'incertezza attribuita all'angolo al centro del prisma $\alpha$.
 
     \section{Conclusioni}
-    I risultati ottenuti hanno permesso di verificare con ottima compatibilità la relazione di Cauchy.
+    Come si evince dai dati ottenuti e dal test statistico svolto, i risultati sono compatibili con la relazione teorica di Cauchy.
 
     \newpage
 
