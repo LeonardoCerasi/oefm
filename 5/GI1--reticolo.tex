@@ -109,7 +109,7 @@
     La posizione dei vari massimi della figura di interferenza dipende dal valore della lunghezza d'onda da cui sono generati. Dunque, dopo aver determinato il passo $d$ del reticolo in uso e dopo aver misurato, ponendo il reticolo sulla piattaforma di uno spettrometro, la posizione angolare di un massimo di ordine $k=\pm 1, \pm 2,\ldots$ rispetto al massimo centrale ($\Delta \theta$), è possibile determinare la lunghezza d'onda $\lambda$ della componente del fascio incidente responsabile di quella specifica riga di spettro:
     \begin{equation}
         \label{lambda}
-        \lambda = \frac{d \, \, \sin{\Delta\theta}}{k}
+        \lambda = \frac{d \sin{\Delta\theta}}{k}
     \end{equation}
     Il passo $d$ del reticolo si ottiene invertendo la relazione \ref{lambda}, attraverso le misure delle posizioni angolari dei massimi di interferenza del doppietto del sodio, le cui lunghezze d'onda si assumono note:
     \begin{equation}
@@ -122,7 +122,7 @@
 
     \subsection{Ortogonalità}
     Per procede alle misure del passo del reticolo e delle lunghezze d'onda delle righe spettrali, è necessario preliminarmente porre il reticolo in condizione di ortogonalità rispetto al fascio di luce incidente. \\
-    Per fare ciò, si misura la posizione angolare di due massimi dello stesso ordine dello spettro di una lampada a Na rispetto al massimo di diffrazione centrale e, se si evidenzia una differenza angolare superiore alla decina di primi di grado, si procede ad una rotazione del reticolo di un fattore correttivo definito da:
+    Per fare ciò, si misura la posizione angolare di due massimi dello stesso ordine dello spettro di una lampada a Na rispetto al massimo di diffrazione centrale, attraverso un nonio sessagesimale di risoluzione $1'$, e, se si evidenzia una differenza angolare superiore alla decina di primi di grado, si procede ad una rotazione del reticolo di un fattore correttivo $\beta$ definito da:
     \begin{equation}
         \label{beta}
         \tan{\beta} = \sin{\frac{\Delta\theta_2 - \Delta\theta_1}{2}} \frac{\cos{\frac{\Delta\theta_1 + \Delta\theta_2}{2}}}{1 - \cos{\frac{\Delta\theta_1 + \Delta\theta_2}{2}} \cos{\frac{\Delta\theta_2 - \Delta\theta_1}{2}}} \quad\Longrightarrow\quad
@@ -130,10 +130,10 @@
     \end{equation}
     dove $\Delta\theta_{1,2} = \theta_0 - \theta_{1,2}$ sono le posizioni angolari dei due massimi e $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$ è la misura del massimo centrale, ottenuta come media ponderata delle misure in Tab. \ref{prel-max-c}. Poiché $\Delta\theta_1 \approx \Delta\theta_2$, è stato possibile approssimare al prim'ordine l'espressione per $\beta$. \\
     È stato necessario correggere la posizione del reticolo solo tre volte per contenere $\beta$ entro qualche primo di grado: i dati solo riportati in Tab. \ref{prel-ort}. \\
-    Per non appesantire le tabelle, si è occasionalmente omesso l'errore sulla misura delle posizioni angolari assoluti: essi sono sempre pari ad $1'$.
+    Per non appesantire le tabelle, si è occasionalmente omesso l'errore sulla misura delle posizioni angolari assolute: essi sono sempre pari ad $1'$.
 
     \subsection{Passo del reticolo}
-    Per misurare il passo del reticolo, si procede all'analisi delle righe spettrali della lampada a Na, ed in particolare si è utilizzata la riga spettrale $\lambda_1 = 589.0\,\text{nm}$ all'ordine $k=4$. Le misure sono riportare in Tab. \ref{d-Na}: si è di nuovo preso $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$ media ponderata dei valori in Tab. \ref{max-Na}.
+    Per misurare il passo del reticolo, si procede all'analisi delle righe spettrali della lampada a Na, ed in particolare si è utilizzata la riga spettrale $\lambda_1 = 589.0\,\text{nm}$ all'ordine $k=4$. Le misure sono riportare in Tab. \ref{d-Na}: si è di nuovo considerato $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$, dato dalla media ponderata dei valori in Tab. \ref{max-Na}.
 
     \subsection{Lunghezze d'onda del mercurio}
     Una volta determinato il passo del reticolo, si può utilizzare la relazione \ref{lambda} per determinare le lunghezze d'onda delle righe spettrali della lampada ad Hg: per fare ciò, basta effettuare varie misure delle loro posizioni angolari rispetto al massimo di diffrazione centrale, la cui posizione $\theta_0 = 0.978548 \pm 0.000092$ è calcolata come media ponderata dei valori in Tab. \ref{max-Hg}. \\
@@ -148,8 +148,8 @@
         d = \frac{k \, \, \lambda_1}{\sin{\Delta\theta}}
     \end{equation}
     dove $\Delta\theta = \theta - \theta_0$.
-    I valori ottenuti per ciascuna misura presa sono riportati nella seguente Tab. \ref{d-Na}: $\sigma_d$ è stato attribuito come da Par. \ref{par:errore_passo}.
-    Il valore finale di $d$ si ottiene mediante media pesata dei valori riportati in tabella:
+    I valori ottenuti per ciascuna misura presa sono riportati nella Tab. \ref{d-Na}: $\sigma_d$ è stato attribuito come da Par. \ref{par:errore_passo}.
+    Il valore finale di $d$ si ottiene tramite media ponderata dei valori riportati in tabella:
     \begin{equation}
         \label{d-value}
         d = 3.3766 \pm 0.0008 \,\mu\text{m}
@@ -159,39 +159,41 @@
     Di ogni componente dello spettro del mercurio osservata, noto l'ordine e la posizione angolare del massimo considerato, si è calcolata la lunghezza d'onda $\lambda$, come da \ref{lambda}. Si è poi effettuata una media ponderata tra tutti i valori di $\lambda$ ottenuti per ciascuna componente. I valori ottenuti sono riportati nella seguente tabella:
     \begin{table}[H]
         \centering
-        \begin{tabular}{||c|c||}
+        \begin{tabular}{||c|c|c|c||}
             \hline
-            Colore & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right] $\\
+            Colore & $\lambda \pm \sigma_{\lambda} \, \left[\text{nm}\right]$ & $\lambda \, \left[\text{nm}\right]$ & $\sigma$\\
             \hline \hline
-            Viola    & $ 404.32 \pm 0.09 $ \\\hline
-            Indaco   & $ 435.57 \pm 0.09 $ \\\hline
-            Ciano    & $ 491.21 \pm 0.09 $ \\\hline
-            Verde    & $ 545.44 \pm 0.08 $ \\\hline
-            Giallo 1 & $ 576.46 \pm 0.08 $ \\\hline
-            Giallo 2 & $ 578.41 \pm 0.08 $ \\\hline
-            Rosso    & $ 623.09 \pm 0.10 $ \\\hline
+            Viola 1  & $404.32 \pm 0.09$ & $404.7$ & $4.2\sigma$ \\\hline
+            Indaco   & $435.57 \pm 0.09$ & $435.8$ & $2.6\sigma$ \\\hline
+            Ciano    & $491.21 \pm 0.09$ & $491.6$ & $4.3\sigma$ \\\hline
+            Verde    & $545.44 \pm 0.08$ & $546.0$ & $7.0\sigma$ \\\hline
+            Giallo 1 & $576.46 \pm 0.08$ & $576.9$ & $5.5\sigma$ \\\hline
+            Giallo 2 & $578.41 \pm 0.08$ & $579.0$ & $7.3\sigma$ \\\hline
+            Rosso    & $623.09 \pm 0.10$ & $622.8$ & $2.9\sigma$ \\\hline
         \end{tabular}
-        \caption{Valori di $\lambda$ di ogni componente di Hg e relativi errori.}
+        \caption{Valori di $\lambda$ di ogni componente di Hg, relativi errori, lunghezze d'onda teoriche e distanza in sigma tra valore misurato ed atteso.}
         \label{lambda-Hg-values}
     \end{table}
-    Dove $\sigma_{\lambda}$ è stato attribuito come da Par. \ref{par:errore_lambda}.
+    dove $\sigma_{\lambda}$ è stato attribuito come da Par. \ref{par:errore_lambda}.
 
     \subsubsection{Potere dispersivo}
-    Attraverso le misure delle posizioni angolari di righe spettrali, si è potuto determinare il potere dispersivo $D_{m}$ del reticolo, definito come:
+    Attraverso le misure delle posizioni angolari delle righe spettrali, si è potuto determinare il potere dispersivo $D_{m}$ del reticolo, definito come:
     \begin{equation}
         \label{D-m}
         D_m = \frac{\Delta \theta}{\Delta \lambda} \qquad \sigma_{D_m} = \sqrt{\left(\frac{\sigma_{\Delta\theta}}{\Delta\lambda}\right)^2 + \left(\frac{\Delta\theta \, \sigma_{\Delta\lambda}}{\Delta\lambda^2}\right)^2}
     \end{equation}
+    dove l'incertezza è stato stimato dalla propagazione degli errori.\\
     In particolare, per sondare varie distanze angolari, sono state considerate le coppie di righe spettrali Viola 1 - Indaco, Giallo 1 - Giallo 2 e Viola 1 - Giallo 2: i relativi dati sono riportati in Tabb. \ref{viola-1-indaco}, \ref{giallo-1-giallo-2}, \ref{viola-1-giallo-2}. \\
     I valori così ottenuti vengono confrontati con quelli ricavati dalle caratteristiche del reticolo stesso tramite la relazione:
     \begin{equation}
         \label{D-t}
         D_t(\theta) = \frac{k}{d\cos{\theta}} \qquad \sigma_{D_t}(\theta) = \sqrt{\left(\frac{k \, \sigma_d}{d^2 \cos{\theta}}\right)^2 + \left(\frac{k \tan{\theta} \, \sigma_\theta}{d\cos{\theta}}\right)^2}
     \end{equation}
+    dove l'incertezza è stato stimato dalla propagazione degli errori.\\
 
     \subsubsection{Potere risolutivo}
-    Dalle caratteristiche del reticolo è possibile anche giustificare a posteriori il fatto che le righe spettrali Giallo 1 e 2 possano essere chiaramente distinte tra loro agli ordini $k = 2, 3, 4$; infatti, confrontando il potere risolutivo del reticolo $R(k) = k N$, dove $N$ è il numero totale di fenditure illuminate, con il rapporto $\frac{\Delta\lambda}{\bar{\lambda}}$ delle righe considerate, si può stabilire se esse appariranno separate o meno. \\
-    Assumento che tutte le fenditure del reticolo siano investite dal fascio luminoso (lecito poiché, essendo la fenditura di fronte al collimatore dell'ordine dei decimi di mm, la sorgente può essere considerata puntiforme e sita nel fuoco del collimatore), e che quindi $N = \frac{L}{d}$, dove $L = 2 \,\text{cm}$ è la lunghezza del reticolo, si ottengono i seguenti valori:
+    Dalle caratteristiche del reticolo è possibile anche giustificare a posteriori il fatto che le righe spettrali Giallo 1 e 2 possano essere chiaramente distinte tra loro agli ordini $k = 2, 3, 4$; infatti, confrontando il potere risolutivo del reticolo $R(k) = k N$, dove $N$ è il numero totale di fenditure illuminate, con il rapporto $\frac{\Delta\lambda}{\bar{\lambda}}$ delle righe considerate, si può stabilire se esse appariranno separate o meno: se $\frac{\Delta\lambda}{\bar{\lambda}} < R(k)$, allora le righe spettrali appariranno separate.\\
+    Assumendo che tutte le fenditure del reticolo siano investite dal fascio luminoso (lecito poiché, essendo la fenditura di fronte al collimatore dell'ordine dei decimi di mm, la sorgente può essere considerata puntiforme e sita nel fuoco del collimatore), e che quindi $N = \frac{L}{d}$, dove $L = 2 \,\text{cm}$ è la lunghezza del reticolo, si ottengono i seguenti valori:
     \begin{table}[H]
         \centering
         \begin{tabular}{||c|c|c|c|c||}
@@ -213,7 +215,8 @@
         \label{d-error}
         \sigma_d = \frac{k \, \lambda \, \cos{\Delta\theta} \, \sigma_{\Delta \theta}}{\sin^2{\Delta\theta}}
     \end{equation}
-    Invece, l'incertezza sul valore finale di $d$ è stata calcolata come errore di una media ponderata dei valori riportati in Tab. \ref{d-Na}.
+    dove $\sigma_{\Delta\theta}$ è la somma in quadratura degli errori sulle singole misurazioni degli angoli.\\
+    Invece, l'incertezza sul valore finale di $d$ è stata calcolata come errore della media ponderata dei valori riportati in Tab. \ref{d-Na}.
     \label{par:errore_passo}
 
     \subsubsection{Lunghezze d'onda del mercurio}
@@ -225,7 +228,11 @@
     \label{par:errore_lambda}
 
     \section{Conclusioni}
-    Conclusioni.
+    Il valore del passo del reticolo ottenuto $d = 3.3766 \pm 0.0008 \,\mu\text{m}$ è compatibile con la frequenza teorica delle fenditure di $\nu = 300 \,\text{mm}^{-1}$: infatti $\frac{1}{d} = 296 \,\text{mm}^{-1}$.\\
+    Come si evince dai dati riportati in Tab. \ref{lambda-Hg-values}, le misure delle lunghezze d'onda non risultano essere compatibili con i valori aspettati: ciò potrebbe essere giustificabile da una sottostima dell'errore sulla misura della posizone angolare. In particolare, quest'ultima può essere viziata dalla difficoltà nell'effettivo centramento delle righe spettrali, specialmente nelle misure di ordine $k = 4$, poiché esse risultavano di maggiore larghezza angolare e minore intensità luminosa.\\
+    Il potere dispersivo stimato dai dati sperimentali, nei casi di righe spettrali di lunghezze d'onda prossime tra loro (Giallo 1 - Giallo 2), risulta compatibile con il valore teorico: ciò è dovuto ad un errore percentuale molto alto. La ragione sta nella dipendenza dell'incertezza da $\frac{1}{\Delta\lambda}$. \\
+    Per quanto riguarda invece le coppie di righe spettrali Viola 1 - Indaco e Viola 1 - Giallo 2, valore sperimentale e teorico non risultano compatibili: ciò può essere sempre ricollegato alla difficoltà nel centramento delle righe spettrali. \\
+    Infine, i valori del potere risolutivo ottenuti giustificano la capacità di distinguere le righe spettrali Giallo 1 - Giallo 2 a tutti gli ordini considerati.
 
     \newpage
 
@@ -489,7 +496,7 @@
             $k$ & $\Delta\theta \pm \sigma_{\Delta\theta} \,\left[\text{rad}\right]$ & $\Delta\lambda \pm \sigma_{\Delta\lambda} \,\left[\text{nm}\right]$ & $D_m \pm \sigma_{D_m} \,\left[\cdot 10^5 \text{rad/m}\right]$ & $D_t \pm \sigma_{D_t} \,\left[\cdot 10^5 \text{rad/m}\right]$ \\\hline
             \hline
             $2$ & $0.018908 \pm 0.000411$ & $30.9 \pm 0.7$ & $6.1 \pm 0.2$ & $7.930 \pm 0.003$ \\\hline
-            $3$ & $0.029671 \pm 0.000411$ & $31.0 \pm 0.5$ & $9.6 \pm 0.2$ & $1.074 \pm 0.003$ \\\hline
+            $3$ & $0.029671 \pm 0.000411$ & $31.0 \pm 0.5$ & $9.6 \pm 0.2$ & $10.740 \pm 0.003$ \\\hline
             $4$ & $0.042179 \pm 0.000411$ & $30.9 \pm 0.3$ & $14.0\pm 0.2$ & $13.200\pm 0.004$ \\\hline
         \end{tabular}
         \caption{Potere dispersivo relativo alle righe spettrali Viola 1 e Indaco.}
@@ -509,7 +516,7 @@
             $k$ & $\Delta\theta \pm \sigma_{\Delta\theta} \,\left[\text{rad}\right]$ & $\Delta\lambda \pm \sigma_{\Delta\lambda} \,\left[\text{nm}\right]$ & $D_m \pm \sigma_{D_m} \,\left[\cdot 10^5 \text{rad/m}\right]$ & $D_t \pm \sigma_{D_t} \,\left[\cdot 10^5 \text{rad/m}\right]$ \\\hline
             \hline
             $2$ & $0.001164 \pm 0.000411$ & $1.8 \pm 0.7$ & $6 \pm 3$ & $7.328 \pm 0.002$ \\\hline
-            $3$ & $0.002036 \pm 0.000411$ & $2.0 \pm 0.4$ & $1 \pm 3$ & $9.820 \pm 0.003$ \\\hline
+            $3$ & $0.002036 \pm 0.000411$ & $2.0 \pm 0.4$ & $10\pm 3$ & $9.820 \pm 0.003$ \\\hline
             $4$ & $0.003491 \pm 0.000411$ & $2.1 \pm 0.3$ & $16\pm 3$ & $12.150\pm 0.003$ \\\hline
         \end{tabular}
         \caption{Potere dispersivo relativo alle righe spettrali Giallo 1 e 2.}
