@@ -2,11 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 
-dataset = pd.read_csv("charges.csv")
-dataset_err = pd.read_csv("charges_err.csv")
+dataset = pd.read_csv("charges2.csv")
 
 charges = dataset['q'].to_numpy()
-charges_err = dataset_err['err'].to_numpy()
+charges_err = dataset['err'].to_numpy()
 
 def S(q):
     sum = 0
@@ -41,3 +40,4 @@ print("err:", err)
 
 e = 1.602176634e-19
 print("sigma:", np.abs(min - e) / err)
+print("perc:", 100 * np.abs(e - min) / e, "%")
