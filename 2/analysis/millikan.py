@@ -36,7 +36,7 @@ print("")
 
 q = np.linspace(1.4e-19, 1.8e-19, index_min)
 
-plt.plot(q, S(q))
+plt.scatter(q, S(q), marker='.', s=10)
 plt.grid(True)
 plt.xlabel("q [C]")
 plt.ylabel("S(q) [C²]")
