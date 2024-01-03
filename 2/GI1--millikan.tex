@@ -185,7 +185,7 @@
     \subsection {Misure effettive}
     Si scelgono 10 gocce di cui registrare il moto nelle due condizioni: in assenza e in presenza di campo elettrico $ E $. In presenza del campo, a seconda del segno della forza elettrica agente sulla goccia $F_e = qE$, si osserva, attraverso microscopio, un moto ascendente o discendente. Si misura quindi la differenza di potenziale applicata e il tempo che ogni goccia impiega a percorrere $ \Delta z = 0.5 \, \text{mm} $. La porzione di spazio percorsa viene considerata priva di errore. A tali grandezze si corredano ulteriori informazioni: il verso del moto - se sale o se scende - e dati qualitativi come eventuale presenza di rumore e comportamenti anomali. \\
     Tutti i dati vegono riporati nelle tabelle in Appendice. \\ 
-    La misura del tempo di volo è stata effetuata mediante un cronometro digitale di risuluzione $ 0.01 \, \text{s} $: l'incertezza attribuita alle misure, però, è $0.5 \, \text{s}$, per tenere conto del tempo di reazione dello sperimentatore. La misurazione della differenza di potenziale $ \Delta V $ è stata effettuata mediante un multimetro digitale a cui viene attribuita come incertezza $ 1 \, \text{V} $.
+    La misura del tempo di volo è stata effetuata mediante un cronometro digitale di risuluzione $ 0.01 \, \text{s} $. La misurazione della differenza di potenziale $ \Delta V $ è stata effettuata mediante un multimetro digitale a cui viene attribuita come incertezza $ 1 \, \text{V} $.
 
 
     \section{Analisi Dati}
@@ -226,12 +226,30 @@
         Q = -\frac{4}{3} \pi r^3 \left( \rho_o - \rho_a \right) \frac{g d}{\Delta V} \left( 1 - \frac{v_E}{v_r} \right)
     \end{equation}
     dove $r$ è il raggio della goccia osservata precedentemente determinato, $v_E$ è la velocità limite della goccia in presenza di campo elettrico $E$ e $v_r$ è la media delle velocità limite della goccia registrate in assenza di campo elettrico.
-    I valori così calcolati sono riportati nelle tabelle in Appendice: i valori contrassegnati da asterisco $\ast$ sono stati rigettati poiché non coerenti con il dataset.
-    L'incertezza associata a ciascuna misura di $Q$ è stata determinata mediante propagazione degli errori nella \ref{Q} sulle grandezze $r$, $d$, $\Delta V$, $t$ (tramite $v_E$) e $v_r$. L'incertezza su $v_r$ è stata attribuita mediante deviazione standard.
+    I valori così calcolati sono riportati nelle tabelle in Appendice. 
+    Poiché si è osservato che alcuni valori di carica $Q_i$ non sono compatibili con gli altri relativi alla medesima goccia, e poiché si è osservato che alcune gocce presentano tempi di acquisizione sotto campo molto brevi (inferiori ai $2s$), si è provato a rigettare tali dati (contrassegnati da asterisco $\ast$ nelle tabelle in Appendice), e a effettuare l'analisi del dataset scremato. Tuttavia, si è osservato che il valore di carica elettronica $q_e$ così ottenuto è meno compatibile con il valore atteso rispetto a quello ottenuto con il dataset completo. Pertanto, si è deciso di proseguire l'analisi con il dataset completo. Si riportano, nella seguente tabella, i risultati ottenuti:
+
+    \begin{table}[H]
+        \centering
+    
+        \begin{tabular}{|| c || c | c||}
+            \hline
+            $ $ & $q_e \pm \sigma_{q}\, \cdot 10^-{19} \text{[C]} $ & $ (q_e - e)/e$\\
+            \hline\hline
+    
+            $\text{dataset completo}$ & $ 1.57 \pm 0.01 $ & $1.83 \%$\\\hline
+            $\text{dataset scremato}$ & $ 1.45 \pm 0.06 $ & $9.29 \%$ \\\hline
+        \end{tabular}
+        \caption{Valori della carica elettronica, con rispettiva incertezza e distanza percentuale dal valore atteso, ottenuti con il dataset completo e scremato.}
+        \label{carica-eletronica}
+    \end{table}
+
+    L'incertezza associata a ciascuna misura di $Q$ è stata determinata mediante propagazione degli errori nella \ref{Q} sulle grandezze $r$, $d$, $\Delta V$ e $v_r$. L'incertezza su $v_r$ è stata attribuita mediante deviazione standard.
     \begin{equation}
         \label{sigma-Q}
-        \sigma_Q = \abs{Q} \sqrt{ \left( 3 \frac{\sigma_r}{r} \right)^2 + \left( \frac{\sigma_d}{d} \right)^2 + \left( \frac{\sigma_{\Delta V}}{\Delta V} \right)^2 + \frac{1}{\left( v_r - v_E \right)^2} \left( \left( \frac{v_E}{t} \sigma_t \right)^2 + \left( \frac{v_E}{v_r} \sigma_{v_r} \right)^2 \right) }
+        \sigma_Q = \abs{Q} \sqrt{ \left( 3 \frac{\sigma_r}{r} \right)^2 + \left( \frac{\sigma_d}{d} \right)^2 + \left( \frac{\sigma_{\Delta V}}{\Delta V} \right)^2 + \frac{1}{\left( v_r - v_E \right)^2}\left( \frac{v_E}{v_r} \sigma_{v_r} \right)^2 }
     \end{equation}
+    Non si è propagato l'errore relativo agli intervalli di tempo $t$ (responsabile dell'errore sulla velocità di regime $v_E$ in presenza di campo elettrico), poiché già considerato attraverso la statistica.
 
     \subsection{Misura della carica elementare}
     Una buona della stima della carica elementare $q_e$ si può trovare come punto di minimo della funzione:
@@ -243,7 +261,7 @@
     Il grafico della funzione $S(q)$ nell'intorno del valore aspettato è:
     \begin{figure}[H]
         \centering
-        \includegraphics[width=0.40\textwidth]{analysis/graph.png}
+        \includegraphics[width=0.50\textwidth]{analysis/graph.png}
         \caption{Grafico della funzione $S(q)$.}
         \label{graph}
     \end{figure}    
@@ -257,7 +275,7 @@
         \label{sigma-stat}
         \sigma_{\text{stat}} = \sqrt{ \frac{S(q_e)}{N \left(N-1 \right)} } = 1.26 \cdot 10^{-21} \, \text{C}
     \end{equation}
-    La compomente sistematica dell'errore è stata determinata mediante propagazione degli errori sulle $Q_i$ nella \ref{qe}:
+    La componente sistematica dell'errore è stata determinata mediante propagazione degli errori sulle $Q_i$ nella \ref{qe}:
     \begin{equation}
         \sigma_{\text{sist}} = \frac{1}{N} \sqrt{\sum_{n=1}^{N} \left(\frac{\sigma_{Q_i}}{k_i} \right)^2} = 4.71 \cdot 10^{-23} \, \text{C}
     \end{equation}
@@ -268,8 +286,7 @@
     \begin{equation}
         q_e = \left( 1.57 \pm 0.01 \right) \cdot 10^{-19} \, \text{C}
     \end{equation}
-    Tale valore è situato entro $1.5\sigma$ dal valore atteso $e = 1.602176634 \cdot 10^{-19} \, \text{C}$. Il discostamento del valore ottenuto dal valore atteso è principalmente determinato dalla poco oculata scelta delle gocce osservate: in particolare, si sono scelte gocce con tempi di caduta eccessivamente ridotti, e/o interagenti con altre gocce. Il primo fattore ha influito sulle misurazioni degli intervalli di tempo $t$, poiché con tempi di caduta minori l'errore percentuale diventa maggiore. Il secondo fattore, invece, può aver provocato scambi di cariche tra gocce o confusione nello sperimentatore, il quale può aver effettuato misure su gocce differenti. \\
-    Nonostante alcuni valori evidentemente incoerenti con il dataset siano stati rigettati, non si è riusciti a migliorare la stima di $q_e$.
+    Tale valore è situato entro $2.33\sigma$ dal valore atteso $e = 1.602176634 \cdot 10^{-19} \, \text{C}$, dunque risulta compatibile. Il discostamento del valore ottenuto dal valore atteso è principalmente determinato dalla poco oculata scelta delle gocce osservate: in particolare, si sono scelte gocce con tempi di caduta eccessivamente ridotti, e/o interagenti con altre gocce. Il primo fattore ha influito sulle misurazioni degli intervalli di tempo $t$, poiché con tempi di caduta minori l'errore percentuale diventa maggiore. Il secondo fattore, invece, può aver provocato scambi di cariche tra gocce o confusione nello sperimentatore, il quale può aver effettuato misure su gocce differenti.
     
     \newpage
 
