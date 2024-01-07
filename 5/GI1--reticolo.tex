@@ -130,7 +130,7 @@
     \end{equation}
     dove $\Delta\theta_{1,2} = \theta_0 - \theta_{1,2}$ sono le posizioni angolari dei due massimi e $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$ è la misura del massimo centrale, ottenuta come media ponderata delle misure in Tab. \ref{prel-max-c}. Poiché $\Delta\theta_1 \approx \Delta\theta_2$, è stato possibile approssimare al prim'ordine l'espressione per $\beta$. \\
     È stato necessario correggere la posizione del reticolo solo tre volte per contenere $\beta$ entro qualche primo di grado: i dati solo riportati in Tab. \ref{prel-ort}. \\
-    Per non appesantire le tabelle, si è occasionalmente omesso l'errore sulla misura delle posizioni angolari assolute: essi sono sempre pari ad $1'$.
+    Per non appesantire le tabelle, si è occasionalmente omesso l'errore sulla misura delle posizioni angolari assolute $\theta$: essi sono sempre pari ad $1'$.
 
     \subsection{Passo del reticolo}
     Per misurare il passo del reticolo, si procede all'analisi delle righe spettrali della lampada a Na, ed in particolare si è utilizzata la riga spettrale $\lambda_1 = 589.0\,\text{nm}$ all'ordine $k=4$. Le misure sono riportare in Tab. \ref{d-Na}: si è di nuovo considerato $\theta_0 = 0.979013 \pm 0.000281 \,\text{rad}$, dato dalla media ponderata dei valori in Tab. \ref{max-Na}.
@@ -209,13 +209,24 @@
     \end{table}
 
     \subsection{Stima degli errori}
+    \subsection{Posizioni angolari relative al massimo centrale}
+    Le singole misure di posizione relativa al massimo centrale $\Delta \theta$ sono affette da due componenti di errore: una, $\sigma_{\text{ris}}$, dovuta alla risoluzione dello strumento e una, $\sigma_{\text{ort}}$, dovuta alla non perfetta ortogonalità del reticolo rispetto alla direzione della luce incidente. L'errore complessivo, dunque, è dato dalla somma in quadratura di queste due componenti:
+    \begin{equation}
+        \label{sigma-delta-theta}
+        \sigma_{\Delta \theta} = \sqrt{ (\sigma_{\text{ris}})^2 + (\sigma_{\text{ort}})^2 }
+    \end{equation}
+    Poiché $\Delta \theta$ è dato dalla differenza di due misure di posizione assoluta (quella del massimo centrale e quella del massimo di ordine k), la componente di errore dovuta alla risoluzione dello strumento è data dalla somma in quadratura degli errori sulle singole misure di posizione: $\sigma_{\text{ris}}\approx 2'$. Invece, la componente dovuta alla non perfetta ortogonalità del reticolo è stata determinata invertendo \ref{beta}, dopo aver assunto che gli scostamenti angolari causati dal $\beta$ residuo per misure effettuate a destra ($\Delta \theta_1$) e a sinistra ($\Delta \theta_2$) rispetto al massimo centrale siano uguali in modulo ma opposte in segno:
+    \begin{equation}
+        \label{sigma-ort}
+        \sigma_{\text{ort}} = \left| \frac{(\Delta \theta_2 - \Delta \theta_1)}{2} \right| = \left| \beta \, \frac{1 - \cos{\Delta \theta}}{\cos{\Delta \theta}} \right|
+    \end{equation}
+
     \subsubsection{Passo del reticolo}
     Per ogni misurazione effettuata, si è attribuito al valore di $d$ ottenuto un errore stimato mediante propagazione degli errori sulla grandezza $\Delta \theta$ nella formula \ref{passo}:
     \begin{equation}
         \label{d-error}
         \sigma_d = \frac{k \, \lambda \, \cos{\Delta\theta} \, \sigma_{\Delta \theta}}{\sin^2{\Delta\theta}}
     \end{equation}
-    dove $\sigma_{\Delta\theta}$ è la somma in quadratura degli errori sulle singole misurazioni degli angoli.\\
     Invece, l'incertezza sul valore finale di $d$ è stata calcolata come errore della media ponderata dei valori riportati in Tab. \ref{d-Na}.
     \label{par:errore_passo}
 
