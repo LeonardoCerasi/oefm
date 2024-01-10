@@ -177,12 +177,12 @@
             Colore & $\delta \pm \sigma_{\delta}$\\
             \hline \hline
             Viola 1  & $ 74 \degree \,  9' \, 0'' \pm  1' \,  8'' $ \\\hline
-            Viola 2  & $ 73 \degree \, 53' \, 0'' \pm  1' \, 44'' $ \\\hline
-            Indaco   & $ 71 \degree \, 47' \, 0'' \pm 27'         $ \\\hline
-            Ciano    & $ 68 \degree \, 58' \, 0'' \pm  1' \, 32'' $ \\\hline
-            Verde    & $ 67 \degree \, 16' \, 0'' \pm        23'' $ \\\hline
-            Giallo 1 & $ 66 \degree \, 33' \, 0'' \pm        23'' $ \\\hline
-            Giallo 2 & $ 66 \degree \, 32' \, 0'' \pm        23'' $ \\\hline
+            Viola 2  & $ 73 \degree \, 53' \, 0'' \pm  44'' $ \\\hline
+            Indaco   & $ 71 \degree \, 47' \, 0'' \pm 27''         $ \\\hline
+            Ciano    & $ 68 \degree \, 58' \, 0'' \pm  32'' $ \\\hline
+            Verde    & $ 67 \degree \, 16' \, 0'' \pm   17'' $ \\\hline
+            Giallo 1 & $ 66 \degree \, 33' \, 0'' \pm    14'' $ \\\hline
+            Giallo 2 & $ 66 \degree \, 32' \, 0'' \pm        10'' $ \\\hline
         \end{tabular}
         \caption{Valori di $\delta$ e relativi errori.}
         \label{d-values}
@@ -231,42 +231,21 @@
     L'errore attribuito ai singoli valori di $\alpha$ è stato ottenuto propagando l'errore su $\theta_1$ e $\theta_2$ nella \ref{alpha}:
     \begin{equation}
         \label{alpha-err}
-        \sigma_{\alpha} = \sqrt{2} \cdot \sigma_{\theta} = 12'
+        \sigma_{\alpha} = \sqrt{2} \cdot \sigma_{\theta} = 1' 25'' 
     \end{equation}
-    Al valore finale di $\alpha$ è stata attribuita come incertezza la deviazione standard della media delle misure effettuate. Si è scelto di attribuire l'incertezza statistica come errore poiché superiore all'incertezza sistematica, pari a
-    \begin{equation}
-        \label{alpha-err-sist}
-        \sigma_{\alpha, sist}= \frac{\sqrt{2} \cdot \sigma_{\theta}}{\sqrt{10}}=27''
-    \end{equation}
+    Al valore finale di $\alpha$ è stata attribuita come incertezza la deviazione standard della media delle misure effettuate.
     \label{par:alpha_err}
 
     \subsubsection{Angolo di deviazione minima}
-    L'errore attribuito al valore medio di $\theta_0$ è stato ricavato attraverso la deviazione standard della media delle misure effettuate. Tale valore è superiore all'incertezza sistematica, ottenuta dalla propagazione dell'errore sulla singola misura di $\theta_0$ nella formula per calcolare la media aritmetica:
-    \begin{equation}
-        \label{theta0-err-sist}
-        \sigma_{\theta_0,sist} = \frac{\sigma_{\theta_0}}{\sqrt{10}} = 19''
-    \end{equation}
-    dove $\sigma_{\theta_0}$ è l'incertezza attribuita alle singole misure di $\theta_0$.\\
-    L'errore sul valore di $\delta$ ottenuto per i primi quattro colori osservati (Viola 1, Viola 2, Indaco e Ciano) è stato attribuito attraverso la deviazione standard della media delle misure effettuate. Tale valore è risultato superiore rispetto all'incertezza sistematica, calcolabile attraverso la propagazione degli errori su $\theta_0$ e $\theta_{\lambda}$ nella \ref{delta}:
+    L'errore attribuito al valore medio di $\theta_0$ è stato ricavato attraverso la deviazione standard della media delle misure effettuate. \\
+    L'errore sui valori di $\delta$, per ciascuna misurazione di $\theta_{\lambda}$, è stato ottenuto attraverso propagazione degli errori nella formula per $\delta$:
     \begin{equation}
         \label{delta-err-sist}
-        \sigma_{\delta, sist}= \frac{\sqrt{ \sigma_{\theta_0}^2 + \sigma_{\theta_{\lambda}}^2 }}{\sqrt{10}} = 23''
+        \sigma_{\delta}= \sqrt{ \sigma_{\theta_0}^2 + \sigma_{\theta_{\lambda}}^2 } 
     \end{equation}
-    Dove $\sigma_{\theta_0}$ è l'incertezza attribuita alle singole misure di $\theta_0$ e $\sigma_{\theta_{\lambda}}$ è l'incertezza attribuita alle singole misure di $\theta_{\lambda}$.
-    Nel caso degli ultimi 3 colori (Verde, Giallo 1 e Giallo 2), l'incertezza sistematica risulta invece superiore a quella statistica, ed è dunque stata attribuita come errore su $\delta$. Le incertezze statistiche sono riportate nella seguente tabella:
-    \begin{table} [H]
-        \centering
-        \begin{tabular}{||c|c||}
-            \hline
-            Colore & $\sigma_{\delta_{stat}}$\\
-            \hline \hline
-            Verde    & $ 0.3'' $ \\\hline
-            Giallo 1 & $ 0.2'' $ \\\hline
-            Giallo 2 & $ 0.2'' $ \\\hline
-        \end{tabular}
-        \caption{Valori dell'incertezza statistica su $\delta$.}
-        \label{d-err-stat}
-    \end{table}
+    dove $\sigma_{\theta_{\lambda}}$ è dato dalla risoluzione dello strumento utilizzato.
+    L'errore sul valore finale di $\delta$ è stato attribuito come deviazione standard della media delle misure effettuate.
+
     \label{par:dev_min_err}
 
     \subsubsection{Indice di rifrazione del vetro}
